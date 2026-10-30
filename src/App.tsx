@@ -310,7 +310,7 @@ export function App() {
     setFitKey((k) => k + 1);
     if (ex) {
       setSettings({ dt: ex.dt, window: ex.window ?? ex.dt * 1000, stepsPerFrame: ex.steps ?? 100 });
-      setTab(ex.id === 'ino-nextion' ? 'display' : ex.id === 'ino-serial' || ex.id === 'ino-serial-control' || ex.id === 'ino-bluetooth' || ex.id === 'ino-sensors' || ex.id === 'us-driver' ? 'serial' : 'scope');
+      setTab(ex.id === 'ino-nextion' ? 'display' : ex.id === 'ino-serial' || ex.id === 'ino-serial-control' || ex.id === 'ino-bluetooth' || ex.id === 'ino-sensors' || ex.id === 'us-driver' || ex.id === 'ino-clock' || ex.id === 'ino-car' || ex.id === 'ino-remote' || ex.id === 'ino-car-pair' ? 'serial' : 'scope');
     }
   };
 

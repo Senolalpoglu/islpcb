@@ -132,6 +132,846 @@
   }
  },
  {
+  "id": "hc-12",
+  "label": {
+   "en": "HC-12 433 MHz serial radio (pinout only)",
+   "tr": "HC-12 433 MHz seri telsiz (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "RXD",
+    "TXD",
+    "SET"
+   ],
+   "right": [],
+   "title": "HC-12"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "link",
+    "label": {
+     "en": "Radio link name (two modules with the same name are paired)",
+     "tr": "Radyo bağlantı adı (aynı ada sahip iki modül eşleşir)"
+    },
+    "default": "",
+    "kind": "text"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 250.0
+    }
+   ]
+  },
+  "footprint": "SIP_5"
+ },
+ {
+  "id": "ds1307",
+  "label": {
+   "en": "DS1307 real-time clock (pinout only)",
+   "tr": "DS1307 gerçek zaman saati (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "X1",
+    "X2",
+    "VBAT",
+    "GND"
+   ],
+   "right": [
+    "VCC",
+    "SQW",
+    "SCL",
+    "SDA"
+   ],
+   "title": "DS1307"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 3333.3
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "padMap": [
+   "X1",
+   "X2",
+   "VBAT",
+   "GND",
+   "SDA",
+   "SCL",
+   "SQW",
+   "VCC"
+  ]
+ },
+ {
+  "id": "74hc595",
+  "label": {
+   "en": "74HC595 8-bit shift register (pinout only)",
+   "tr": "74HC595 8 bit kaydırmalı yazmaç (yalnızca pin bağlantısı)"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "QB",
+    "QC",
+    "QD",
+    "QE",
+    "QF",
+    "QG",
+    "QH",
+    "GND"
+   ],
+   "right": [
+    "VCC",
+    "QA",
+    "SER",
+    "OE",
+    "RCLK",
+    "SRCLK",
+    "SRCLR",
+    "QH'"
+   ],
+   "title": "74HC595"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 50000.0
+    }
+   ]
+  },
+  "footprint": "DIP16",
+  "padMap": [
+   "QB",
+   "QC",
+   "QD",
+   "QE",
+   "QF",
+   "QG",
+   "QH",
+   "GND",
+   "QH'",
+   "SRCLR",
+   "SRCLK",
+   "RCLK",
+   "OE",
+   "SER",
+   "QA",
+   "VCC"
+  ]
+ },
+ {
+  "id": "max7219-module",
+  "label": {
+   "en": "MAX7219 8x8 LED matrix module (FC-16) (pinout only)",
+   "tr": "MAX7219 8x8 LED matris modülü (FC-16) (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "DIN",
+    "CS",
+    "CLK"
+   ],
+   "right": [],
+   "title": "MAX7219"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 125.0
+    }
+   ]
+  },
+  "footprint": "SIP_5"
+ },
+ {
+  "id": "lcd2004",
+  "label": {
+   "en": "LCD 2004 (HD44780, 20 x 4) (pinout only)",
+   "tr": "LCD 2004 (HD44780, 20 x 4) (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VSS",
+    "VDD",
+    "V0",
+    "RS",
+    "RW",
+    "E",
+    "D0",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "A",
+    "K"
+   ],
+   "right": [],
+   "title": "LCD 2004"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VDD",
+      "VSS"
+     ],
+     "value": 1666.7
+    }
+   ]
+  },
+  "footprint": "SIP_16"
+ },
+ {
+  "id": "lcd2004-i2c",
+  "label": {
+   "en": "LCD 2004 with I2C backpack (pinout only)",
+   "tr": "I2C adaptörlü LCD 2004 (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "VCC",
+    "SDA",
+    "SCL"
+   ],
+   "right": [],
+   "title": "LCD 2004 I2C"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 1250.0
+    }
+   ]
+  },
+  "footprint": "SIP_4"
+ },
+ {
+  "id": "7seg-6digit-cc",
+  "label": {
+   "en": "6-digit 7-segment display, common cathode (multiplexed)",
+   "tr": "6 haneli 7 segment gösterge, ortak katot (çoklamalı)"
+  },
+  "category": "semi",
+  "prefix": "DS",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "dp"
+   ],
+   "right": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6"
+   ],
+   "title": "6x7SEG CC"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "a",
+      "D1"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "b",
+      "D1"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "c",
+      "D1"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "d",
+      "D1"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "e",
+      "D1"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "f",
+      "D1"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "g",
+      "D1"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "dp",
+      "D1"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "a",
+      "D2"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "b",
+      "D2"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "c",
+      "D2"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "d",
+      "D2"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "e",
+      "D2"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "f",
+      "D2"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "g",
+      "D2"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "dp",
+      "D2"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "a",
+      "D3"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "b",
+      "D3"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "c",
+      "D3"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "d",
+      "D3"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "e",
+      "D3"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "f",
+      "D3"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "g",
+      "D3"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "dp",
+      "D3"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "a",
+      "D4"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "b",
+      "D4"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "c",
+      "D4"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "d",
+      "D4"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "e",
+      "D4"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "f",
+      "D4"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "g",
+      "D4"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "dp",
+      "D4"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "a",
+      "D5"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "b",
+      "D5"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "c",
+      "D5"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "d",
+      "D5"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "e",
+      "D5"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "f",
+      "D5"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "g",
+      "D5"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "dp",
+      "D5"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "a",
+      "D6"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "b",
+      "D6"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "c",
+      "D6"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "d",
+      "D6"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "e",
+      "D6"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "f",
+      "D6"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "g",
+      "D6"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "dp",
+      "D6"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    }
+   ]
+  },
+  "footprint": "SIP_14"
+ },
+ {
   "id": "esp-01",
   "label": {
    "en": "ESP-01 ESP8266 WiFi module (pinout only)",
@@ -1320,6 +2160,884 @@
     }
    ]
   }
+ },
+ {
+  "id": "tb6612fng",
+  "label": {
+   "en": "TB6612FNG dual motor driver module",
+   "tr": "TB6612FNG çift motor sürücü modülü"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VM",
+    "VCC",
+    "GND",
+    "STBY",
+    "PWMA",
+    "AIN1",
+    "AIN2"
+   ],
+   "right": [
+    "AO1",
+    "AO2",
+    "BO1",
+    "BO2",
+    "BIN1",
+    "BIN2",
+    "PWMB"
+   ],
+   "title": "TB6612FNG"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "VSW",
+     "nodes": [
+      "h_AO1",
+      "VM",
+      "AIN1",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.2
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "mh_AO1",
+      "h_AO1",
+      "PWMA",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "AO1",
+      "mh_AO1",
+      "STBY",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "l_AO1",
+      "GND",
+      "AIN1",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.2,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "ml_AO1",
+      "l_AO1",
+      "PWMA",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "AO1",
+      "ml_AO1",
+      "STBY",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "AO1",
+      "VM"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "GND",
+      "AO1"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "h_AO2",
+      "VM",
+      "AIN2",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.2
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "mh_AO2",
+      "h_AO2",
+      "PWMA",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "AO2",
+      "mh_AO2",
+      "STBY",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "l_AO2",
+      "GND",
+      "AIN2",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.2,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "ml_AO2",
+      "l_AO2",
+      "PWMA",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "AO2",
+      "ml_AO2",
+      "STBY",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "AO2",
+      "VM"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "GND",
+      "AO2"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "h_BO1",
+      "VM",
+      "BIN1",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.2
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "mh_BO1",
+      "h_BO1",
+      "PWMB",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "BO1",
+      "mh_BO1",
+      "STBY",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "l_BO1",
+      "GND",
+      "BIN1",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.2,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "ml_BO1",
+      "l_BO1",
+      "PWMB",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "BO1",
+      "ml_BO1",
+      "STBY",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "BO1",
+      "VM"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "GND",
+      "BO1"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "h_BO2",
+      "VM",
+      "BIN2",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.2
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "mh_BO2",
+      "h_BO2",
+      "PWMB",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "BO2",
+      "mh_BO2",
+      "STBY",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "l_BO2",
+      "GND",
+      "BIN2",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.2,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "ml_BO2",
+      "l_BO2",
+      "PWMB",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "BO2",
+      "ml_BO2",
+      "STBY",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "BO2",
+      "VM"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "GND",
+      "BO2"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 2500
+    }
+   ]
+  },
+  "footprint": "SIP_14"
+ },
+ {
+  "id": "l293d",
+  "label": {
+   "en": "L293D dual H-bridge motor driver (DIP16)",
+   "tr": "L293D çift H köprüsü motor sürücü (DIP16)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "EN12",
+    "IN1",
+    "OUT1",
+    "GND1",
+    "GND2",
+    "OUT2",
+    "IN2",
+    "VCC2"
+   ],
+   "right": [
+    "VCC1",
+    "IN4",
+    "OUT4",
+    "GND4",
+    "GND3",
+    "OUT3",
+    "IN3",
+    "EN34"
+   ],
+   "title": "L293D"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC1",
+      "GND1"
+     ],
+     "value": 2500
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "GND1",
+      "GND2"
+     ],
+     "value": 0.001
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "GND1",
+      "GND3"
+     ],
+     "value": 0.001
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "GND1",
+      "GND4"
+     ],
+     "value": 0.001
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "h_OUT1",
+      "VCC2",
+      "IN1",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 2.3
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT1",
+      "h_OUT1",
+      "EN12",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "l_OUT1",
+      "GND1",
+      "IN1",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 2.0,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT1",
+      "l_OUT1",
+      "EN12",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "OUT1",
+      "VCC2"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "GND1",
+      "OUT1"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "h_OUT2",
+      "VCC2",
+      "IN2",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 2.3
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT2",
+      "h_OUT2",
+      "EN12",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "l_OUT2",
+      "GND1",
+      "IN2",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 2.0,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT2",
+      "l_OUT2",
+      "EN12",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "OUT2",
+      "VCC2"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "GND1",
+      "OUT2"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "h_OUT3",
+      "VCC2",
+      "IN3",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 2.3
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT3",
+      "h_OUT3",
+      "EN34",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "l_OUT3",
+      "GND1",
+      "IN3",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 2.0,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT3",
+      "l_OUT3",
+      "EN34",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "OUT3",
+      "VCC2"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "GND1",
+      "OUT3"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "h_OUT4",
+      "VCC2",
+      "IN4",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 2.3
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT4",
+      "h_OUT4",
+      "EN34",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "l_OUT4",
+      "GND1",
+      "IN4",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 2.0,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT4",
+      "l_OUT4",
+      "EN34",
+      "GND1"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "OUT4",
+      "VCC2"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "GND1",
+      "OUT4"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "DIP16",
+  "padMap": [
+   "EN12",
+   "IN1",
+   "OUT1",
+   "GND1",
+   "GND2",
+   "OUT2",
+   "IN2",
+   "VCC2",
+   "EN34",
+   "IN3",
+   "OUT3",
+   "GND3",
+   "GND4",
+   "OUT4",
+   "IN4",
+   "VCC1"
+  ]
  },
  {
   "id": "a4988",

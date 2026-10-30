@@ -32,8 +32,8 @@ const UART_PINS: Record<string, { tx: string; rx: string }> = {
   PIC16F628A: { tx: 'RB2', rx: 'RB1' },
 };
 
-/** The radio modules whose `link` name pairs them (the library's HC-05 and HC-06). */
-const LINK_TYPES = new Set(['x:hc-05', 'x:hc-06']);
+/** The radio modules whose `link` name pairs them (the library's HC-05, HC-06 and HC-12). */
+const LINK_TYPES = new Set(['x:hc-05', 'x:hc-06', 'x:hc-12']);
 
 interface RunningDisplay {
   display: NextionDisplay;
@@ -54,6 +54,10 @@ export class McuRig {
   private readonly relays: Array<Array<(byte: number) => void>> = [];
   /** The latest circuit solution, which tells whether a radio module has power. */
   private last: Solution | null = null;
+  /** With several boards: the reference of each board's part, what it has printed of the line it is on, and when it printed it. */
+  private readonly names: string[] = [];
+  private readonly pending: string[] = [];
+  private readonly pendingAt: number[] = [];
   /** The virtual Nextion displays of the circuit. */
   get displays(): Array<{ display: NextionDisplay; layoutError: string; partId: string }> {
     return this.screens;
@@ -77,7 +81,7 @@ export class McuRig {
           : new AvrBoard(hex, { variant: engine === 'avr2560' ? 'atmega2560' : 'atmega328p' });
       const boardIndex = this.boards.length;
       board.onSerial = (b) => {
-        this.serial = (this.serial + String.fromCharCode(b)).slice(-MAX_SERIAL);
+        this.print(boardIndex, b);
         if (boardIndex === 0) this.tap?.(b);
         for (const s of this.screens) if (s.board === boardIndex && s.display.linkedRx) s.display.feed(b);
         for (const relay of this.relays[boardIndex] ?? []) relay(b);
@@ -89,6 +93,9 @@ export class McuRig {
       }
       this.boards.push({ board, pins });
       this.relays.push([]);
+      this.names.push(part.ref);
+      this.pending.push('');
+      this.pendingAt.push(0);
     }
     this.connectDisplays(doc, extracted);
     this.connectLinks(doc, extracted, netlist);
@@ -162,6 +169,28 @@ export class McuRig {
     }
   }
 
+  /**
+   * Adds a byte a board printed to the log. With one board it goes in at once. With several, two boards that print at the same
+   * time would mix their letters, so each board's line is kept until it ends (or the board has been quiet for a moment) and
+   * then written as one line that starts with the board's reference: `[A1] hello`.
+   */
+  private print(board: number, byte: number): void {
+    if (this.boards.length < 2) {
+      this.serial = (this.serial + String.fromCharCode(byte)).slice(-MAX_SERIAL);
+      return;
+    }
+    this.pending[board] += String.fromCharCode(byte);
+    this.pendingAt[board] = this.last?.time ?? 0;
+    if (byte === 10) this.flush(board);
+  }
+
+  private flush(board: number): void {
+    const text = this.pending[board];
+    if (!text) return;
+    this.pending[board] = '';
+    this.serial = `${this.serial}[${this.names[board]}] ${text.replace(/\r/g, '')}${text.endsWith('\n') ? '' : '\n'}`.slice(-MAX_SERIAL);
+  }
+
   /** Builds the virtual displays and works out which board each one is wired to (its RX to the board's TX, its TX to the board's RX). */
   private connectDisplays(doc: Doc, extracted: Extracted): void {
     const boardParts = doc.parts.filter((p) => isMcu(p.type) && typeof p.params.hex === 'string' && p.params.hex);
@@ -221,6 +250,7 @@ export class McuRig {
     }
     const s = simulator.step();
     this.last = s;
+    for (let i = 0; i < this.pending.length; i++) if (this.pending[i] && s.time - this.pendingAt[i] > 0.01) this.flush(i);
     for (const d of this.screens) d.display.setPower(d.vdd !== undefined && d.gnd !== undefined && s.v[d.vdd] - s.v[d.gnd] > 3);
     for (const b of this.boards) for (const p of b.pins) b.board.setInput(p.pin, s.v[p.el.a]);
     return s;

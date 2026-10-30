@@ -1,7 +1,7 @@
 {
   "name": "isl-pcb",
   "productName": "ISL PCB",
-  "version": "0.17.0",
+  "version": "0.19.0",
   "description": "Schematic capture, circuit simulation and PCB design / Şematik çizim, devre simülasyonu ve PCB tasarımı",
   "private": true,
   "main": "electron/main.cjs",

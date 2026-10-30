@@ -4,6 +4,7 @@ import { hexFor, sketchById } from './arduinoExamples';
 import { assembleCached, picProgramById } from './picExamples';
 import { Builder } from './builder';
 import { amRadio, arduinoBluetooth, arduinoSensorStation, fmTransmitter, inverter, mainsLamps, ultrasonicDriver } from './projectExamples';
+import { carExample, carPairExample, clockExample, esp01Example, nrf24Example, remoteExample } from './commExamples';
 import { PART_DEFS, pinPositions, type Doc, type PartType, type Pt } from './model';
 
 const p = (x: number, y: number): Pt => ({ x, y });
@@ -386,6 +387,12 @@ export const EXAMPLES: Example[] = [
   { id: 'am-radio', label: 'ex.amradio', build: amRadio, dt: 100e-9, window: 4e-3, steps: 400 },
   { id: 'us-driver', label: 'exa.ultrasonic', build: ultrasonicDriver, dt: 1e-6, window: 0.06, steps: 100 },
   { id: 'ino-bluetooth', label: 'exa.bluetooth', build: arduinoBluetooth, dt: 100e-6, window: 2, steps: 200 },
+  { id: 'ino-clock', label: 'exa.clock', build: clockExample, dt: 100e-6, window: 2, steps: 200 },
+  { id: 'ino-car', label: 'exa.car', build: carExample, dt: 100e-6, window: 2, steps: 200 },
+  { id: 'ino-remote', label: 'exa.remote', build: remoteExample, dt: 100e-6, window: 2, steps: 200 },
+  { id: 'ino-car-pair', label: 'exa.carPair', build: carPairExample, dt: 100e-6, window: 2, steps: 200 },
+  { id: 'ino-nrf24', label: 'exa.nrf24', build: nrf24Example, dt: 100e-6, window: 0.02, steps: 100 },
+  { id: 'ino-esp01', label: 'exa.esp01', build: esp01Example, dt: 100e-6, window: 0.02, steps: 100 },
   { id: 'ino-sensors', label: 'exa.sensors', build: arduinoSensorStation, dt: 100e-6, window: 4, steps: 200 },
   { id: 'ino-blink', label: 'exa.blink', build: arduinoBlink, dt: 100e-6, window: 2, steps: 200 },
   { id: 'ino-fade', label: 'exa.fade', build: arduinoFade, dt: 50e-6, window: 0.02, steps: 200 },

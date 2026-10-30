@@ -55,6 +55,11 @@ def build(h):
     bjt("bu508a", "BU508A NPN high-voltage (1500 V, 8 A, TO-247)", True, 10, 1.0, 4.5, "TO247", ["B", "C", "E"], "Horizontal-deflection switch: hFE about 10 at 4.5 A, Vbe 1 V. TO-247: B, C, E.")
     bjt("bc856b", "BC856B PNP (65 V, 0.1 A, SOT-23)", False, 330, 0.65, 2e-3, "SOT23", ["B", "E", "C"], "hFE 220-475 (typ. 330). SOT-23: 1 B, 2 E, 3 C.")
     bjt("mmbt2907a", "MMBT2907A PNP (60 V, 0.6 A, SOT-23)", False, 150, 0.75, 0.15, "SOT23", ["B", "E", "C"], "hFE 100-300 (typ. 150). SOT-23: 1 B, 2 E, 3 C.")
+    bjt("s8050", "S8050 NPN (25 V, 0.5 A, TO-92)", True, 160, 0.72, 0.05, "TO92", ["E", "B", "C"], "hFE 85-300 (ranks B 85-160, C 120-200, D 160-300; typ. 160), Vce(sat) 0.6 V max at 500 mA. TO-92: E, B, C. The usual module and toy transistor.")
+    bjt("s8550", "S8550 PNP (25 V, 0.5 A, TO-92)", False, 160, 0.72, 0.05, "TO92", ["E", "B", "C"], "Complement of the S8050: hFE 85-300 (typ. 160). TO-92: E, B, C.")
+    bjt("2n5551", "2N5551 NPN high-voltage (160 V, 0.6 A, TO-92)", True, 150, 0.68, 0.01, "TO92", ["E", "B", "C"], "hFE 80-300 at 10 mA, Vceo 160 V. TO-92: E, B, C (check the maker's drawing: some are C, B, E).")
+    bjt("2n5401", "2N5401 PNP high-voltage (150 V, 0.6 A, TO-92)", False, 120, 0.7, 0.01, "TO92", ["E", "B", "C"], "hFE 60-300 at 10 mA, Vceo -150 V; the complement of the 2N5551. TO-92: E, B, C.")
+    bjt("2n2907a", "2N2907A PNP (60 V, 0.6 A, TO-92)", False, 150, 0.75, 0.15, "TO92", ["E", "B", "C"], "hFE 100-300 at 150 mA, Vce(sat) 0.4 V at 150 mA. TO-92: E, B, C.")
 
     # ---- MOSFETs: beta from Rds(on) at the quoted Vgs, with the body diode ----------------------------------------
     def mos(id, label, nmos, rds, id_test, vth, vgs, fp, pad_map, note, lam=0.01):
@@ -76,6 +81,11 @@ def build(h):
     mos("6n90", "6N90 N-MOSFET (900 V, 6 A)", True, 2.0, 3, 3.5, 10, "TO220", to220, "Rds(on) about 2 ohm at Vgs 10 V. TO-220: G, D, S. Body diode included.")
     mos("12n65", "12N65 N-MOSFET (650 V, 12 A)", True, 0.7, 6, 3.5, 10, "TO220", to220, "Rds(on) about 0.7 ohm at Vgs 10 V. TO-220: G, D, S. Body diode included.")
     mos("2n7002", "2N7002 N-MOSFET (60 V, 0.3 A, SOT-23)", True, 2.0, 0.5, 2.1, 10, "SOT23", ["G", "S", "D"], "Rds(on) about 2 ohm at Vgs 10 V, Vth 1-2.5 V (also covers 2N7002K / CK / KW). SOT-23: 1 G, 2 S, 3 D.")
+    mos("ao3400a", "AO3400A N-MOSFET (30 V, 5.7 A, SOT-23)", True, 0.0265, 5.7, 1.05, 10, "SOT23", ["G", "S", "D"], "Logic-level: Rds(on) 26.5 mohm max at Vgs 10 V (48 mohm at 2.5 V), Vth 0.65-1.45 V, Vgs max 12 V. SOT-23: 1 G, 2 S, 3 D. Body diode included.")
+    mos("ao3401a", "AO3401A P-MOSFET (30 V, 4 A, SOT-23)", False, 0.05, 4.0, 0.9, 10, "SOT23", ["G", "S", "D"], "Rds(on) 50 mohm max at Vgs -10 V (85 mohm at -2.5 V), Vth -0.5 to -1.3 V, Vgs max 12 V. SOT-23: 1 G, 2 S, 3 D. Body diode included.")
+    mos("irlml6402", "IRLML6402 P-MOSFET (20 V, 3.7 A, SOT-23)", False, 0.065, 3.7, 0.8, 4.5, "SOT23", ["G", "S", "D"], "Logic-level: Rds(on) 65 mohm max at Vgs -4.5 V (135 mohm at -2.5 V), Vgs max 12 V. SOT-23: 1 G, 2 S, 3 D. Body diode included.")
+    mos("irf840", "IRF840 N-MOSFET (500 V, 8 A)", True, 0.85, 4.8, 3.0, 10, "TO220", to220, "Rds(on) 0.85 ohm at Vgs 10 V, Vth 2-4 V. TO-220: G, D, S. Body diode included.")
+    mos("irf4905", "IRF4905 P-MOSFET (55 V, 74 A)", False, 0.02, 38, 3.0, 10, "TO220", to220, "Rds(on) 20 mohm max at Vgs -10 V, Vth -2 to -4 V. TO-220: G, D, S (check the maker's drawing). Body diode included.")
 
     # ---- diodes: two points of the forward curve -----------------------------------------------------------------
     def fit(vf1, i1, vf2, i2, n):

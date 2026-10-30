@@ -512,6 +512,221 @@
   }
  },
  {
+  "id": "s8050",
+  "label": {
+   "en": "S8050 NPN (25 V, 0.5 A, TO-92)",
+   "tr": "S8050 NPN (25 V, 0.5 A, TO-92)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 160,
+      "is": 4.01e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "E",
+   "B",
+   "C"
+  ],
+  "note": "hFE 85-300 (ranks B 85-160, C 120-200, D 160-300; typ. 160), Vce(sat) 0.6 V max at 500 mA. TO-92: E, B, C. The usual module and toy transistor."
+ },
+ {
+  "id": "s8550",
+  "label": {
+   "en": "S8550 PNP (25 V, 0.5 A, TO-92)",
+   "tr": "S8550 PNP (25 V, 0.5 A, TO-92)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 160,
+      "is": 4.01e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "E",
+   "B",
+   "C"
+  ],
+  "note": "Complement of the S8050: hFE 85-300 (typ. 160). TO-92: E, B, C."
+ },
+ {
+  "id": "2n5551",
+  "label": {
+   "en": "2N5551 NPN high-voltage (160 V, 0.6 A, TO-92)",
+   "tr": "2N5551 NPN high-voltage (160 V, 0.6 A, TO-92)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 150,
+      "is": 3.77e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "E",
+   "B",
+   "C"
+  ],
+  "note": "hFE 80-300 at 10 mA, Vceo 160 V. TO-92: E, B, C (check the maker's drawing: some are C, B, E)."
+ },
+ {
+  "id": "2n5401",
+  "label": {
+   "en": "2N5401 PNP high-voltage (150 V, 0.6 A, TO-92)",
+   "tr": "2N5401 PNP high-voltage (150 V, 0.6 A, TO-92)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 120,
+      "is": 1.74e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "E",
+   "B",
+   "C"
+  ],
+  "note": "hFE 60-300 at 10 mA, Vceo -150 V; the complement of the 2N5551. TO-92: E, B, C."
+ },
+ {
+  "id": "2n2907a",
+  "label": {
+   "en": "2N2907A PNP (60 V, 0.6 A, TO-92)",
+   "tr": "2N2907A PNP (60 V, 0.6 A, TO-92)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 150,
+      "is": 3.77e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "E",
+   "B",
+   "C"
+  ],
+  "note": "hFE 100-300 at 150 mA, Vce(sat) 0.4 V at 150 mA. TO-92: E, B, C."
+ },
+ {
   "id": "irf510",
   "label": {
    "en": "IRF510 N-MOSFET (100 V, 5.6 A)",
@@ -1258,6 +1473,281 @@
    ],
    "p": 0.2
   }
+ },
+ {
+  "id": "ao3400a",
+  "label": {
+   "en": "AO3400A N-MOSFET (30 V, 5.7 A, SOT-23)",
+   "tr": "AO3400A N-MOSFET (30 V, 5.7 A, SOT-23)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 4.24576,
+      "vth": 1.05,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "S",
+      "D"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "SOT23",
+  "padMap": [
+   "G",
+   "S",
+   "D"
+  ],
+  "note": "Logic-level: Rds(on) 26.5 mohm max at Vgs 10 V (48 mohm at 2.5 V), Vth 0.65-1.45 V, Vgs max 12 V. SOT-23: 1 G, 2 S, 3 D. Body diode included."
+ },
+ {
+  "id": "ao3401a",
+  "label": {
+   "en": "AO3401A P-MOSFET (30 V, 4 A, SOT-23)",
+   "tr": "AO3401A P-MOSFET (30 V, 4 A, SOT-23)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "PMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 2.21779,
+      "vth": 0.9,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "D",
+      "S"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "SOT23",
+  "padMap": [
+   "G",
+   "S",
+   "D"
+  ],
+  "note": "Rds(on) 50 mohm max at Vgs -10 V (85 mohm at -2.5 V), Vth -0.5 to -1.3 V, Vgs max 12 V. SOT-23: 1 G, 2 S, 3 D. Body diode included."
+ },
+ {
+  "id": "irlml6402",
+  "label": {
+   "en": "IRLML6402 P-MOSFET (20 V, 3.7 A, SOT-23)",
+   "tr": "IRLML6402 P-MOSFET (20 V, 3.7 A, SOT-23)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "PMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 4.28737,
+      "vth": 0.8,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "D",
+      "S"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "SOT23",
+  "padMap": [
+   "G",
+   "S",
+   "D"
+  ],
+  "note": "Logic-level: Rds(on) 65 mohm max at Vgs -4.5 V (135 mohm at -2.5 V), Vgs max 12 V. SOT-23: 1 G, 2 S, 3 D. Body diode included."
+ },
+ {
+  "id": "irf840",
+  "label": {
+   "en": "IRF840 N-MOSFET (500 V, 8 A)",
+   "tr": "IRF840 N-MOSFET (500 V, 8 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.22789,
+      "vth": 3.0,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "S",
+      "D"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "note": "Rds(on) 0.85 ohm at Vgs 10 V, Vth 2-4 V. TO-220: G, D, S. Body diode included."
+ },
+ {
+  "id": "irf4905",
+  "label": {
+   "en": "IRF4905 P-MOSFET (55 V, 74 A)",
+   "tr": "IRF4905 P-MOSFET (55 V, 74 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "PMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 7.4959,
+      "vth": 3.0,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "D",
+      "S"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "note": "Rds(on) 20 mohm max at Vgs -10 V, Vth -2 to -4 V. TO-220: G, D, S (check the maker's drawing). Body diode included."
  },
  {
   "id": "1n5817",

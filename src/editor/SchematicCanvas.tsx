@@ -28,7 +28,7 @@ import { computeFlow, NO_CURRENT } from './flow';
 import { explainPart, isSwitchPart, partState } from './explain';
 import { FlowLayer, type FlowView } from './FlowLayer';
 import { SevenSegGlyph } from './SevenSegGlyph';
-import { isSevenSeg } from '../sim/segments';
+import { digitsOf, isSevenSeg } from '../sim/segments';
 import { boxInside, boxesTouch, partBounds, sheetLayout, type GridBox } from './bounds';
 import { PX_PER_MM, type SheetSettings } from './sheet';
 import { SheetSvg } from './SheetSvg';
@@ -551,9 +551,16 @@ export function SchematicCanvas(props: Props) {
                 <PartSymbol type={p.type} closed={p.params.closed === true} color={color} rot={p.rot} mirror={p.mirror === true} spin={motion?.spin ?? 0} pulled={motion?.pulled ?? false} />
               </g>
               {isSevenSeg(p.type) && (
-                // The digit stays upright; its centre follows the middle of the box as the part is turned.
-                <g transform={`translate(${px(p.x) + 15 * Math.sin((p.rot * Math.PI) / 180)} ${px(p.y) - 15 * Math.cos((p.rot * Math.PI) / 180)})`}>
-                  <SevenSegGlyph levels={props.segLevels?.get(p.id)} />
+                // The digits stay upright; their centre follows the part as it is turned: in the middle of the box for a
+                // single digit, under the box for a display with several (they are wider than the box).
+                <g
+                  transform={(() => {
+                    const along = digitsOf(p.type) === 1 ? -15 : 150;
+                    const a = (p.rot * Math.PI) / 180;
+                    return `translate(${px(p.x) - along * Math.sin(a)} ${px(p.y) + along * Math.cos(a)})`;
+                  })()}
+                >
+                  <SevenSegGlyph levels={props.segLevels?.get(p.id)} digits={digitsOf(p.type)} />
                 </g>
               )}
               {p.type !== 'GND' && (

@@ -48,11 +48,11 @@ const RULES: Rule[] = [
   { id: 'leds', category: 'semi', label: t('LEDs', "LED'ler"), ids: ['LED', /^led-/] },
   { id: 'displays', category: 'semi', label: t('7-segment displays', '7 segment göstergeler'), ids: [/^7seg-/] },
   { id: 'bridges', category: 'semi', label: t('Bridge rectifiers', 'Köprü diyotlar'), ids: ['bridge'] },
-  { id: 'npn', category: 'semi', label: t('NPN transistors', 'NPN transistörler'), ids: ['QNPN', '2n2222', '2n3904', 'bc547', 'bc337', 'bd139', 'tip31c', '2n3055', 'bc107', 'bc108', 'bc140', 'tip29c', 'bu508a'] },
-  { id: 'pnp', category: 'semi', label: t('PNP transistors', 'PNP transistörler'), ids: ['QPNP', '2n3906', 'bc557', 'bc327', 'bd140', 'tip32c', 'mj2955', 'bd138', 'bc856b', 'mmbt2907a'] },
+  { id: 'npn', category: 'semi', label: t('NPN transistors', 'NPN transistörler'), ids: ['QNPN', '2n2222', '2n3904', 'bc547', 'bc337', 'bd139', 'tip31c', '2n3055', 'bc107', 'bc108', 'bc140', 'tip29c', 'bu508a', 's8050', '2n5551'] },
+  { id: 'pnp', category: 'semi', label: t('PNP transistors', 'PNP transistörler'), ids: ['QPNP', '2n3906', 'bc557', 'bc327', 'bd140', 'tip32c', 'mj2955', 'bd138', 'bc856b', 'mmbt2907a', 's8550', '2n5401', '2n2907a'] },
   { id: 'darlington', category: 'semi', label: t('Darlington transistors', 'Darlington transistörler'), ids: ['tip120', 'tip125'] },
-  { id: 'nmos', category: 'semi', label: t('N-channel MOSFETs', "N kanal MOSFET'ler"), ids: ['NMOS', 'nmos-power', 'irf540n', 'irf520', 'irfz44n', 'irlz44n', 'irf3205', '2n7000', 'bs170', 'irf510', 'irf530', 'irf540', 'irf630', '6n60', '6n90', '12n65', '2n7002'] },
-  { id: 'pmos', category: 'semi', label: t('P-channel MOSFETs', "P kanal MOSFET'ler"), ids: ['PMOS', 'pmos-power', 'irf9540', 'irf9z24n', 'irf5210'] },
+  { id: 'nmos', category: 'semi', label: t('N-channel MOSFETs', "N kanal MOSFET'ler"), ids: ['NMOS', 'nmos-power', 'irf540n', 'irf520', 'irfz44n', 'irlz44n', 'irf3205', '2n7000', 'bs170', 'irf510', 'irf530', 'irf540', 'irf630', '6n60', '6n90', '12n65', '2n7002', 'ao3400a', 'irf840'] },
+  { id: 'pmos', category: 'semi', label: t('P-channel MOSFETs', "P kanal MOSFET'ler"), ids: ['PMOS', 'pmos-power', 'irf9540', 'irf9z24n', 'irf5210', 'ao3401a', 'irlml6402', 'irf4905'] },
   { id: 'thyristors', category: 'semi', label: t('Thyristors (SCR)', 'Tristörler (SCR)'), ids: [/^scr-/] },
   { id: 'triacs', category: 'semi', label: t('Triacs and diacs', 'Triyak ve diyaklar'), ids: [/^triac-/, 'diac-db3'] },
   { id: 'optos', category: 'semi', label: t('Optocouplers', 'Optokuplörler'), ids: ['optocoupler', 'moc3021', '4n25', '4n35', 'el817', 'pc814', 'moc3010', 'moc3020', 'moc3023', '6n137', 'tlp250', 'tlp251'] },
@@ -63,7 +63,7 @@ const RULES: Rule[] = [
   { id: 'timers', category: 'ic', label: t('Timers', 'Zamanlayıcılar'), ids: ['ne555', 'lm555', 'lm556', 'cd4047'] },
   { id: 'radio-audio-ics', category: 'ic', label: t('Radio and audio ICs', 'Radyo ve ses entegreleri'), ids: ['zn414', 'lm386'] },
   { id: 'gate-drivers', category: 'ic', label: t('MOSFET gate drivers', 'MOSFET kapı sürücüleri'), ids: ['tc4427'] },
-  { id: 'driver-ics', category: 'ic', label: t('Driver arrays', 'Sürücü dizileri'), ids: ['uln2003'] },
+  { id: 'driver-ics', category: 'ic', label: t('Driver arrays', 'Sürücü dizileri'), ids: ['uln2003', 'l293d'] },
 
   // Logic
   { id: 'gates', category: 'logic', label: t('Logic gates', 'Mantık kapıları'), ids: [/^gate-/] },
@@ -106,11 +106,11 @@ const RULES: Rule[] = [
   { id: 'pressure-sensors', category: 'sensor', label: t('Pressure and weight', 'Basınç ve ağırlık'), ids: ['bmp280', 'hx711'] },
 
   // Modules
-  { id: 'wireless', category: 'module', label: t('Wireless modules', 'Kablosuz modüller'), ids: ['hc-05', 'hc-06', 'esp-01', 'nrf24l01'] },
+  { id: 'wireless', category: 'module', label: t('Wireless modules', 'Kablosuz modüller'), ids: ['hc-05', 'hc-06', 'hc-12', 'esp-01', 'nrf24l01'] },
   { id: 'gps-rfid', category: 'module', label: t('GPS and RFID', 'GPS ve RFID'), ids: ['neo-6m', 'rc522'] },
-  { id: 'display-modules', category: 'module', label: t('Display modules', 'Ekran modülleri'), ids: ['oled-ssd1306', 'lcd1602', 'lcd1602-i2c', 'tm1637', 'nextion-display'] },
-  { id: 'storage-clock', category: 'module', label: t('Storage and clock', 'Depolama ve saat'), ids: ['sd-card', 'ds3231'] },
-  { id: 'motor-drivers', category: 'module', label: t('Motors and drivers', 'Motorlar ve sürücüler'), ids: ['l298n', 'a4988', 'servo-sg90', 'stepper-28byj48', 'relay-module-1ch'] },
+  { id: 'display-modules', category: 'module', label: t('Display modules', 'Ekran modülleri'), ids: ['oled-ssd1306', 'lcd1602', 'lcd1602-i2c', 'lcd2004', 'lcd2004-i2c', 'tm1637', 'max7219-module', 'nextion-display'] },
+  { id: 'storage-clock', category: 'module', label: t('Storage and clock', 'Depolama ve saat'), ids: ['sd-card', 'ds3231', 'ds1307'] },
+  { id: 'motor-drivers', category: 'module', label: t('Motors and drivers', 'Motorlar ve sürücüler'), ids: ['l298n', 'tb6612fng', 'a4988', 'servo-sg90', 'stepper-28byj48', 'relay-module-1ch'] },
 
   // Miscellaneous
   { id: 'screw-terminals', category: 'connector', label: t('Screw terminal blocks', 'Vidalı klemensler'), ids: [/^term-/] },

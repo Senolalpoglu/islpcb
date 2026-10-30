@@ -93,10 +93,16 @@ In the desktop app you can bridge the monitor to a **real COM port**, for exampl
 
 ### Two boards and Bluetooth
 
-HC-05 and HC-06 have a **link** property. Give two modules the same link name and wire each module the way the real one is
+HC-05, HC-06 and HC-12 have a **link** property. Give two modules the same link name and wire each module the way the real one is
 wired (the board's TX through a divider to the module's RXD, the module's TXD to the board's RX): everything one board
 prints on its serial port is delivered to the other, in both directions. A module without power does not pass anything.
-Only the hardware serial port (D0 / D1) is paired.
+Only the hardware serial port (D0 / D1) is paired. With more than one board the serial monitor writes each board's lines
+whole and puts the board's reference in front of them (`[A1] #CAR F v=7`); text you type goes to the first board.
+
+Try the examples **Two Arduino Nanos: remote control and car talk over Bluetooth** (type `F`, `B`, `L`, `R`, `S` or a speed digit
+`0`-`9` in the serial monitor: the remote passes it on, the car drives its four motors and answers), **Arduino Nano: 4-motor
+Bluetooth car** and **Arduino Nano: Bluetooth remote control** (the same two, drawn separately), and **digital clock
+HH:MM:SS on six 7-segment digits** (type `T123456` in the serial monitor to set the time).
 
 ## 5. PCB design
 

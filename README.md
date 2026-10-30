@@ -34,9 +34,13 @@ Then turn the same schematic into a routed board and export Gerber files.
   analog circuit and read it back (LED loads, pull-ups, buttons, PWM).
 - **Serial monitor** with input, an optional bridge to a **real COM port**, and a virtual Nextion display.
 - **Ready-made examples**: RC filter, rectifier, BJT switch, op-amp amplifier, inverter, FM transmitter, AM radio,
-  Arduino blink / fade / analog / serial / Bluetooth / sensor station / ultrasonic driver and more.
-- **Part library** of about 430 parts defined in plain JSON (see [`library/README.md`](library/README.md)), including
-  modules such as HC-05, ESP-01, nRF24L01, L298N, TM1637 and many sensors. You can import your own.
+  Arduino blink / fade / analog / serial / Bluetooth / sensor station / ultrasonic driver and more, including
+  - a **six-digit 7-segment clock** (HH:MM:SS) driven by an Arduino Nano through a ULN2003, with the digits lit one after the other;
+  - a **four-motor Bluetooth car** (Nano, HC-05, two L298N modules), its **remote control**, and the two **talking to each other**;
+  - wiring examples for an **nRF24L01** and an **ESP-01** with their 3.3 V supply and level divider.
+- **Part library** of about 445 parts defined in plain JSON (see [`library/README.md`](library/README.md)), including
+  modules such as HC-05, HC-12, ESP-01, nRF24L01, L298N, TB6612FNG, L293D, TM1637, a 6-digit 7-segment display and many
+  sensors, transistors and MOSFETs. You can import your own.
 - **PCB design**: update the board from the schematic, auto-place, auto-route, copper pours, design-rule check,
   Gerber / drill export as a ZIP, and a 3D board view.
 - **Themes**: light *Paper*, *Linen*, *Stone*, *Sand*, *Mist* and *Fusion 360*; dark *Dark*, *Blender 3D*, *Midnight*,
@@ -124,8 +128,9 @@ docs/       user guide and images
   Switching times, reverse recovery, regulator current limiting and temperature are **not** simulated.
 - Digital **protocol modules** (Wi-Fi, nRF24, displays with I²C or SPI, GPS, RFID ...) are *pinout only*: they have a
   symbol, a footprint and a supply load, and the sketch cannot talk to them. The exceptions are the Nextion display and
-  the serial radios **HC-05 and HC-06**: give two of them the same *link* name and the boards behind them exchange what
-  they print on their serial ports.
+  the serial radios **HC-05, HC-06 and HC-12**: give two of them the same *link* name and the boards behind them exchange
+  what they print on their serial ports. With several boards the serial monitor writes each board's lines whole, in front of
+  them the board's reference (`[A1] ...`).
 - Serial pairing works for boards on the hardware serial port (D0 / D1).
 
 ## Status

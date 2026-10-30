@@ -4,7 +4,7 @@
 ; Output: output\ISL_PCB_Setup_<version>.exe
 
 #define AppName "ISL PCB"
-#define AppVersion "0.17.0"
+#define AppVersion "0.19.0"
 #define AppPublisher "ISL"
 #define AppExe "ISL PCB.exe"
 #define AppExt ".islpcb"
