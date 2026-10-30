@@ -1,0 +1,1029 @@
+[
+ {
+  "id": "mq3-module",
+  "label": {
+   "en": "MQ-3 alcohol sensor module",
+   "tr": "MQ-3 alkol sensörü modülü"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "DO",
+    "AO"
+   ],
+   "right": [],
+   "title": "MQ-3"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "level",
+    "label": {
+     "en": "Alcohol level (0 clean - 1 heavy)",
+     "tr": "Alkol düzeyi (0 temiz - 1 yoğun)"
+    },
+    "default": 0.2
+   },
+   {
+    "name": "thr",
+    "label": {
+     "en": "DO threshold trimmer (0-1 of Vcc)",
+     "tr": "DO eşik trimpotu (Vcc'nin 0-1'i)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "AO"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "AO",
+      "GND"
+     ],
+     "value": "max(10000*$level/(1-min($level,0.99)),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "thr"
+     ],
+     "value": "max(20000*(1-$thr),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "thr",
+      "GND"
+     ],
+     "value": "max(20000*$thr,1)"
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "DO",
+      "thr",
+      "AO"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.1,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 33
+    }
+   ]
+  },
+  "footprint": "MOD_SENSOR4",
+  "note": "The heater draws about 150 mA from 5 V (33 ohm). AO = Vcc * RL / (Rs + RL) with RL 10 k; DO goes high when AO passes the trimmer threshold. The level is approximate, not calibrated in ppm.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "mq4-module",
+  "label": {
+   "en": "MQ-4 methane sensor module",
+   "tr": "MQ-4 metan sensörü modülü"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "DO",
+    "AO"
+   ],
+   "right": [],
+   "title": "MQ-4"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "level",
+    "label": {
+     "en": "Methane level (0 clean - 1 heavy)",
+     "tr": "Metan düzeyi (0 temiz - 1 yoğun)"
+    },
+    "default": 0.2
+   },
+   {
+    "name": "thr",
+    "label": {
+     "en": "DO threshold trimmer (0-1 of Vcc)",
+     "tr": "DO eşik trimpotu (Vcc'nin 0-1'i)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "AO"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "AO",
+      "GND"
+     ],
+     "value": "max(10000*$level/(1-min($level,0.99)),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "thr"
+     ],
+     "value": "max(20000*(1-$thr),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "thr",
+      "GND"
+     ],
+     "value": "max(20000*$thr,1)"
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "DO",
+      "thr",
+      "AO"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.1,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 33
+    }
+   ]
+  },
+  "footprint": "MOD_SENSOR4",
+  "note": "The heater draws about 150 mA from 5 V (33 ohm). AO = Vcc * RL / (Rs + RL) with RL 10 k; DO goes high when AO passes the trimmer threshold. The level is approximate, not calibrated in ppm.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "mq5-module",
+  "label": {
+   "en": "MQ-5 LPG / natural gas sensor module",
+   "tr": "MQ-5 LPG / doğal gaz sensörü modülü"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "DO",
+    "AO"
+   ],
+   "right": [],
+   "title": "MQ-5"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "level",
+    "label": {
+     "en": "Gas level (0 clean - 1 heavy)",
+     "tr": "Gaz düzeyi (0 temiz - 1 yoğun)"
+    },
+    "default": 0.2
+   },
+   {
+    "name": "thr",
+    "label": {
+     "en": "DO threshold trimmer (0-1 of Vcc)",
+     "tr": "DO eşik trimpotu (Vcc'nin 0-1'i)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "AO"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "AO",
+      "GND"
+     ],
+     "value": "max(10000*$level/(1-min($level,0.99)),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "thr"
+     ],
+     "value": "max(20000*(1-$thr),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "thr",
+      "GND"
+     ],
+     "value": "max(20000*$thr,1)"
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "DO",
+      "thr",
+      "AO"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.1,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 33
+    }
+   ]
+  },
+  "footprint": "MOD_SENSOR4",
+  "note": "The heater draws about 150 mA from 5 V (33 ohm). AO = Vcc * RL / (Rs + RL) with RL 10 k; DO goes high when AO passes the trimmer threshold. The level is approximate, not calibrated in ppm.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "mq7-module",
+  "label": {
+   "en": "MQ-7 carbon monoxide sensor module",
+   "tr": "MQ-7 karbonmonoksit sensörü modülü"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "DO",
+    "AO"
+   ],
+   "right": [],
+   "title": "MQ-7"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "level",
+    "label": {
+     "en": "CO level (0 clean - 1 heavy)",
+     "tr": "CO düzeyi (0 temiz - 1 yoğun)"
+    },
+    "default": 0.2
+   },
+   {
+    "name": "thr",
+    "label": {
+     "en": "DO threshold trimmer (0-1 of Vcc)",
+     "tr": "DO eşik trimpotu (Vcc'nin 0-1'i)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "AO"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "AO",
+      "GND"
+     ],
+     "value": "max(10000*$level/(1-min($level,0.99)),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "thr"
+     ],
+     "value": "max(20000*(1-$thr),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "thr",
+      "GND"
+     ],
+     "value": "max(20000*$thr,1)"
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "DO",
+      "thr",
+      "AO"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.1,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 33
+    }
+   ]
+  },
+  "footprint": "MOD_SENSOR4",
+  "note": "The heater draws about 150 mA from 5 V (33 ohm). AO = Vcc * RL / (Rs + RL) with RL 10 k; DO goes high when AO passes the trimmer threshold. The level is approximate, not calibrated in ppm.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "mq9-module",
+  "label": {
+   "en": "MQ-9 CO / flammable gas sensor module",
+   "tr": "MQ-9 CO / yanıcı gaz sensörü modülü"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "DO",
+    "AO"
+   ],
+   "right": [],
+   "title": "MQ-9"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "level",
+    "label": {
+     "en": "Gas level (0 clean - 1 heavy)",
+     "tr": "Gaz düzeyi (0 temiz - 1 yoğun)"
+    },
+    "default": 0.2
+   },
+   {
+    "name": "thr",
+    "label": {
+     "en": "DO threshold trimmer (0-1 of Vcc)",
+     "tr": "DO eşik trimpotu (Vcc'nin 0-1'i)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "AO"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "AO",
+      "GND"
+     ],
+     "value": "max(10000*$level/(1-min($level,0.99)),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "thr"
+     ],
+     "value": "max(20000*(1-$thr),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "thr",
+      "GND"
+     ],
+     "value": "max(20000*$thr,1)"
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "DO",
+      "thr",
+      "AO"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.1,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 33
+    }
+   ]
+  },
+  "footprint": "MOD_SENSOR4",
+  "note": "The heater draws about 150 mA from 5 V (33 ohm). AO = Vcc * RL / (Rs + RL) with RL 10 k; DO goes high when AO passes the trimmer threshold. The level is approximate, not calibrated in ppm.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "mq135-module",
+  "label": {
+   "en": "MQ-135 air quality sensor module",
+   "tr": "MQ-135 hava kalitesi sensörü modülü"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "DO",
+    "AO"
+   ],
+   "right": [],
+   "title": "MQ-135"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "level",
+    "label": {
+     "en": "Pollution level (0 clean - 1 heavy)",
+     "tr": "Kirlilik düzeyi (0 temiz - 1 yoğun)"
+    },
+    "default": 0.2
+   },
+   {
+    "name": "thr",
+    "label": {
+     "en": "DO threshold trimmer (0-1 of Vcc)",
+     "tr": "DO eşik trimpotu (Vcc'nin 0-1'i)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "AO"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "AO",
+      "GND"
+     ],
+     "value": "max(10000*$level/(1-min($level,0.99)),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "thr"
+     ],
+     "value": "max(20000*(1-$thr),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "thr",
+      "GND"
+     ],
+     "value": "max(20000*$thr,1)"
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "DO",
+      "thr",
+      "AO"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.1,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 33
+    }
+   ]
+  },
+  "footprint": "MOD_SENSOR4",
+  "note": "The heater draws about 150 mA from 5 V (33 ohm). AO = Vcc * RL / (Rs + RL) with RL 10 k; DO goes high when AO passes the trimmer threshold. The level is approximate, not calibrated in ppm.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "acs712-5a",
+  "label": {
+   "en": "ACS712-05B current sensor module (+-5 A, 185 mV/A)",
+   "tr": "ACS712-05B akım sensörü modülü (+-5 A, 185 mV/A)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "OUT",
+    "GND",
+    "IP+",
+    "IP-"
+   ],
+   "right": [],
+   "title": "ACS712"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "IP+",
+      "IP-"
+     ],
+     "value": 0.0012
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "mid"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "mid",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "GND",
+      "mid",
+      "IP+",
+      "IP-"
+     ],
+     "value": 0.030833
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT",
+      "OUT",
+      "mid"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.3,
+      "headroomLo": 0.3,
+      "rout": 1
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 500
+    }
+   ]
+  },
+  "footprint": "MOD_ACS712",
+  "note": "Output = Vcc / 2 + 185 mV per ampere through IP+ -> IP-, both directions (+-5 A). 10 mA supply current.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "IP+",
+     "max": 6.0
+    }
+   ]
+  }
+ },
+ {
+  "id": "acs712-20a",
+  "label": {
+   "en": "ACS712-20A current sensor module (+-20 A, 100 mV/A)",
+   "tr": "ACS712-20A akım sensörü modülü (+-20 A, 100 mV/A)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "OUT",
+    "GND",
+    "IP+",
+    "IP-"
+   ],
+   "right": [],
+   "title": "ACS712"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "IP+",
+      "IP-"
+     ],
+     "value": 0.0012
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "mid"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "mid",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "GND",
+      "mid",
+      "IP+",
+      "IP-"
+     ],
+     "value": 0.016667
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT",
+      "OUT",
+      "mid"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.3,
+      "headroomLo": 0.3,
+      "rout": 1
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 500
+    }
+   ]
+  },
+  "footprint": "MOD_ACS712",
+  "note": "Output = Vcc / 2 + 100 mV per ampere through IP+ -> IP-, both directions (+-20 A). 10 mA supply current.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "IP+",
+     "max": 24.0
+    }
+   ]
+  }
+ },
+ {
+  "id": "acs712-30a",
+  "label": {
+   "en": "ACS712-30A current sensor module (+-30 A, 66 mV/A)",
+   "tr": "ACS712-30A akım sensörü modülü (+-30 A, 66 mV/A)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "OUT",
+    "GND",
+    "IP+",
+    "IP-"
+   ],
+   "right": [],
+   "title": "ACS712"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "IP+",
+      "IP-"
+     ],
+     "value": 0.0012
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "mid"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "mid",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "GND",
+      "mid",
+      "IP+",
+      "IP-"
+     ],
+     "value": 0.011
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT",
+      "OUT",
+      "mid"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.3,
+      "headroomLo": 0.3,
+      "rout": 1
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 500
+    }
+   ]
+  },
+  "footprint": "MOD_ACS712",
+  "note": "Output = Vcc / 2 + 66 mV per ampere through IP+ -> IP-, both directions (+-30 A). 10 mA supply current.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "IP+",
+     "max": 36.0
+    }
+   ]
+  }
+ },
+ {
+  "id": "e18-d80nk",
+  "label": {
+   "en": "E18-D80NK infrared obstacle sensor (NPN output)",
+   "tr": "E18-D80NK kızılötesi engel sensörü (NPN çıkış)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "OUT",
+    "GND"
+   ],
+   "right": [],
+   "title": "E18-D80NK"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "detected",
+    "label": {
+     "en": "Object in range (double-click)",
+     "tr": "Cisim algılandı (çift tıkla)"
+    },
+    "default": false,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "SW",
+     "nodes": [
+      "OUT",
+      "GND"
+     ],
+     "props": {
+      "closed": "$detected"
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 200
+    }
+   ]
+  },
+  "footprint": "SIP_3",
+  "note": "Open-collector NPN output pulls to GND while an object is within range (up to 80 cm); add a pull-up. 25 mA supply current."
+ }
+]

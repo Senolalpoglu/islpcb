@@ -1,0 +1,1506 @@
+[
+ {
+  "id": "hc-05",
+  "label": {
+   "en": "HC-05 Bluetooth module (pinout only)",
+   "tr": "HC-05 Bluetooth modülü (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "STATE",
+    "RXD",
+    "TXD",
+    "GND",
+    "VCC",
+    "EN"
+   ],
+   "right": [],
+   "title": "HC-05"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "link",
+    "label": {
+     "en": "Radio link name (two modules with the same name are paired)",
+     "tr": "Radyo bağlantı adı (aynı ada sahip iki modül eşleşir)"
+    },
+    "default": "",
+    "kind": "text"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 166.7
+    }
+   ]
+  },
+  "footprint": "MOD_HC05",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    },
+    {
+     "a": "RXD",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    },
+    {
+     "a": "STATE",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    }
+   ]
+  }
+ },
+ {
+  "id": "hc-06",
+  "label": {
+   "en": "HC-06 Bluetooth module (pinout only)",
+   "tr": "HC-06 Bluetooth modülü (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "TXD",
+    "RXD"
+   ],
+   "right": [],
+   "title": "HC-06"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "link",
+    "label": {
+     "en": "Radio link name (two modules with the same name are paired)",
+     "tr": "Radyo bağlantı adı (aynı ada sahip iki modül eşleşir)"
+    },
+    "default": "",
+    "kind": "text"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 166.7
+    }
+   ]
+  },
+  "footprint": "MOD_HC06",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    },
+    {
+     "a": "RXD",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    }
+   ]
+  }
+ },
+ {
+  "id": "esp-01",
+  "label": {
+   "en": "ESP-01 ESP8266 WiFi module (pinout only)",
+   "tr": "ESP-01 ESP8266 WiFi modülü (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "GPIO2",
+    "GPIO0",
+    "RXD"
+   ],
+   "right": [
+    "TXD",
+    "CH_PD",
+    "RST",
+    "VCC"
+   ],
+   "title": "ESP-01"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 71.4
+    }
+   ]
+  },
+  "footprint": "MOD_ESP01",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5,
+     "polar": "min"
+    },
+    {
+     "a": "RXD",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    },
+    {
+     "a": "TXD",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    },
+    {
+     "a": "GPIO0",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    },
+    {
+     "a": "GPIO2",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    },
+    {
+     "a": "CH_PD",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    },
+    {
+     "a": "RST",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    }
+   ]
+  }
+ },
+ {
+  "id": "esp32-devkit",
+  "label": {
+   "en": "ESP32 DevKit (30 pins) (pinout only)",
+   "tr": "ESP32 DevKit (30 pin) (yalnızca pin bağlantısı)"
+  },
+  "category": "mcu",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "EN",
+    "VP",
+    "VN",
+    "D34",
+    "D35",
+    "D32",
+    "D33",
+    "D25",
+    "D26",
+    "D27",
+    "D14",
+    "D12",
+    "D13",
+    "GND",
+    "VIN"
+   ],
+   "right": [
+    "D23",
+    "D22",
+    "TX0",
+    "RX0",
+    "D21",
+    "D19",
+    "D18",
+    "D5",
+    "TX2",
+    "RX2",
+    "D4",
+    "D2",
+    "D15",
+    "GND2",
+    "3V3"
+   ],
+   "title": "ESP32"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VIN",
+      "GND"
+     ],
+     "value": 62.5
+    }
+   ]
+  },
+  "footprint": "MOD_ESP32",
+  "ratings": {
+   "v": [
+    {
+     "a": "VIN",
+     "b": "GND",
+     "max": 12,
+     "min": -0.5,
+     "polar": "min"
+    },
+    {
+     "a": "3V3",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    }
+   ]
+  }
+ },
+ {
+  "id": "nodemcu",
+  "label": {
+   "en": "NodeMCU ESP8266 (30 pins) (pinout only)",
+   "tr": "NodeMCU ESP8266 (30 pin) (yalnızca pin bağlantısı)"
+  },
+  "category": "mcu",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A0",
+    "RSV1",
+    "RSV2",
+    "SD3",
+    "SD2",
+    "SD1",
+    "CMD",
+    "SD0",
+    "CLK",
+    "GND",
+    "3V3",
+    "EN",
+    "RST",
+    "GND2",
+    "VIN"
+   ],
+   "right": [
+    "D0",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "3V3_2",
+    "GND3",
+    "D5",
+    "D6",
+    "D7",
+    "D8",
+    "RX",
+    "TX",
+    "GND4",
+    "3V3_3"
+   ],
+   "title": "NodeMCU"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VIN",
+      "GND"
+     ],
+     "value": 71.4
+    }
+   ]
+  },
+  "footprint": "MOD_NODEMCU"
+ },
+ {
+  "id": "wemos-d1-mini",
+  "label": {
+   "en": "Wemos D1 mini (ESP8266) (pinout only)",
+   "tr": "Wemos D1 mini (ESP8266) (yalnızca pin bağlantısı)"
+  },
+  "category": "mcu",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "RST",
+    "A0",
+    "D0",
+    "D5",
+    "D6",
+    "D7",
+    "D8",
+    "3V3"
+   ],
+   "right": [
+    "TX",
+    "RX",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "GND",
+    "5V"
+   ],
+   "title": "D1 mini"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "5V",
+      "GND"
+     ],
+     "value": 71.4
+    }
+   ]
+  },
+  "footprint": "MOD_D1MINI",
+  "ratings": {
+   "v": [
+    {
+     "a": "5V",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    },
+    {
+     "a": "3V3",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    }
+   ]
+  }
+ },
+ {
+  "id": "nrf24l01",
+  "label": {
+   "en": "nRF24L01+ radio (pinout only)",
+   "tr": "nRF24L01+ telsiz (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "CE",
+    "SCK",
+    "MISO"
+   ],
+   "right": [
+    "VCC",
+    "CSN",
+    "MOSI",
+    "IRQ"
+   ],
+   "title": "nRF24"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 416.7
+    }
+   ]
+  },
+  "footprint": "MOD_NRF24",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "neo-6m",
+  "label": {
+   "en": "GPS NEO-6M (pinout only)",
+   "tr": "GPS NEO-6M (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "RX",
+    "TX",
+    "GND"
+   ],
+   "right": [],
+   "title": "NEO-6M"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 111.1
+    }
+   ]
+  },
+  "footprint": "MOD_NEO6M",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "rc522",
+  "label": {
+   "en": "RFID RC522 (pinout only)",
+   "tr": "RFID RC522 (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "SDA",
+    "SCK",
+    "MOSI",
+    "MISO",
+    "IRQ",
+    "GND",
+    "RST",
+    "3V3"
+   ],
+   "right": [],
+   "title": "RC522"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "3V3",
+      "GND"
+     ],
+     "value": 200.0
+    }
+   ]
+  },
+  "footprint": "MOD_RC522",
+  "ratings": {
+   "v": [
+    {
+     "a": "3V3",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5,
+     "polar": "min"
+    },
+    {
+     "a": "SDA",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    },
+    {
+     "a": "SCK",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    },
+    {
+     "a": "MOSI",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    },
+    {
+     "a": "MISO",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    },
+    {
+     "a": "RST",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5
+    }
+   ]
+  }
+ },
+ {
+  "id": "oled-ssd1306",
+  "label": {
+   "en": "OLED 0.96 inch I2C (SSD1306) (pinout only)",
+   "tr": "OLED 0,96 inç I2C (SSD1306) (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "VCC",
+    "SCL",
+    "SDA"
+   ],
+   "right": [],
+   "title": "OLED"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 416.7
+    }
+   ]
+  },
+  "footprint": "MOD_OLED",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lcd1602",
+  "label": {
+   "en": "LCD 1602 (HD44780) (pinout only)",
+   "tr": "LCD 1602 (HD44780) (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VSS",
+    "VDD",
+    "V0",
+    "RS",
+    "RW",
+    "E",
+    "D0",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "A",
+    "K"
+   ],
+   "right": [],
+   "title": "LCD 1602"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VDD",
+      "VSS"
+     ],
+     "value": 2500.0
+    }
+   ]
+  },
+  "footprint": "MOD_LCD1602"
+ },
+ {
+  "id": "lcd1602-i2c",
+  "label": {
+   "en": "LCD 1602 with I2C backpack (pinout only)",
+   "tr": "I2C arayüzlü LCD 1602 (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "VCC",
+    "SDA",
+    "SCL"
+   ],
+   "right": [],
+   "title": "LCD I2C"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 200.0
+    }
+   ]
+  },
+  "footprint": "MOD_LCD1602_I2C",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "tm1637",
+  "label": {
+   "en": "TM1637 4-digit display (pinout only)",
+   "tr": "TM1637 4 haneli ekran (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "CLK",
+    "DIO",
+    "VCC",
+    "GND"
+   ],
+   "right": [],
+   "title": "TM1637"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 250.0
+    }
+   ]
+  },
+  "footprint": "MOD_TM1637",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "sd-card",
+  "label": {
+   "en": "Micro SD card module (pinout only)",
+   "tr": "Micro SD kart modülü (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "VCC",
+    "MISO",
+    "MOSI",
+    "SCK",
+    "CS"
+   ],
+   "right": [],
+   "title": "SD CARD"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 250.0
+    }
+   ]
+  },
+  "footprint": "MOD_SDCARD",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "ds3231",
+  "label": {
+   "en": "DS3231 real-time clock (pinout only)",
+   "tr": "DS3231 gerçek zaman saati (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "32K",
+    "SQW",
+    "SCL",
+    "SDA",
+    "VCC",
+    "GND"
+   ],
+   "right": [],
+   "title": "DS3231"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 25000.0
+    }
+   ]
+  },
+  "footprint": "MOD_DS3231",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "nextion-display",
+  "label": {
+   "en": "Nextion display (virtual, serial protocol)",
+   "tr": "Nextion ekran (sanal, seri protokol)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "5V",
+    "TX",
+    "RX",
+    "GND"
+   ],
+   "right": [],
+   "title": "NEXTION"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "layout",
+    "label": {
+     "en": "Screen layout (JSON, empty = demo screen)",
+     "tr": "Ekran düzeni (JSON, boş = demo ekran)"
+    },
+    "default": "",
+    "kind": "text"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "5V",
+      "GND"
+     ],
+     "value": 50
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "TX",
+      "GND"
+     ],
+     "value": 10000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "RX",
+      "GND"
+     ],
+     "value": 10000000.0
+    }
+   ]
+  },
+  "footprint": "MOD_NEXTION",
+  "note": "Wire RX to the TX pin of a board (D1 on an Arduino) and TX to its RX pin (D0), 5 V and GND. The Display tab shows the screen; touching a button sends the touch event to the board. It draws about 100 mA from 5 V (backlight).",
+  "ratings": {
+   "v": [
+    {
+     "a": "5V",
+     "b": "GND",
+     "max": 7,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "servo-sg90",
+  "label": {
+   "en": "Servo SG90 (supply current only)",
+   "tr": "Servo SG90 (yalnızca besleme akımı)"
+  },
+  "category": "module",
+  "prefix": "M",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "VCC",
+    "SIG"
+   ],
+   "right": [],
+   "title": "SERVO"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 50.0
+    }
+   ]
+  },
+  "footprint": "SIP_3",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 7.2,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "stepper-28byj48",
+  "label": {
+   "en": "Stepper motor 28BYJ-48 (5 V, unipolar)",
+   "tr": "Step motor 28BYJ-48 (5 V, unipolar)"
+  },
+  "category": "module",
+  "prefix": "M",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COM",
+    "A",
+    "B"
+   ],
+   "right": [
+    "C",
+    "D"
+   ],
+   "title": "28BYJ-48"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "L",
+     "nodes": [
+      "COM",
+      "lA"
+     ],
+     "value": 0.01
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "lA",
+      "A"
+     ],
+     "value": 31
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "COM",
+      "lB"
+     ],
+     "value": 0.01
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "lB",
+      "B"
+     ],
+     "value": 31
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "COM",
+      "lC"
+     ],
+     "value": 0.01
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "lC",
+      "C"
+     ],
+     "value": 31
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "COM",
+      "lD"
+     ],
+     "value": 0.01
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "lD",
+      "D"
+     ],
+     "value": 31
+    }
+   ]
+  },
+  "footprint": "SIP_5"
+ },
+ {
+  "id": "l298n",
+  "label": {
+   "en": "L298N dual H-bridge motor driver",
+   "tr": "L298N çift H köprüsü motor sürücü"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "OUT1",
+    "OUT2",
+    "12V",
+    "GND",
+    "5V"
+   ],
+   "right": [
+    "OUT3",
+    "OUT4",
+    "ENA",
+    "IN1",
+    "IN2",
+    "IN3",
+    "IN4",
+    "ENB"
+   ],
+   "title": "L298N"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "VSW",
+     "nodes": [
+      "m_OUT1",
+      "12V",
+      "IN1",
+      "GND"
+     ],
+     "props": {
+      "vth": 2.5,
+      "vhys": 0.2,
+      "ron": 0.6
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "m_OUT1",
+      "GND",
+      "IN1",
+      "GND"
+     ],
+     "props": {
+      "vth": 2.5,
+      "vhys": 0.2,
+      "ron": 0.6,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "m_OUT1",
+      "OUT1",
+      "ENA",
+      "GND"
+     ],
+     "props": {
+      "vth": 2.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "m_OUT2",
+      "12V",
+      "IN2",
+      "GND"
+     ],
+     "props": {
+      "vth": 2.5,
+      "vhys": 0.2,
+      "ron": 0.6
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "m_OUT2",
+      "GND",
+      "IN2",
+      "GND"
+     ],
+     "props": {
+      "vth": 2.5,
+      "vhys": 0.2,
+      "ron": 0.6,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "m_OUT2",
+      "OUT2",
+      "ENA",
+      "GND"
+     ],
+     "props": {
+      "vth": 2.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "m_OUT3",
+      "12V",
+      "IN3",
+      "GND"
+     ],
+     "props": {
+      "vth": 2.5,
+      "vhys": 0.2,
+      "ron": 0.6
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "m_OUT3",
+      "GND",
+      "IN3",
+      "GND"
+     ],
+     "props": {
+      "vth": 2.5,
+      "vhys": 0.2,
+      "ron": 0.6,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "m_OUT3",
+      "OUT3",
+      "ENB",
+      "GND"
+     ],
+     "props": {
+      "vth": 2.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "m_OUT4",
+      "12V",
+      "IN4",
+      "GND"
+     ],
+     "props": {
+      "vth": 2.5,
+      "vhys": 0.2,
+      "ron": 0.6
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "m_OUT4",
+      "GND",
+      "IN4",
+      "GND"
+     ],
+     "props": {
+      "vth": 2.5,
+      "vhys": 0.2,
+      "ron": 0.6,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "m_OUT4",
+      "OUT4",
+      "ENB",
+      "GND"
+     ],
+     "props": {
+      "vth": 2.5,
+      "vhys": 0.2,
+      "ron": 0.05
+     }
+    }
+   ]
+  },
+  "footprint": "MOD_L298N",
+  "ratings": {
+   "v": [
+    {
+     "a": "12V",
+     "b": "GND",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    },
+    {
+     "a": "5V",
+     "b": "GND",
+     "max": 7,
+     "min": -0.5
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT1",
+     "max": 2
+    },
+    {
+     "pin": "OUT2",
+     "max": 2
+    },
+    {
+     "pin": "OUT3",
+     "max": 2
+    },
+    {
+     "pin": "OUT4",
+     "max": 2
+    }
+   ]
+  }
+ },
+ {
+  "id": "a4988",
+  "label": {
+   "en": "A4988 stepper driver (pinout only)",
+   "tr": "A4988 step motor sürücü (yalnızca pin bağlantısı)"
+  },
+  "category": "module",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "ENABLE",
+    "MS1",
+    "MS2",
+    "MS3",
+    "RESET",
+    "SLEEP",
+    "STEP",
+    "DIR"
+   ],
+   "right": [
+    "VMOT",
+    "GND_M",
+    "2B",
+    "2A",
+    "1A",
+    "1B",
+    "VDD",
+    "GND"
+   ],
+   "title": "A4988"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VDD",
+      "GND"
+     ],
+     "value": 625.0
+    }
+   ]
+  },
+  "footprint": "MOD_A4988",
+  "ratings": {
+   "v": [
+    {
+     "a": "VMOT",
+     "b": "GND_M",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    },
+    {
+     "a": "VDD",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "1A",
+     "max": 2
+    },
+    {
+     "pin": "1B",
+     "max": 2
+    },
+    {
+     "pin": "2A",
+     "max": 2
+    },
+    {
+     "pin": "2B",
+     "max": 2
+    }
+   ]
+  }
+ },
+ {
+  "id": "relay-module-1ch",
+  "label": {
+   "en": "Relay module 1 channel (active low)",
+   "tr": "Röle modülü 1 kanal (aktif düşük)"
+  },
+  "category": "module",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "DC+",
+    "DC-",
+    "IN"
+   ],
+   "right": [
+    "NC",
+    "COM",
+    "NO"
+   ],
+   "title": "RELAY MOD"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "DC+",
+      "m"
+     ],
+     "value": 70
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "DC-"
+     ],
+     "value": 0.001
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NO",
+      "DC+",
+      "IN"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.5,
+      "ron": 0.05
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NC",
+      "DC+",
+      "IN"
+     ],
+     "props": {
+      "vth": 2.0,
+      "vhys": 0.5,
+      "ron": 0.05,
+      "inv": true
+     }
+    }
+   ]
+  },
+  "footprint": "MOD_RELAY1",
+  "visual": {
+   "kind": "relay",
+   "pins": [
+    0,
+    2
+   ],
+   "threshold": 2.0
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "DC+",
+     "b": "DC-",
+     "max": 7,
+     "min": -0.5,
+     "polar": "min"
+    },
+    {
+     "a": "IN",
+     "b": "DC-",
+     "max": 7,
+     "min": -0.5
+    }
+   ]
+  }
+ }
+]

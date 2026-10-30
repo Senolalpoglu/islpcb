@@ -1,0 +1,4722 @@
+[
+ {
+  "id": "transformer-pct",
+  "label": {
+   "en": "Transformer, centre-tapped primary (push-pull)",
+   "tr": "Trafo, orta uçlu birincil (push-pull)"
+  },
+  "category": "passive",
+  "prefix": "TR",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "transformer-pct"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "n",
+    "label": {
+     "en": "Voltage ratio (total secondary / total primary)",
+     "tr": "Gerilim oranı (toplam ikincil / toplam birincil)"
+    },
+    "default": 10
+   },
+   {
+    "name": "lp",
+    "label": {
+     "en": "Primary magnetising inductance (H)",
+     "tr": "Birincil mıknatıslanma endüktansı (H)"
+    },
+    "default": 0.5
+   },
+   {
+    "name": "rp",
+    "label": {
+     "en": "Primary resistance (Ω)",
+     "tr": "Birincil direnç (Ω)"
+    },
+    "default": 0.05
+   },
+   {
+    "name": "rs",
+    "label": {
+     "en": "Secondary resistance (Ω)",
+     "tr": "İkincil direnç (Ω)"
+    },
+    "default": 4
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "L",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "$lp/4"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "PC",
+      "P1",
+      "core",
+      "0"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "PC"
+     ],
+     "value": "max($rp*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rp*0.5,0.001))/((1)*(1))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "P1",
+      "PC"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "P2",
+      "PC",
+      "core",
+      "0"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "PC",
+      "P2"
+     ],
+     "value": "max($rp*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rp*0.5,0.001))/((1)*(1))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "PC",
+      "P2"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "S2",
+      "S1",
+      "core",
+      "0"
+     ],
+     "value": "($n*2)/(max($rs*1.0,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "S2"
+     ],
+     "value": "max($rs*1.0,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rs*1.0,0.001))/(($n*2)*($n*2))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "S1",
+      "S2"
+     ],
+     "value": "($n*2)/(max($rs*1.0,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "PC",
+      "0"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprintDef": {
+   "id": "TRAFO_TRANSFORMER_PCT",
+   "label": "Transformer, centre-tapped primary (push-pull)",
+   "body": {
+    "w": 36,
+    "h": 30
+   },
+   "pads": [
+    {
+     "name": "P1",
+     "x": -10.0,
+     "y": -5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "rect",
+     "drill": 1.1
+    },
+    {
+     "name": "PC",
+     "x": -10.0,
+     "y": 0.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "P2",
+     "x": -10.0,
+     "y": 5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "S1",
+     "x": 10.0,
+     "y": -2.5,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "S2",
+     "x": 10.0,
+     "y": 2.5,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    }
+   ]
+  },
+  "footprint": "TRAFO_TRANSFORMER_PCT",
+  "note": "The load on the secondary is reflected into the primary (ideal ratio plus winding resistance and magnetising inductance); there is no core saturation."
+ },
+ {
+  "id": "transformer-sct",
+  "label": {
+   "en": "Transformer, centre-tapped secondary",
+   "tr": "Trafo, orta uçlu ikincil"
+  },
+  "category": "passive",
+  "prefix": "TR",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "transformer-sct"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "n",
+    "label": {
+     "en": "Voltage ratio (total secondary / total primary)",
+     "tr": "Gerilim oranı (toplam ikincil / toplam birincil)"
+    },
+    "default": 0.1
+   },
+   {
+    "name": "lp",
+    "label": {
+     "en": "Primary magnetising inductance (H)",
+     "tr": "Birincil mıknatıslanma endüktansı (H)"
+    },
+    "default": 20
+   },
+   {
+    "name": "rp",
+    "label": {
+     "en": "Primary resistance (Ω)",
+     "tr": "Birincil direnç (Ω)"
+    },
+    "default": 100
+   },
+   {
+    "name": "rs",
+    "label": {
+     "en": "Secondary resistance (Ω)",
+     "tr": "İkincil direnç (Ω)"
+    },
+    "default": 1.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "L",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "$lp/1"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "P2",
+      "P1",
+      "core",
+      "0"
+     ],
+     "value": "(1)/(max($rp*1.0,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "P2"
+     ],
+     "value": "max($rp*1.0,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rp*1.0,0.001))/((1)*(1))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "P1",
+      "P2"
+     ],
+     "value": "(1)/(max($rp*1.0,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "SC",
+      "S1",
+      "core",
+      "0"
+     ],
+     "value": "($n*1/2)/(max($rs*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "SC"
+     ],
+     "value": "max($rs*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rs*0.5,0.001))/(($n*1/2)*($n*1/2))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "S1",
+      "SC"
+     ],
+     "value": "($n*1/2)/(max($rs*0.5,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "S2",
+      "SC",
+      "core",
+      "0"
+     ],
+     "value": "($n*1/2)/(max($rs*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "SC",
+      "S2"
+     ],
+     "value": "max($rs*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rs*0.5,0.001))/(($n*1/2)*($n*1/2))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "SC",
+      "S2"
+     ],
+     "value": "($n*1/2)/(max($rs*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "SC",
+      "0"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprintDef": {
+   "id": "TRAFO_TRANSFORMER_SCT",
+   "label": "Transformer, centre-tapped secondary",
+   "body": {
+    "w": 36,
+    "h": 30
+   },
+   "pads": [
+    {
+     "name": "P1",
+     "x": -10.0,
+     "y": -2.5,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "rect",
+     "drill": 1.1
+    },
+    {
+     "name": "P2",
+     "x": -10.0,
+     "y": 2.5,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "S1",
+     "x": 10.0,
+     "y": -5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "SC",
+     "x": 10.0,
+     "y": 0.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "S2",
+     "x": 10.0,
+     "y": 5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    }
+   ]
+  },
+  "footprint": "TRAFO_TRANSFORMER_SCT",
+  "note": "The load on the secondary is reflected into the primary (ideal ratio plus winding resistance and magnetising inductance); there is no core saturation."
+ },
+ {
+  "id": "transformer-ct",
+  "label": {
+   "en": "Transformer, both windings centre-tapped",
+   "tr": "Trafo, iki sargısı da orta uçlu"
+  },
+  "category": "passive",
+  "prefix": "TR",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "transformer-ct"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "n",
+    "label": {
+     "en": "Voltage ratio (total secondary / total primary)",
+     "tr": "Gerilim oranı (toplam ikincil / toplam birincil)"
+    },
+    "default": 1
+   },
+   {
+    "name": "lp",
+    "label": {
+     "en": "Primary magnetising inductance (H)",
+     "tr": "Birincil mıknatıslanma endüktansı (H)"
+    },
+    "default": 1
+   },
+   {
+    "name": "rp",
+    "label": {
+     "en": "Primary resistance (Ω)",
+     "tr": "Birincil direnç (Ω)"
+    },
+    "default": 0.1
+   },
+   {
+    "name": "rs",
+    "label": {
+     "en": "Secondary resistance (Ω)",
+     "tr": "İkincil direnç (Ω)"
+    },
+    "default": 0.1
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "L",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "$lp/4"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "PC",
+      "P1",
+      "core",
+      "0"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "PC"
+     ],
+     "value": "max($rp*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rp*0.5,0.001))/((1)*(1))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "P1",
+      "PC"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "P2",
+      "PC",
+      "core",
+      "0"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "PC",
+      "P2"
+     ],
+     "value": "max($rp*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rp*0.5,0.001))/((1)*(1))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "PC",
+      "P2"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "SC",
+      "S1",
+      "core",
+      "0"
+     ],
+     "value": "($n*2/2)/(max($rs*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "SC"
+     ],
+     "value": "max($rs*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rs*0.5,0.001))/(($n*2/2)*($n*2/2))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "S1",
+      "SC"
+     ],
+     "value": "($n*2/2)/(max($rs*0.5,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "S2",
+      "SC",
+      "core",
+      "0"
+     ],
+     "value": "($n*2/2)/(max($rs*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "SC",
+      "S2"
+     ],
+     "value": "max($rs*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rs*0.5,0.001))/(($n*2/2)*($n*2/2))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "SC",
+      "S2"
+     ],
+     "value": "($n*2/2)/(max($rs*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "PC",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "SC",
+      "0"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprintDef": {
+   "id": "TRAFO_TRANSFORMER_CT",
+   "label": "Transformer, both windings centre-tapped",
+   "body": {
+    "w": 36,
+    "h": 30
+   },
+   "pads": [
+    {
+     "name": "P1",
+     "x": -10.0,
+     "y": -5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "rect",
+     "drill": 1.1
+    },
+    {
+     "name": "PC",
+     "x": -10.0,
+     "y": 0.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "P2",
+     "x": -10.0,
+     "y": 5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "S1",
+     "x": 10.0,
+     "y": -5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "SC",
+     "x": 10.0,
+     "y": 0.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "S2",
+     "x": 10.0,
+     "y": 5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    }
+   ]
+  },
+  "footprint": "TRAFO_TRANSFORMER_CT",
+  "note": "The load on the secondary is reflected into the primary (ideal ratio plus winding resistance and magnetising inductance); there is no core saturation."
+ },
+ {
+  "id": "trafo-inverter-12v-230v",
+  "label": {
+   "en": "Inverter transformer 12-0-12 V / 230 V (100 VA)",
+   "tr": "İnverter trafosu 12-0-12 V / 230 V (100 VA)"
+  },
+  "category": "passive",
+  "prefix": "TR",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "transformer-pct"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "n",
+    "label": {
+     "en": "Voltage ratio (total secondary / total primary)",
+     "tr": "Gerilim oranı (toplam ikincil / toplam birincil)"
+    },
+    "default": 9.5833
+   },
+   {
+    "name": "lp",
+    "label": {
+     "en": "Primary magnetising inductance (H)",
+     "tr": "Birincil mıknatıslanma endüktansı (H)"
+    },
+    "default": 0.4
+   },
+   {
+    "name": "rp",
+    "label": {
+     "en": "Primary resistance (Ω)",
+     "tr": "Birincil direnç (Ω)"
+    },
+    "default": 0.04
+   },
+   {
+    "name": "rs",
+    "label": {
+     "en": "Secondary resistance (Ω)",
+     "tr": "İkincil direnç (Ω)"
+    },
+    "default": 4.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "L",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "$lp/4"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "PC",
+      "P1",
+      "core",
+      "0"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "PC"
+     ],
+     "value": "max($rp*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rp*0.5,0.001))/((1)*(1))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "P1",
+      "PC"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "P2",
+      "PC",
+      "core",
+      "0"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "PC",
+      "P2"
+     ],
+     "value": "max($rp*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rp*0.5,0.001))/((1)*(1))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "PC",
+      "P2"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "S2",
+      "S1",
+      "core",
+      "0"
+     ],
+     "value": "($n*2)/(max($rs*1.0,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "S2"
+     ],
+     "value": "max($rs*1.0,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rs*1.0,0.001))/(($n*2)*($n*2))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "S1",
+      "S2"
+     ],
+     "value": "($n*2)/(max($rs*1.0,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "PC",
+      "0"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprintDef": {
+   "id": "TRAFO_TRAFO_INVERTER_12V_230V",
+   "label": "Inverter transformer 12-0-12 V / 230 V (100 VA)",
+   "body": {
+    "w": 60,
+    "h": 50
+   },
+   "pads": [
+    {
+     "name": "P1",
+     "x": -10.0,
+     "y": -5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "rect",
+     "drill": 1.1
+    },
+    {
+     "name": "PC",
+     "x": -10.0,
+     "y": 0.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "P2",
+     "x": -10.0,
+     "y": 5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "S1",
+     "x": 10.0,
+     "y": -2.5,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "S2",
+     "x": 10.0,
+     "y": 2.5,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    }
+   ]
+  },
+  "footprint": "TRAFO_TRAFO_INVERTER_12V_230V",
+  "note": "The load on the secondary is reflected into the primary (ideal ratio plus winding resistance and magnetising inductance); there is no core saturation.",
+  "ratings": {
+   "v": [
+    {
+     "a": "P1",
+     "b": "PC",
+     "max": 40,
+     "min": -40
+    },
+    {
+     "a": "PC",
+     "b": "P2",
+     "max": 40,
+     "min": -40
+    },
+    {
+     "a": "S1",
+     "b": "S2",
+     "max": 420,
+     "min": -420
+    }
+   ],
+   "i": [
+    {
+     "pin": "PC",
+     "max": 12
+    }
+   ]
+  }
+ },
+ {
+  "id": "trafo-220v-2x12v",
+  "label": {
+   "en": "Mains transformer 220 V / 12-0-12 V (50 VA)",
+   "tr": "Şebeke trafosu 220 V / 12-0-12 V (50 VA)"
+  },
+  "category": "passive",
+  "prefix": "TR",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "transformer-sct"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "n",
+    "label": {
+     "en": "Voltage ratio (total secondary / total primary)",
+     "tr": "Gerilim oranı (toplam ikincil / toplam birincil)"
+    },
+    "default": 0.1091
+   },
+   {
+    "name": "lp",
+    "label": {
+     "en": "Primary magnetising inductance (H)",
+     "tr": "Birincil mıknatıslanma endüktansı (H)"
+    },
+    "default": 25
+   },
+   {
+    "name": "rp",
+    "label": {
+     "en": "Primary resistance (Ω)",
+     "tr": "Birincil direnç (Ω)"
+    },
+    "default": 110
+   },
+   {
+    "name": "rs",
+    "label": {
+     "en": "Secondary resistance (Ω)",
+     "tr": "İkincil direnç (Ω)"
+    },
+    "default": 1.4
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "L",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "$lp/1"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "P2",
+      "P1",
+      "core",
+      "0"
+     ],
+     "value": "(1)/(max($rp*1.0,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "P2"
+     ],
+     "value": "max($rp*1.0,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rp*1.0,0.001))/((1)*(1))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "P1",
+      "P2"
+     ],
+     "value": "(1)/(max($rp*1.0,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "SC",
+      "S1",
+      "core",
+      "0"
+     ],
+     "value": "($n*1/2)/(max($rs*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "SC"
+     ],
+     "value": "max($rs*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rs*0.5,0.001))/(($n*1/2)*($n*1/2))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "S1",
+      "SC"
+     ],
+     "value": "($n*1/2)/(max($rs*0.5,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "S2",
+      "SC",
+      "core",
+      "0"
+     ],
+     "value": "($n*1/2)/(max($rs*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "SC",
+      "S2"
+     ],
+     "value": "max($rs*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rs*0.5,0.001))/(($n*1/2)*($n*1/2))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "SC",
+      "S2"
+     ],
+     "value": "($n*1/2)/(max($rs*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "SC",
+      "0"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprintDef": {
+   "id": "TRAFO_TRAFO_220V_2X12V",
+   "label": "Mains transformer 220 V / 12-0-12 V (50 VA)",
+   "body": {
+    "w": 56,
+    "h": 48
+   },
+   "pads": [
+    {
+     "name": "P1",
+     "x": -10.0,
+     "y": -2.5,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "rect",
+     "drill": 1.1
+    },
+    {
+     "name": "P2",
+     "x": -10.0,
+     "y": 2.5,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "S1",
+     "x": 10.0,
+     "y": -5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "SC",
+     "x": 10.0,
+     "y": 0.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "S2",
+     "x": 10.0,
+     "y": 5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    }
+   ]
+  },
+  "footprint": "TRAFO_TRAFO_220V_2X12V",
+  "note": "The load on the secondary is reflected into the primary (ideal ratio plus winding resistance and magnetising inductance); there is no core saturation.",
+  "ratings": {
+   "v": [
+    {
+     "a": "P1",
+     "b": "P2",
+     "max": 390,
+     "min": -390
+    },
+    {
+     "a": "S1",
+     "b": "S2",
+     "max": 45,
+     "min": -45
+    }
+   ],
+   "i": [
+    {
+     "pin": "P1",
+     "max": 0.5
+    }
+   ]
+  }
+ },
+ {
+  "id": "trafo-ultrasonic-1-5",
+  "label": {
+   "en": "Ferrite driver transformer 12-0-12 V, 1:5 (ultrasonic)",
+   "tr": "Ferrit sürücü trafosu 12-0-12 V, 1:5 (ultrasonik)"
+  },
+  "category": "passive",
+  "prefix": "TR",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "transformer-pct"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "n",
+    "label": {
+     "en": "Voltage ratio (total secondary / total primary)",
+     "tr": "Gerilim oranı (toplam ikincil / toplam birincil)"
+    },
+    "default": 5
+   },
+   {
+    "name": "lp",
+    "label": {
+     "en": "Primary magnetising inductance (H)",
+     "tr": "Birincil mıknatıslanma endüktansı (H)"
+    },
+    "default": 0.002
+   },
+   {
+    "name": "rp",
+    "label": {
+     "en": "Primary resistance (Ω)",
+     "tr": "Birincil direnç (Ω)"
+    },
+    "default": 0.05
+   },
+   {
+    "name": "rs",
+    "label": {
+     "en": "Secondary resistance (Ω)",
+     "tr": "İkincil direnç (Ω)"
+    },
+    "default": 6
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "L",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "$lp/4"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "PC",
+      "P1",
+      "core",
+      "0"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "PC"
+     ],
+     "value": "max($rp*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rp*0.5,0.001))/((1)*(1))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "P1",
+      "PC"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "P2",
+      "PC",
+      "core",
+      "0"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "PC",
+      "P2"
+     ],
+     "value": "max($rp*0.5,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rp*0.5,0.001))/((1)*(1))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "PC",
+      "P2"
+     ],
+     "value": "(1)/(max($rp*0.5,0.001))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "S2",
+      "S1",
+      "core",
+      "0"
+     ],
+     "value": "($n*2)/(max($rs*1.0,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "S2"
+     ],
+     "value": "max($rs*1.0,0.001)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "core",
+      "0"
+     ],
+     "value": "(max($rs*1.0,0.001))/(($n*2)*($n*2))"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "core",
+      "S1",
+      "S2"
+     ],
+     "value": "($n*2)/(max($rs*1.0,0.001))"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "P2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "PC",
+      "0"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprintDef": {
+   "id": "TRAFO_TRAFO_ULTRASONIC_1_5",
+   "label": "Ferrite driver transformer 12-0-12 V, 1:5 (ultrasonic)",
+   "body": {
+    "w": 32,
+    "h": 28
+   },
+   "pads": [
+    {
+     "name": "P1",
+     "x": -10.0,
+     "y": -5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "rect",
+     "drill": 1.1
+    },
+    {
+     "name": "PC",
+     "x": -10.0,
+     "y": 0.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "P2",
+     "x": -10.0,
+     "y": 5.0,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "S1",
+     "x": 10.0,
+     "y": -2.5,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    },
+    {
+     "name": "S2",
+     "x": 10.0,
+     "y": 2.5,
+     "w": 2.4,
+     "h": 1.4,
+     "shape": "oval",
+     "drill": 1.1
+    }
+   ]
+  },
+  "footprint": "TRAFO_TRAFO_ULTRASONIC_1_5",
+  "note": "The load on the secondary is reflected into the primary (ideal ratio plus winding resistance and magnetising inductance); there is no core saturation.",
+  "ratings": {
+   "v": [
+    {
+     "a": "P1",
+     "b": "PC",
+     "max": 40,
+     "min": -40
+    },
+    {
+     "a": "PC",
+     "b": "P2",
+     "max": 40,
+     "min": -40
+    },
+    {
+     "a": "S1",
+     "b": "S2",
+     "max": 300,
+     "min": -300
+    }
+   ],
+   "i": [
+    {
+     "pin": "PC",
+     "max": 15
+    }
+   ]
+  }
+ },
+ {
+  "id": "lamp",
+  "label": {
+   "en": "Incandescent lamp (set the rating)",
+   "tr": "Akkor lamba (değerleri ayarla)"
+  },
+  "category": "electromech",
+  "prefix": "LA",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "lamp"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vrated",
+    "label": {
+     "en": "Rated voltage (V)",
+     "tr": "Anma gerilimi (V)"
+    },
+    "default": 12
+   },
+   {
+    "name": "prated",
+    "label": {
+     "en": "Rated power (W)",
+     "tr": "Anma gücü (W)"
+    },
+    "default": 5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$vrated*$vrated/max($prated,0.001)"
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "visual": {
+   "kind": "lamp",
+   "pins": [
+    0,
+    1
+   ],
+   "rated": "vrated"
+  },
+  "note": "Hot resistance V^2 / P. The glass lights up with the power, (V / rated)^2; on AC the glow is smoothed like a filament.",
+  "ratings": {
+   "v": [
+    {
+     "a": "1",
+     "b": "2",
+     "max": "$vrated*1.2",
+     "min": "-$vrated*1.2"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lamp-12v-dc-5w",
+  "label": {
+   "en": "DC lamp 12 V, 5 W",
+   "tr": "DC lamba 12 V, 5 W"
+  },
+  "category": "electromech",
+  "prefix": "LA",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "lamp"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vrated",
+    "label": {
+     "en": "Rated voltage (V)",
+     "tr": "Anma gerilimi (V)"
+    },
+    "default": 12
+   },
+   {
+    "name": "prated",
+    "label": {
+     "en": "Rated power (W)",
+     "tr": "Anma gücü (W)"
+    },
+    "default": 5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$vrated*$vrated/max($prated,0.001)"
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "visual": {
+   "kind": "lamp",
+   "pins": [
+    0,
+    1
+   ],
+   "rated": "vrated"
+  },
+  "note": "Hot resistance V^2 / P. The glass lights up with the power, (V / rated)^2; on AC the glow is smoothed like a filament.",
+  "ratings": {
+   "v": [
+    {
+     "a": "1",
+     "b": "2",
+     "max": "$vrated*1.2",
+     "min": "-$vrated*1.2"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lamp-12v-dc-21w",
+  "label": {
+   "en": "DC lamp 12 V, 21 W (car bulb)",
+   "tr": "DC lamba 12 V, 21 W (araç ampulü)"
+  },
+  "category": "electromech",
+  "prefix": "LA",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "lamp"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vrated",
+    "label": {
+     "en": "Rated voltage (V)",
+     "tr": "Anma gerilimi (V)"
+    },
+    "default": 12
+   },
+   {
+    "name": "prated",
+    "label": {
+     "en": "Rated power (W)",
+     "tr": "Anma gücü (W)"
+    },
+    "default": 21
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$vrated*$vrated/max($prated,0.001)"
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "visual": {
+   "kind": "lamp",
+   "pins": [
+    0,
+    1
+   ],
+   "rated": "vrated"
+  },
+  "note": "Hot resistance V^2 / P. The glass lights up with the power, (V / rated)^2; on AC the glow is smoothed like a filament.",
+  "ratings": {
+   "v": [
+    {
+     "a": "1",
+     "b": "2",
+     "max": "$vrated*1.2",
+     "min": "-$vrated*1.2"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lamp-24v-dc-10w",
+  "label": {
+   "en": "DC lamp 24 V, 10 W",
+   "tr": "DC lamba 24 V, 10 W"
+  },
+  "category": "electromech",
+  "prefix": "LA",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "lamp"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vrated",
+    "label": {
+     "en": "Rated voltage (V)",
+     "tr": "Anma gerilimi (V)"
+    },
+    "default": 24
+   },
+   {
+    "name": "prated",
+    "label": {
+     "en": "Rated power (W)",
+     "tr": "Anma gücü (W)"
+    },
+    "default": 10
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$vrated*$vrated/max($prated,0.001)"
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "visual": {
+   "kind": "lamp",
+   "pins": [
+    0,
+    1
+   ],
+   "rated": "vrated"
+  },
+  "note": "Hot resistance V^2 / P. The glass lights up with the power, (V / rated)^2; on AC the glow is smoothed like a filament.",
+  "ratings": {
+   "v": [
+    {
+     "a": "1",
+     "b": "2",
+     "max": "$vrated*1.2",
+     "min": "-$vrated*1.2"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lamp-12v-ac-10w",
+  "label": {
+   "en": "AC lamp 12 V, 10 W",
+   "tr": "AC lamba 12 V, 10 W"
+  },
+  "category": "electromech",
+  "prefix": "LA",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "lamp"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vrated",
+    "label": {
+     "en": "Rated voltage (V)",
+     "tr": "Anma gerilimi (V)"
+    },
+    "default": 12
+   },
+   {
+    "name": "prated",
+    "label": {
+     "en": "Rated power (W)",
+     "tr": "Anma gücü (W)"
+    },
+    "default": 10
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$vrated*$vrated/max($prated,0.001)"
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "visual": {
+   "kind": "lamp",
+   "pins": [
+    0,
+    1
+   ],
+   "rated": "vrated"
+  },
+  "note": "Hot resistance V^2 / P. The glass lights up with the power, (V / rated)^2; on AC the glow is smoothed like a filament.",
+  "ratings": {
+   "v": [
+    {
+     "a": "1",
+     "b": "2",
+     "max": "$vrated*1.62",
+     "min": "-$vrated*1.62"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lamp-220v-ac-25w",
+  "label": {
+   "en": "AC lamp 220 V, 25 W",
+   "tr": "AC lamba 220 V, 25 W"
+  },
+  "category": "electromech",
+  "prefix": "LA",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "lamp"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vrated",
+    "label": {
+     "en": "Rated voltage (V)",
+     "tr": "Anma gerilimi (V)"
+    },
+    "default": 220
+   },
+   {
+    "name": "prated",
+    "label": {
+     "en": "Rated power (W)",
+     "tr": "Anma gücü (W)"
+    },
+    "default": 25
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$vrated*$vrated/max($prated,0.001)"
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "visual": {
+   "kind": "lamp",
+   "pins": [
+    0,
+    1
+   ],
+   "rated": "vrated"
+  },
+  "note": "Hot resistance V^2 / P. The glass lights up with the power, (V / rated)^2; on AC the glow is smoothed like a filament.",
+  "ratings": {
+   "v": [
+    {
+     "a": "1",
+     "b": "2",
+     "max": "$vrated*1.62",
+     "min": "-$vrated*1.62"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lamp-220v-ac-60w",
+  "label": {
+   "en": "AC lamp 220 V, 60 W",
+   "tr": "AC lamba 220 V, 60 W"
+  },
+  "category": "electromech",
+  "prefix": "LA",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "lamp"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vrated",
+    "label": {
+     "en": "Rated voltage (V)",
+     "tr": "Anma gerilimi (V)"
+    },
+    "default": 220
+   },
+   {
+    "name": "prated",
+    "label": {
+     "en": "Rated power (W)",
+     "tr": "Anma gücü (W)"
+    },
+    "default": 60
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$vrated*$vrated/max($prated,0.001)"
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "visual": {
+   "kind": "lamp",
+   "pins": [
+    0,
+    1
+   ],
+   "rated": "vrated"
+  },
+  "note": "Hot resistance V^2 / P. The glass lights up with the power, (V / rated)^2; on AC the glow is smoothed like a filament.",
+  "ratings": {
+   "v": [
+    {
+     "a": "1",
+     "b": "2",
+     "max": "$vrated*1.62",
+     "min": "-$vrated*1.62"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lamp-220v-ac-100w",
+  "label": {
+   "en": "AC lamp 220 V, 100 W",
+   "tr": "AC lamba 220 V, 100 W"
+  },
+  "category": "electromech",
+  "prefix": "LA",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "lamp"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vrated",
+    "label": {
+     "en": "Rated voltage (V)",
+     "tr": "Anma gerilimi (V)"
+    },
+    "default": 220
+   },
+   {
+    "name": "prated",
+    "label": {
+     "en": "Rated power (W)",
+     "tr": "Anma gücü (W)"
+    },
+    "default": 100
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$vrated*$vrated/max($prated,0.001)"
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "visual": {
+   "kind": "lamp",
+   "pins": [
+    0,
+    1
+   ],
+   "rated": "vrated"
+  },
+  "note": "Hot resistance V^2 / P. The glass lights up with the power, (V / rated)^2; on AC the glow is smoothed like a filament.",
+  "ratings": {
+   "v": [
+    {
+     "a": "1",
+     "b": "2",
+     "max": "$vrated*1.62",
+     "min": "-$vrated*1.62"
+    }
+   ]
+  }
+ },
+ {
+  "id": "neon-lamp",
+  "label": {
+   "en": "Neon lamp NE-2 (holds about 60 V, needs a series resistor)",
+   "tr": "Neon lamba NE-2 (yaklaşık 60 V tutar, seri direnç ister)"
+  },
+  "category": "electromech",
+  "prefix": "LA",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "neon"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vsus",
+    "label": {
+     "en": "Holding voltage (V)",
+     "tr": "Tutunma gerilimi (V)"
+    },
+    "default": 60
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "1",
+      "m"
+     ],
+     "props": {
+      "bv": "$vsus",
+      "is": 1e-12,
+      "ibv": 0.0001
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "2",
+      "m"
+     ],
+     "props": {
+      "bv": "$vsus",
+      "is": 1e-12,
+      "ibv": 0.0001
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "m"
+     ],
+     "value": 100000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "2",
+      "m"
+     ],
+     "value": 100000000.0
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "visual": {
+   "kind": "lamp",
+   "pins": [
+    0,
+    1
+   ],
+   "threshold": 55
+  },
+  "note": "Glows once the voltage across it passes about 60 V and then holds that voltage, so the current has to be limited from outside (100 k to 220 k at mains).",
+  "ratings": {
+   "i": [
+    {
+     "pin": "1",
+     "max": 0.002
+    }
+   ],
+   "v": [
+    {
+     "a": "1",
+     "b": "2",
+     "max": 400,
+     "min": -400
+    }
+   ]
+  }
+ },
+ {
+  "id": "neon-indicator-220v",
+  "label": {
+   "en": "Neon indicator lamp 220 V (with series resistor)",
+   "tr": "Neon gösterge lambası 220 V (seri dirençli)"
+  },
+  "category": "electromech",
+  "prefix": "LA",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "neon"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vsus",
+    "label": {
+     "en": "Holding voltage (V)",
+     "tr": "Tutunma gerilimi (V)"
+    },
+    "default": 60
+   },
+   {
+    "name": "rs",
+    "label": {
+     "en": "Series resistor (Ω)",
+     "tr": "Seri direnç (Ω)"
+    },
+    "default": 220000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "k"
+     ],
+     "value": "$rs"
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "k",
+      "m"
+     ],
+     "props": {
+      "bv": "$vsus",
+      "is": 1e-12,
+      "ibv": 0.0001
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "2",
+      "m"
+     ],
+     "props": {
+      "bv": "$vsus",
+      "is": 1e-12,
+      "ibv": 0.0001
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "k",
+      "m"
+     ],
+     "value": 100000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "2",
+      "m"
+     ],
+     "value": 100000000.0
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "visual": {
+   "kind": "lamp",
+   "pins": [
+    0,
+    1
+   ],
+   "threshold": 85
+  },
+  "note": "The panel-mount neon lamp with its resistor built in: connect it straight across the mains. (Across a switching inverter's output the solver may not converge: use it on the mains.)",
+  "ratings": {
+   "v": [
+    {
+     "a": "1",
+     "b": "2",
+     "max": 420,
+     "min": -420
+    }
+   ]
+  }
+ },
+ {
+  "id": "mains-220v",
+  "label": {
+   "en": "Mains 220 V / 50 Hz",
+   "tr": "Şebeke 220 V / 50 Hz"
+  },
+  "category": "source",
+  "prefix": "V",
+  "symbol": {
+   "kind": "like",
+   "like": "VAC"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "wave": {
+      "kind": "sin",
+      "amp": 311.13,
+      "freq": 50
+     }
+    }
+   ]
+  },
+  "footprint": "TERM_5.08"
+ },
+ {
+  "id": "mains-inlet-220v",
+  "label": {
+   "en": "220 V mains inlet with fuse and switch",
+   "tr": "220 V şebeke girişi (sigorta ve anahtarlı)"
+  },
+  "category": "source",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [],
+   "right": [
+    "L",
+    "N",
+    "PE"
+   ],
+   "title": "220 V AC"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vrms",
+    "label": {
+     "en": "Voltage (V rms)",
+     "tr": "Gerilim (V rms)"
+    },
+    "default": 220
+   },
+   {
+    "name": "freq",
+    "label": {
+     "en": "Frequency (Hz)",
+     "tr": "Frekans (Hz)"
+    },
+    "default": 50
+   },
+   {
+    "name": "rfuse",
+    "label": {
+     "en": "Fuse resistance (Ω)",
+     "tr": "Sigorta direnci (Ω)"
+    },
+    "default": 0.1
+   },
+   {
+    "name": "closed",
+    "label": {
+     "en": "Switch on (double-click to toggle)",
+     "tr": "Anahtar açık (çift tıkla)"
+    },
+    "default": true,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "src",
+      "N"
+     ],
+     "wave": {
+      "kind": "sin",
+      "amp": "$vrms*1.41421356",
+      "freq": "$freq"
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "src",
+      "sw"
+     ],
+     "value": 0.15
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "sw",
+      "fz"
+     ],
+     "props": {
+      "closed": "$closed",
+      "ron": 0.01
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fz",
+      "L"
+     ],
+     "value": "$rfuse"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "N",
+      "0"
+     ],
+     "value": 100000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "PE",
+      "0"
+     ],
+     "value": 1000.0
+    }
+   ]
+  },
+  "footprint": "TB508_3",
+  "note": "Live (L), neutral (N) and protective earth (PE) as on a Schuko plug. PE is tied to the circuit ground through 1 k; neutral is referenced to ground through 100 M, so a mains circuit needs no extra ground symbol. Double-click switches it.",
+  "ratings": {
+   "i": [
+    {
+     "pin": "L",
+     "max": 10
+    }
+   ]
+  }
+ },
+ {
+  "id": "piezo-transducer",
+  "label": {
+   "en": "Piezo ultrasonic transducer (set fs, C0, Cm, Rm)",
+   "tr": "Piezo ultrasonik transdüser (fs, C0, Cm, Rm ayarlı)"
+  },
+  "category": "electromech",
+  "prefix": "BZ",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "piezo"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "fs",
+    "label": {
+     "en": "Series resonance (Hz)",
+     "tr": "Seri rezonans (Hz)"
+    },
+    "default": 40000
+   },
+   {
+    "name": "c0",
+    "label": {
+     "en": "Clamped capacitance C0 (F)",
+     "tr": "Kelepçeli kapasite C0 (F)"
+    },
+    "default": 2e-09
+   },
+   {
+    "name": "cm",
+    "label": {
+     "en": "Motional capacitance Cm (F)",
+     "tr": "Hareket kapasitesi Cm (F)"
+    },
+    "default": 2.5e-10
+   },
+   {
+    "name": "rm",
+    "label": {
+     "en": "Acoustic load Rm (Ω)",
+     "tr": "Akustik yük Rm (Ω)"
+    },
+    "default": 500
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "C",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "value": "$c0"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "+",
+      "a"
+     ],
+     "value": "$rm"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "a",
+      "b"
+     ],
+     "value": "1/(39.4784176*$fs^2*$cm)"
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "b",
+      "-"
+     ],
+     "value": "$cm"
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "note": "Butterworth-Van Dyke model: C0 across the terminals, in parallel with Rm, Lm and Cm in series; Lm follows from fs and Cm. The power in Rm is the sound the transducer radiates.",
+  "ratings": {
+   "v": [
+    {
+     "a": "+",
+     "b": "-",
+     "max": 100,
+     "min": -100
+    }
+   ]
+  }
+ },
+ {
+  "id": "ultrasonic-40k",
+  "label": {
+   "en": "Ultrasonic transducer 40 kHz (16 mm, transmitter / receiver)",
+   "tr": "Ultrasonik transdüser 40 kHz (16 mm, verici / alıcı)"
+  },
+  "category": "electromech",
+  "prefix": "BZ",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "piezo"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "fs",
+    "label": {
+     "en": "Series resonance (Hz)",
+     "tr": "Seri rezonans (Hz)"
+    },
+    "default": 40000
+   },
+   {
+    "name": "c0",
+    "label": {
+     "en": "Clamped capacitance C0 (F)",
+     "tr": "Kelepçeli kapasite C0 (F)"
+    },
+    "default": 2e-09
+   },
+   {
+    "name": "cm",
+    "label": {
+     "en": "Motional capacitance Cm (F)",
+     "tr": "Hareket kapasitesi Cm (F)"
+    },
+    "default": 2.5e-10
+   },
+   {
+    "name": "rm",
+    "label": {
+     "en": "Acoustic load Rm (Ω)",
+     "tr": "Akustik yük Rm (Ω)"
+    },
+    "default": 500
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "C",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "value": "$c0"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "+",
+      "a"
+     ],
+     "value": "$rm"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "a",
+      "b"
+     ],
+     "value": "1/(39.4784176*$fs^2*$cm)"
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "b",
+      "-"
+     ],
+     "value": "$cm"
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "note": "Typical 16 mm 40 kHz capsule: about 2 nF, series resonance 40 kHz, a few hundred ohms there.",
+  "ratings": {
+   "v": [
+    {
+     "a": "+",
+     "b": "-",
+     "max": 60,
+     "min": -60
+    }
+   ]
+  }
+ },
+ {
+  "id": "langevin-28k-50w",
+  "label": {
+   "en": "Langevin power transducer 28 kHz (50 W, probe in water)",
+   "tr": "Langevin güç transdüseri 28 kHz (50 W, probe suda)"
+  },
+  "category": "electromech",
+  "prefix": "BZ",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "piezo"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "fs",
+    "label": {
+     "en": "Series resonance (Hz)",
+     "tr": "Seri rezonans (Hz)"
+    },
+    "default": 28000
+   },
+   {
+    "name": "c0",
+    "label": {
+     "en": "Clamped capacitance C0 (F)",
+     "tr": "Kelepçeli kapasite C0 (F)"
+    },
+    "default": 4.5e-09
+   },
+   {
+    "name": "cm",
+    "label": {
+     "en": "Motional capacitance Cm (F)",
+     "tr": "Hareket kapasitesi Cm (F)"
+    },
+    "default": 4.5e-10
+   },
+   {
+    "name": "rm",
+    "label": {
+     "en": "Acoustic load Rm (Ω)",
+     "tr": "Akustik yük Rm (Ω)"
+    },
+    "default": 300
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "C",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "value": "$c0"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "+",
+      "a"
+     ],
+     "value": "$rm"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "a",
+      "b"
+     ],
+     "value": "1/(39.4784176*$fs^2*$cm)"
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "b",
+      "-"
+     ],
+     "value": "$cm"
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "note": "Bolted Langevin stack, as in ultrasonic probes and cleaners, loaded by water: C0 4.5 nF, resonance 28 kHz. Drive it through an inductor of 1 / (w^2 C0), about 7 mH, to cancel C0.",
+  "ratings": {
+   "v": [
+    {
+     "a": "+",
+     "b": "-",
+     "max": 700,
+     "min": -700
+    }
+   ],
+   "i": [
+    {
+     "pin": "+",
+     "max": 2
+    }
+   ]
+  }
+ },
+ {
+  "id": "piezo-1mhz-focus",
+  "label": {
+   "en": "Focusing ceramic transducer 1 MHz",
+   "tr": "Odaklayıcı seramik transdüser 1 MHz"
+  },
+  "category": "electromech",
+  "prefix": "BZ",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "piezo"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "fs",
+    "label": {
+     "en": "Series resonance (Hz)",
+     "tr": "Seri rezonans (Hz)"
+    },
+    "default": 1000000
+   },
+   {
+    "name": "c0",
+    "label": {
+     "en": "Clamped capacitance C0 (F)",
+     "tr": "Kelepçeli kapasite C0 (F)"
+    },
+    "default": 1.5e-09
+   },
+   {
+    "name": "cm",
+    "label": {
+     "en": "Motional capacitance Cm (F)",
+     "tr": "Hareket kapasitesi Cm (F)"
+    },
+    "default": 8e-11
+   },
+   {
+    "name": "rm",
+    "label": {
+     "en": "Acoustic load Rm (Ω)",
+     "tr": "Akustik yük Rm (Ω)"
+    },
+    "default": 40
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "C",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "value": "$c0"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "+",
+      "a"
+     ],
+     "value": "$rm"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "a",
+      "b"
+     ],
+     "value": "1/(39.4784176*$fs^2*$cm)"
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "b",
+      "-"
+     ],
+     "value": "$cm"
+    }
+   ]
+  },
+  "footprint": "TB508_2",
+  "note": "Bowl-shaped PZT ceramic of the kind used for focused ultrasound, 1 MHz: about 1.5 nF, 40 ohm at resonance.",
+  "ratings": {
+   "v": [
+    {
+     "a": "+",
+     "b": "-",
+     "max": 100,
+     "min": -100
+    }
+   ]
+  }
+ },
+ {
+  "id": "mic-electret",
+  "label": {
+   "en": "Electret microphone capsule (bias through a resistor)",
+   "tr": "Elektret mikrofon kapsülü (dirençle beslenir)"
+  },
+  "category": "sensor",
+  "prefix": "MK",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "mic"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "ibias",
+    "label": {
+     "en": "Bias current (mA)",
+     "tr": "Bias akımı (mA)"
+    },
+    "default": 0.5
+   },
+   {
+    "name": "level",
+    "label": {
+     "en": "Sound level (µA peak)",
+     "tr": "Ses düzeyi (µA tepe)"
+    },
+    "default": 20
+   },
+   {
+    "name": "freq",
+    "label": {
+     "en": "Tone (Hz)",
+     "tr": "Ton (Hz)"
+    },
+    "default": 1000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "I",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "wave": {
+      "kind": "sin",
+      "offset": "$ibias*0.001",
+      "amp": "$level*0.000001",
+      "freq": "$freq"
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "value": 100000
+    }
+   ]
+  },
+  "footprint": "SIP_2",
+  "note": "The capsule's built-in JFET is a current source: feed it from the supply through 2.2 k to 10 k and take the sound from the + pin through a capacitor. The tone is the sound it hears.",
+  "ratings": {
+   "v": [
+    {
+     "a": "+",
+     "b": "-",
+     "max": 10,
+     "min": -1,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "cap-variable",
+  "label": {
+   "en": "Variable capacitor (tuning gang, set the value)",
+   "tr": "Ayarlı kondansatör (tuning, değeri ayarla)"
+  },
+  "category": "passive",
+  "prefix": "CV",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "cap-var"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "c",
+    "label": {
+     "en": "Capacitance (F)",
+     "tr": "Kapasite (F)"
+    },
+    "default": 1e-10
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "C",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$c"
+    }
+   ]
+  },
+  "footprint": "SIP_2"
+ },
+ {
+  "id": "cap-trimmer",
+  "label": {
+   "en": "Trimmer capacitor (5-30 pF)",
+   "tr": "Trimer kondansatör (5-30 pF)"
+  },
+  "category": "passive",
+  "prefix": "CV",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "cap-trim"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "c",
+    "label": {
+     "en": "Capacitance (F)",
+     "tr": "Kapasite (F)"
+    },
+    "default": 1.5e-11
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "C",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$c"
+    }
+   ]
+  },
+  "footprint": "SIP_2"
+ },
+ {
+  "id": "varicap-bb910",
+  "label": {
+   "en": "Varicap BB910 (capacitance set by a parameter)",
+   "tr": "Varikap BB910 (kapasite parametreyle)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "varicap"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "c",
+    "label": {
+     "en": "Capacitance at the bias point (F)",
+     "tr": "Çalışma noktasındaki kapasite (F)"
+    },
+    "default": 2e-11
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "C",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "value": "$c"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "The capacitance is the parameter; its dependence on the reverse voltage is not simulated.",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "max": 0.7,
+     "min": -30,
+     "polar": "max"
+    }
+   ]
+  }
+ },
+ {
+  "id": "antenna",
+  "label": {
+   "en": "Antenna (whip)",
+   "tr": "Anten (çubuk)"
+  },
+  "category": "passive",
+  "prefix": "ANT",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "antenna"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "C",
+     "nodes": [
+      "ANT",
+      "0"
+     ],
+     "value": 3e-12
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "ANT",
+      "0"
+     ],
+     "value": 10000000.0
+    }
+   ]
+  },
+  "footprint": "SIP_1"
+ },
+ {
+  "id": "ferrite-antenna",
+  "label": {
+   "en": "Ferrite rod antenna (AM band) with a received station",
+   "tr": "Ferrit çubuk anten (AM bandı), alınan istasyonlu"
+  },
+  "category": "passive",
+  "prefix": "L",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "loopstick"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "l",
+    "label": {
+     "en": "Tuned winding L (H)",
+     "tr": "Ayarlı sargı L (H)"
+    },
+    "default": 0.00024
+   },
+   {
+    "name": "rl",
+    "label": {
+     "en": "Winding resistance (Ω)",
+     "tr": "Sargı direnci (Ω)"
+    },
+    "default": 3
+   },
+   {
+    "name": "emf",
+    "label": {
+     "en": "Station signal induced (mV peak)",
+     "tr": "İndüklenen istasyon sinyali (mV tepe)"
+    },
+    "default": 5
+   },
+   {
+    "name": "fc",
+    "label": {
+     "en": "Station carrier (Hz)",
+     "tr": "İstasyon taşıyıcısı (Hz)"
+    },
+    "default": 1000000.0
+   },
+   {
+    "name": "fm",
+    "label": {
+     "en": "Audio tone (Hz)",
+     "tr": "Ses tonu (Hz)"
+    },
+    "default": 1000
+   },
+   {
+    "name": "depth",
+    "label": {
+     "en": "Modulation depth (0-1)",
+     "tr": "Modülasyon derinliği (0-1)"
+    },
+    "default": 0.6
+   },
+   {
+    "name": "link",
+    "label": {
+     "en": "Coupling winding turns / tuned winding turns",
+     "tr": "Bağlantı sargısı sarımı / ayarlı sargı sarımı"
+    },
+    "default": 0.1
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "L1",
+      "e1"
+     ],
+     "wave": {
+      "kind": "am",
+      "amp": "$emf*0.001",
+      "freq": "$fc",
+      "mod": "$fm",
+      "depth": "$depth"
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "e1",
+      "e2"
+     ],
+     "value": "$rl"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "e2",
+      "L2"
+     ],
+     "value": "$l"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "C2",
+      "C1",
+      "e2",
+      "L2"
+     ],
+     "value": "$link/10"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "C1",
+      "C2"
+     ],
+     "value": 10
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "L1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "L2",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "C1",
+      "0"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "C2",
+      "0"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprint": "SIP_4",
+  "padMap": [
+   "L1",
+   "L2",
+   "C1",
+   "C2"
+  ],
+  "note": "L1-L2 is the tuned winding with the AM station's induced voltage in series; C1-C2 is a few coupling turns. Tune with a variable capacitor from L1 to L2: f = 1 / (2 pi sqrt(L C))."
+ },
+ {
+  "id": "zn414",
+  "label": {
+   "en": "ZN414 / TA7642 AM radio chip (3 pins)",
+   "tr": "ZN414 / TA7642 AM radyo entegresi (3 pin)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "OUT",
+    "GND",
+    "IN"
+   ],
+   "right": [],
+   "title": "ZN414"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "gain",
+    "label": {
+     "en": "RF gain (x, 1 to 100)",
+     "tr": "RF kazancı (x, 1 ile 100)"
+    },
+    "default": 8
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "rf",
+      "fbn",
+      "IN"
+     ],
+     "props": {
+      "vmax": 1.0,
+      "rout": 50
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "rf",
+      "fbn"
+     ],
+     "value": "$gain*1000-1000"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fbn",
+      "GND"
+     ],
+     "value": 1000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN",
+      "GND"
+     ],
+     "value": 1000000.0
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "rf",
+      "det"
+     ],
+     "props": {
+      "is": 1e-09,
+      "n": 1.1
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "det",
+      "GND"
+     ],
+     "value": 22000
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "det",
+      "GND"
+     ],
+     "value": 1e-09
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "det",
+      "ac"
+     ],
+     "value": 1e-07
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "ac",
+      "b"
+     ],
+     "value": 47000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "b",
+      "OUT"
+     ],
+     "value": 100000
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "OUT",
+      "GND",
+      "b"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "OUT",
+   "GND",
+   "IN"
+  ],
+  "note": "Power it through a 1 k resistor from 1.5 V into the OUT pin; the audio appears on OUT too (take it through a capacitor). Tune the input with a coil and a variable capacitor.",
+  "ratings": {
+   "v": [
+    {
+     "a": "OUT",
+     "b": "GND",
+     "max": 2.0,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lm386",
+  "label": {
+   "en": "LM386 audio power amplifier (0.5 W)",
+   "tr": "LM386 ses güç yükselticisi (0,5 W)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GAIN1",
+    "IN-",
+    "IN+",
+    "GND"
+   ],
+   "right": [
+    "GAIN8",
+    "BYPASS",
+    "VS",
+    "OUT"
+   ],
+   "title": "LM386"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VS",
+      "vm"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "vm",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "vmb",
+      "vmb",
+      "vm"
+     ],
+     "p": "VS",
+     "n": "GND",
+     "props": {
+      "headroom": 0.1,
+      "headroomLo": 0.1,
+      "rout": 1
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN+",
+      "GND"
+     ],
+     "value": 50000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "pp",
+      "vmb"
+     ],
+     "value": 1000
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "0",
+      "pp",
+      "IN+",
+      "0"
+     ],
+     "value": 0.001
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "o",
+      "g1",
+      "pp"
+     ],
+     "p": "VS",
+     "n": "GND",
+     "props": {
+      "headroom": 0.9,
+      "headroomLo": 0.15,
+      "rout": 30
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "o",
+      "g1"
+     ],
+     "value": 28500
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "g1",
+      "GAIN8"
+     ],
+     "value": 1350
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "GAIN8",
+      "vmb"
+     ],
+     "value": 150
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "GAIN1",
+      "g1"
+     ],
+     "value": 0.01
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "o"
+     ],
+     "value": 0.01
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN-",
+      "GND"
+     ],
+     "value": 50000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "BYPASS",
+      "vmb"
+     ],
+     "value": 15000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VS",
+      "GND"
+     ],
+     "value": 5000
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "Gain 20; a 10 uF capacitor between GAIN1 and GAIN8 makes it about 190. Keep IN- at ground. The output rests at half the supply, so take it through 220 uF to the speaker.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VS",
+     "b": "GND",
+     "max": 15,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 0.8
+    }
+   ]
+  }
+ },
+ {
+  "id": "tc4427",
+  "label": {
+   "en": "TC4427 dual 1.5 A MOSFET gate driver",
+   "tr": "TC4427 çift 1,5 A MOSFET kapı sürücü"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "NC1",
+    "INA",
+    "GND",
+    "INB"
+   ],
+   "right": [
+    "NC8",
+    "OUTA",
+    "VDD",
+    "OUTB"
+   ],
+   "title": "TC4427"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "a_r",
+      "GND"
+     ],
+     "value": 1.5
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "a_m",
+      "INA",
+      "a_r"
+     ],
+     "p": "VDD",
+     "n": "GND",
+     "props": {
+      "headroom": 0,
+      "headroomLo": 0,
+      "rout": 100
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OUTA",
+      "GND",
+      "a_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.5,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OUTA",
+      "VDD",
+      "a_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.5,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "V",
+     "nodes": [
+      "b_r",
+      "GND"
+     ],
+     "value": 1.5
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "b_m",
+      "INB",
+      "b_r"
+     ],
+     "p": "VDD",
+     "n": "GND",
+     "props": {
+      "headroom": 0,
+      "headroomLo": 0,
+      "rout": 100
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OUTB",
+      "GND",
+      "b_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.5,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OUTB",
+      "VDD",
+      "b_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.5,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "INA",
+      "GND"
+     ],
+     "value": 10000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "INB",
+      "GND"
+     ],
+     "value": 10000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VDD",
+      "GND"
+     ],
+     "value": 40000
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "Non-inverting; 4.5 to 18 V supply. Wire the MOSFET gates to OUTA and OUTB through about 10 ohm.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VDD",
+     "b": "GND",
+     "max": 18,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUTA",
+     "max": 1.5
+    },
+    {
+     "pin": "OUTB",
+     "max": 1.5
+    }
+   ]
+  }
+ },
+ {
+  "id": "cd4047",
+  "label": {
+   "en": "CD4047 astable multivibrator (astable mode only)",
+   "tr": "CD4047 astable multivibratör (yalnızca astable mod)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "C",
+    "R",
+    "RC",
+    "/ASTABLE",
+    "ASTABLE",
+    "-TRIG",
+    "VSS"
+   ],
+   "right": [
+    "VDD",
+    "OSC",
+    "RETRIG",
+    "/Q",
+    "Q",
+    "RESET",
+    "+TRIG"
+   ],
+   "title": "CD4047"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VDD",
+      "vm"
+     ],
+     "value": 100000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "vm",
+      "VSS"
+     ],
+     "value": 100000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "R",
+      "RC",
+      "ref"
+     ],
+     "p": "VDD",
+     "n": "VSS",
+     "props": {
+      "headroom": 0,
+      "headroomLo": 0,
+      "rout": 50
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "R",
+      "ref"
+     ],
+     "value": 100000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "ref",
+      "vm"
+     ],
+     "value": 50000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "C",
+      "VSS"
+     ],
+     "value": 1
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "clkb",
+      "VSS",
+      "R"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "clkb",
+      "VDD",
+      "R"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "clk",
+      "VSS",
+      "clkb"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "clk",
+      "VDD",
+      "clkb"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "clkn",
+      "VSS",
+      "clk"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "clkn",
+      "VDD",
+      "clk"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_nd",
+      "VSS",
+      "QBi"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_nd",
+      "VDD",
+      "QBi"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_s",
+      "VDD",
+      "QBi"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_s",
+      "VDD",
+      "clkn"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_s",
+      "m1_n",
+      "QBi"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m1_n",
+      "VSS",
+      "clkn"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_r",
+      "VDD",
+      "m_nd"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_r",
+      "VDD",
+      "clkn"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_r",
+      "m2_n",
+      "m_nd"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m2_n",
+      "VSS",
+      "clkn"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "mq",
+      "VDD",
+      "m_s"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "mq",
+      "VDD",
+      "mqb"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "mq",
+      "m3_n",
+      "m_s"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m3_n",
+      "VSS",
+      "mqb"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "mqb",
+      "VDD",
+      "m_r"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "mqb",
+      "VDD",
+      "mq"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "mqb",
+      "m4_n",
+      "m_r"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m4_n",
+      "VSS",
+      "mq"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_nd",
+      "VSS",
+      "mq"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_nd",
+      "VDD",
+      "mq"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_s",
+      "VDD",
+      "mq"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_s",
+      "VDD",
+      "clk"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_s",
+      "s1_n",
+      "mq"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s1_n",
+      "VSS",
+      "clk"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_r",
+      "VDD",
+      "s_nd"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_r",
+      "VDD",
+      "clk"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_r",
+      "s2_n",
+      "s_nd"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s2_n",
+      "VSS",
+      "clk"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Qi",
+      "VDD",
+      "s_s"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Qi",
+      "VDD",
+      "QBi"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Qi",
+      "s3_n",
+      "s_s"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s3_n",
+      "VSS",
+      "QBi"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "QBi",
+      "VDD",
+      "s_r"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "QBi",
+      "VDD",
+      "Qi"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "QBi",
+      "s4_n",
+      "s_r"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s4_n",
+      "VSS",
+      "Qi"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "Qi",
+      "VSS"
+     ],
+     "value": 20000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q_x",
+      "VSS",
+      "Qi"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.1,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q_x",
+      "VDD",
+      "Qi"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.1,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "VSS",
+      "Q_x"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.3,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "VDD",
+      "Q_x"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.3,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "/Q_x",
+      "VSS",
+      "QBi"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.1,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "/Q_x",
+      "VDD",
+      "QBi"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.1,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "/Q",
+      "VSS",
+      "/Q_x"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.3,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "/Q",
+      "VDD",
+      "/Q_x"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.3,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OSC_x",
+      "VSS",
+      "clk"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.1,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OSC_x",
+      "VDD",
+      "clk"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.1,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OSC",
+      "VSS",
+      "OSC_x"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.3,
+      "vth": 1.5
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OSC",
+      "VDD",
+      "OSC_x"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.3,
+      "vth": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "note": "Astable mode: the outside resistor goes between R and RC, the capacitor between C and RC. Q and /Q are complementary square waves at 1 / (4.4 R C) with 50 % duty; OSC runs at twice that. The trigger, retrigger and reset inputs do nothing in this model.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VDD",
+     "b": "VSS",
+     "max": 18,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "Q",
+     "max": 0.02
+    },
+    {
+     "pin": "/Q",
+     "max": 0.02
+    }
+   ]
+  }
+ }
+]

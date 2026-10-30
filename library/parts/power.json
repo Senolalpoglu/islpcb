@@ -1,0 +1,3283 @@
+[
+ {
+  "id": "scr-2n5060",
+  "label": {
+   "en": "Thyristor SCR 2N5060 (0.8 A)",
+   "tr": "Tristör SCR 2N5060 (0,8 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "scr"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rg",
+    "label": {
+     "en": "Gate-cathode resistance (Ω)",
+     "tr": "Gate-katot direnci (Ω)"
+    },
+    "default": 1000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "K"
+     ],
+     "value": "$rg"
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "A",
+      "K",
+      "G"
+     ],
+     "props": {
+      "vgt": 0.8,
+      "ih": 0.005,
+      "ron": 0.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "K",
+   "G",
+   "A"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "max": 30,
+     "min": -30
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.8
+    }
+   ]
+  }
+ },
+ {
+  "id": "scr-bt151",
+  "label": {
+   "en": "Thyristor SCR BT151 (12 A)",
+   "tr": "Tristör SCR BT151 (12 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "scr"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rg",
+    "label": {
+     "en": "Gate-cathode resistance (Ω)",
+     "tr": "Gate-katot direnci (Ω)"
+    },
+    "default": 1000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "K"
+     ],
+     "value": "$rg"
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "A",
+      "K",
+      "G"
+     ],
+     "props": {
+      "vgt": 1.0,
+      "ih": 0.02,
+      "ron": 0.05
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "K",
+   "A",
+   "G"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "max": 650,
+     "min": -650
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 12
+    }
+   ]
+  }
+ },
+ {
+  "id": "scr-tyn616",
+  "label": {
+   "en": "Thyristor SCR TYN616 (16 A)",
+   "tr": "Tristör SCR TYN616 (16 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "scr"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rg",
+    "label": {
+     "en": "Gate-cathode resistance (Ω)",
+     "tr": "Gate-katot direnci (Ω)"
+    },
+    "default": 1000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "K"
+     ],
+     "value": "$rg"
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "A",
+      "K",
+      "G"
+     ],
+     "props": {
+      "vgt": 1.0,
+      "ih": 0.04,
+      "ron": 0.04
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "K",
+   "A",
+   "G"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "max": 600,
+     "min": -600
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 16
+    }
+   ]
+  }
+ },
+ {
+  "id": "triac-bt136",
+  "label": {
+   "en": "Triac BT136 (4 A)",
+   "tr": "Triyak BT136 (4 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "triac"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rg",
+    "label": {
+     "en": "Gate resistance (Ω)",
+     "tr": "Gate direnci (Ω)"
+    },
+    "default": 100
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "MT1"
+     ],
+     "value": "$rg"
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "MT2",
+      "MT1",
+      "G"
+     ],
+     "props": {
+      "vgt": 1.0,
+      "ih": 0.015,
+      "ron": 0.15,
+      "bidir": true
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "MT1",
+   "MT2",
+   "G"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "MT2",
+     "b": "MT1",
+     "max": 600,
+     "min": -600
+    }
+   ],
+   "i": [
+    {
+     "pin": "MT2",
+     "max": 4
+    }
+   ]
+  }
+ },
+ {
+  "id": "triac-bta16",
+  "label": {
+   "en": "Triac BTA16-600 (16 A)",
+   "tr": "Triyak BTA16-600 (16 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "triac"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rg",
+    "label": {
+     "en": "Gate resistance (Ω)",
+     "tr": "Gate direnci (Ω)"
+    },
+    "default": 100
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "MT1"
+     ],
+     "value": "$rg"
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "MT2",
+      "MT1",
+      "G"
+     ],
+     "props": {
+      "vgt": 1.0,
+      "ih": 0.03,
+      "ron": 0.06,
+      "bidir": true
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "MT1",
+   "MT2",
+   "G"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "MT2",
+     "b": "MT1",
+     "max": 600,
+     "min": -600
+    }
+   ],
+   "i": [
+    {
+     "pin": "MT2",
+     "max": 16
+    }
+   ]
+  }
+ },
+ {
+  "id": "triac-z0103",
+  "label": {
+   "en": "Triac Z0103 (1 A, sensitive gate)",
+   "tr": "Triyak Z0103 (1 A, hassas gate)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "triac"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rg",
+    "label": {
+     "en": "Gate resistance (Ω)",
+     "tr": "Gate direnci (Ω)"
+    },
+    "default": 100
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "MT1"
+     ],
+     "value": "$rg"
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "MT2",
+      "MT1",
+      "G"
+     ],
+     "props": {
+      "vgt": 0.8,
+      "ih": 0.005,
+      "ron": 0.4,
+      "bidir": true
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "MT1",
+   "G",
+   "MT2"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "MT2",
+     "b": "MT1",
+     "max": 600,
+     "min": -600
+    }
+   ],
+   "i": [
+    {
+     "pin": "MT2",
+     "max": 1
+    }
+   ]
+  }
+ },
+ {
+  "id": "diac-db3",
+  "label": {
+   "en": "Diac DB3 (32 V)",
+   "tr": "Diyak DB3 (32 V)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "diac"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vbo",
+    "label": {
+     "en": "Breakover voltage (V)",
+     "tr": "Kırılma gerilimi (V)"
+    },
+    "default": 31.3
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A1",
+      "m"
+     ],
+     "props": {
+      "bv": "$vbo",
+      "is": 1e-12
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "A2",
+      "m"
+     ],
+     "props": {
+      "bv": "$vbo",
+      "is": 1e-12
+     }
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62"
+ },
+ {
+  "id": "2n2222",
+  "label": {
+   "en": "2N2222 NPN (0.8 A)",
+   "tr": "2N2222 NPN (0.8 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 200,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "E",
+   "B",
+   "C"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 40
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 0.8
+    }
+   ],
+   "p": 0.5
+  }
+ },
+ {
+  "id": "2n3904",
+  "label": {
+   "en": "2N3904 NPN (0.2 A)",
+   "tr": "2N3904 NPN (0.2 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 150,
+      "is": 6.7e-15
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "E",
+   "B",
+   "C"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 40
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 0.2
+    }
+   ],
+   "p": 0.625
+  }
+ },
+ {
+  "id": "2n3906",
+  "label": {
+   "en": "2N3906 PNP (0.2 A)",
+   "tr": "2N3906 PNP (0.2 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 150,
+      "is": 1.1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "E",
+   "B",
+   "C"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "E",
+     "b": "C",
+     "max": 40
+    },
+    {
+     "a": "E",
+     "b": "B",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 0.2
+    }
+   ],
+   "p": 0.625
+  }
+ },
+ {
+  "id": "bc547",
+  "label": {
+   "en": "BC547 NPN (0.1 A)",
+   "tr": "BC547 NPN (0.1 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 300,
+      "is": 7e-15
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "C",
+   "B",
+   "E"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 45
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 0.1
+    }
+   ],
+   "p": 0.5
+  }
+ },
+ {
+  "id": "bc557",
+  "label": {
+   "en": "BC557 PNP (0.1 A)",
+   "tr": "BC557 PNP (0.1 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 250,
+      "is": 7e-15
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "C",
+   "B",
+   "E"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "E",
+     "b": "C",
+     "max": 45
+    },
+    {
+     "a": "E",
+     "b": "B",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 0.1
+    }
+   ],
+   "p": 0.5
+  }
+ },
+ {
+  "id": "bc337",
+  "label": {
+   "en": "BC337 NPN (0.8 A)",
+   "tr": "BC337 NPN (0.8 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 250,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "C",
+   "B",
+   "E"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 45
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 0.8
+    }
+   ],
+   "p": 0.625
+  }
+ },
+ {
+  "id": "bc327",
+  "label": {
+   "en": "BC327 PNP (0.8 A)",
+   "tr": "BC327 PNP (0.8 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 250,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "C",
+   "B",
+   "E"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "E",
+     "b": "C",
+     "max": 45
+    },
+    {
+     "a": "E",
+     "b": "B",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 0.8
+    }
+   ],
+   "p": 0.625
+  }
+ },
+ {
+  "id": "bd139",
+  "label": {
+   "en": "BD139 NPN power (1.5 A)",
+   "tr": "BD139 NPN power (1.5 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 5e-13
+     }
+    }
+   ]
+  },
+  "footprint": "TO126",
+  "padMap": [
+   "E",
+   "C",
+   "B"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 80
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 1.5
+    }
+   ],
+   "p": 12.5
+  }
+ },
+ {
+  "id": "bd140",
+  "label": {
+   "en": "BD140 PNP power (1.5 A)",
+   "tr": "BD140 PNP power (1.5 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 100,
+      "is": 5e-13
+     }
+    }
+   ]
+  },
+  "footprint": "TO126",
+  "padMap": [
+   "E",
+   "C",
+   "B"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "E",
+     "b": "C",
+     "max": 80
+    },
+    {
+     "a": "E",
+     "b": "B",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 1.5
+    }
+   ],
+   "p": 12.5
+  }
+ },
+ {
+  "id": "tip31c",
+  "label": {
+   "en": "TIP31C NPN power (3 A)",
+   "tr": "TIP31C NPN power (3 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 40,
+      "is": 1e-12
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "B",
+   "C",
+   "E"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 100
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 3
+    }
+   ],
+   "p": 40
+  }
+ },
+ {
+  "id": "tip32c",
+  "label": {
+   "en": "TIP32C PNP power (3 A)",
+   "tr": "TIP32C PNP power (3 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 40,
+      "is": 1e-12
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "B",
+   "C",
+   "E"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "E",
+     "b": "C",
+     "max": 100
+    },
+    {
+     "a": "E",
+     "b": "B",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 3
+    }
+   ],
+   "p": 40
+  }
+ },
+ {
+  "id": "2n3055",
+  "label": {
+   "en": "2N3055 NPN power (15 A)",
+   "tr": "2N3055 NPN power (15 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 5e-12
+     }
+    }
+   ]
+  },
+  "footprint": "TO3",
+  "padMap": [
+   "B",
+   "E",
+   "C",
+   "-"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 60
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 15
+    }
+   ],
+   "p": 115
+  }
+ },
+ {
+  "id": "mj2955",
+  "label": {
+   "en": "MJ2955 PNP power (15 A)",
+   "tr": "MJ2955 PNP power (15 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 50,
+      "is": 5e-12
+     }
+    }
+   ]
+  },
+  "footprint": "TO3",
+  "padMap": [
+   "B",
+   "E",
+   "C",
+   "-"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "E",
+     "b": "C",
+     "max": 60
+    },
+    {
+     "a": "E",
+     "b": "B",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 15
+    }
+   ],
+   "p": 115
+  }
+ },
+ {
+  "id": "tip120",
+  "label": {
+   "en": "TIP120 NPN Darlington (5 A)",
+   "tr": "TIP120 NPN Darlington (5 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "x",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 80,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "x"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 80,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "x",
+      "E"
+     ],
+     "value": 8000
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "B",
+   "C",
+   "E"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 60
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 5
+    }
+   ],
+   "p": 65
+  }
+ },
+ {
+  "id": "tip125",
+  "label": {
+   "en": "TIP125 PNP Darlington (5 A)",
+   "tr": "TIP125 PNP Darlington (5 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "x",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 80,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "x"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 80,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "x",
+      "E"
+     ],
+     "value": 8000
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "B",
+   "C",
+   "E"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "E",
+     "b": "C",
+     "max": 60
+    },
+    {
+     "a": "E",
+     "b": "B",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 5
+    }
+   ],
+   "p": 65
+  }
+ },
+ {
+  "id": "irf540n",
+  "label": {
+   "en": "IRF540N N-MOSFET (33 A, 100 V)",
+   "tr": "IRF540N N-MOSFET (33 A, 100 V)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 12,
+      "vth": 3.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 100
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 33
+    }
+   ],
+   "p": 94
+  }
+ },
+ {
+  "id": "irf520",
+  "label": {
+   "en": "IRF520 N-MOSFET (9 A, 100 V)",
+   "tr": "IRF520 N-MOSFET (9 A, 100 V)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 4,
+      "vth": 3.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 100
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 9.2
+    }
+   ],
+   "p": 60
+  }
+ },
+ {
+  "id": "irfz44n",
+  "label": {
+   "en": "IRFZ44N N-MOSFET (49 A, 55 V)",
+   "tr": "IRFZ44N N-MOSFET (49 A, 55 V)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 20,
+      "vth": 3.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 55
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 49
+    }
+   ],
+   "p": 94
+  }
+ },
+ {
+  "id": "irlz44n",
+  "label": {
+   "en": "IRLZ44N logic-level N-MOSFET (47 A)",
+   "tr": "IRLZ44N logic-level N-MOSFET (47 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 25,
+      "vth": 1.8
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 55
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 16,
+     "min": -16
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 47
+    }
+   ],
+   "p": 110
+  }
+ },
+ {
+  "id": "irf3205",
+  "label": {
+   "en": "IRF3205 N-MOSFET (110 A, 55 V)",
+   "tr": "IRF3205 N-MOSFET (110 A, 55 V)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 40,
+      "vth": 3.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 55
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 110
+    }
+   ],
+   "p": 200
+  }
+ },
+ {
+  "id": "irf9540",
+  "label": {
+   "en": "IRF9540 P-MOSFET (19 A, 100 V)",
+   "tr": "IRF9540 P-MOSFET (19 A, 100 V)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "PMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 5,
+      "vth": 3.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "S",
+     "b": "D",
+     "max": 100
+    },
+    {
+     "a": "S",
+     "b": "G",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 19
+    }
+   ],
+   "p": 150
+  }
+ },
+ {
+  "id": "2n7000",
+  "label": {
+   "en": "2N7000 N-MOSFET (0.2 A)",
+   "tr": "2N7000 N-MOSFET (0.2 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.1,
+      "vth": 2.1
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "S",
+   "G",
+   "D"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 60
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 0.2
+    }
+   ],
+   "p": 0.4
+  }
+ },
+ {
+  "id": "bs170",
+  "label": {
+   "en": "BS170 N-MOSFET (0.5 A)",
+   "tr": "BS170 N-MOSFET (0.5 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.15,
+      "vth": 2.1
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "D",
+   "G",
+   "S"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 60
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 0.5
+    }
+   ],
+   "p": 0.83
+  }
+ },
+ {
+  "id": "lm7805",
+  "label": {
+   "en": "LM7805 regulator +5 V (1 A)",
+   "tr": "LM7805 regulator +5 V (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM7805"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 2.5
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1.5
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "lm7809",
+  "label": {
+   "en": "LM7809 regulator +9 V (1 A)",
+   "tr": "LM7809 regulator +9 V (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM7809"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 4.5
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1.5
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "lm7812",
+  "label": {
+   "en": "LM7812 regulator +12 V (1 A)",
+   "tr": "LM7812 regulator +12 V (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM7812"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 6.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1.5
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "lm7815",
+  "label": {
+   "en": "LM7815 regulator +15 V (1 A)",
+   "tr": "LM7815 regulator +15 V (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM7815"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 7.5
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1.5
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "lm78l05",
+  "label": {
+   "en": "78L05 regulator +5 V (0.1 A)",
+   "tr": "78L05 regulator +5 V (0.1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM78L05"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 2.5
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.0,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "OUT",
+   "GND",
+   "IN"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 30,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 0.1
+    }
+   ],
+   "p": 3
+  }
+ },
+ {
+  "id": "lm7905",
+  "label": {
+   "en": "LM7905 regulator -5 V (1 A)",
+   "tr": "LM7905 regulator -5 V (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "IN"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM7905"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": -2.5
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "GND",
+     "n": "IN",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "GND",
+   "IN",
+   "OUT"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "GND",
+     "b": "IN",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1.5
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "lm7912",
+  "label": {
+   "en": "LM7912 regulator -12 V (1 A)",
+   "tr": "LM7912 regulator -12 V (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "IN"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM7912"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": -6.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "GND",
+     "n": "IN",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "GND",
+   "IN",
+   "OUT"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "GND",
+     "b": "IN",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1.5
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "lm1117-3v3",
+  "label": {
+   "en": "LM1117-3.3 LDO regulator (0.8 A)",
+   "tr": "LM1117-3.3 LDO regulator (0.8 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM1117-3V3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 1.65
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 0.5,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "SOT223",
+  "padMap": [
+   "GND",
+   "OUT",
+   "IN",
+   "OUT"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 15,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 0.8
+    }
+   ],
+   "p": 3
+  }
+ },
+ {
+  "id": "lm1117-5v",
+  "label": {
+   "en": "LM1117-5.0 LDO regulator (0.8 A)",
+   "tr": "LM1117-5.0 LDO regulator (0.8 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM1117-5V"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 2.5
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 0.5,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "SOT223",
+  "padMap": [
+   "GND",
+   "OUT",
+   "IN",
+   "OUT"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 15,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 0.8
+    }
+   ],
+   "p": 3
+  }
+ },
+ {
+  "id": "ams1117-3v3",
+  "label": {
+   "en": "AMS1117-3.3 LDO regulator (1 A)",
+   "tr": "AMS1117-3.3 LDO regulator (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "AMS1117-3V3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 1.65
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 0.5,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "SOT223",
+  "padMap": [
+   "GND",
+   "OUT",
+   "IN",
+   "OUT"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 15,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "lm2940-5",
+  "label": {
+   "en": "LM2940-5.0 low-dropout regulator (1 A)",
+   "tr": "LM2940-5.0 low-dropout regulator (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM2940-5"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 2.5
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "ref",
+      "fb"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 0,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "OUT",
+      "IN",
+      "drv"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 30,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 26,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "mcp1700-3v3",
+  "label": {
+   "en": "MCP1700-3.3 low-dropout regulator (0.25 A)",
+   "tr": "MCP1700-3.3 low-dropout regulator (0.25 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "MCP1700-3V3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 1.65
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "ref",
+      "fb"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 0,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "OUT",
+      "IN",
+      "drv"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 30,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "GND",
+   "IN",
+   "OUT"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 0.25
+    }
+   ],
+   "p": 3
+  }
+ },
+ {
+  "id": "lm317",
+  "label": {
+   "en": "LM317 adjustable regulator (1.5 A)",
+   "tr": "LM317 ayarlı regülatör (1,5 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "ADJ",
+    "IN"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM317"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "ADJ"
+     ],
+     "value": 1.25
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "OUT",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "ADJ",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "ADJ",
+   "OUT",
+   "IN"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "OUT",
+     "max": 40,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1.5
+    }
+   ],
+   "p": 20
+  }
+ }
+]

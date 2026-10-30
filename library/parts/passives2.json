@@ -1,0 +1,1562 @@
+[
+ {
+  "id": "xtal-4mhz",
+  "label": {
+   "en": "Crystal 4 MHz (HC-49)",
+   "tr": "Kristal 4 MHz (HC-49)"
+  },
+  "category": "passive",
+  "prefix": "Y",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2"
+   ],
+   "right": [],
+   "title": "4 MHz"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "a"
+     ],
+     "value": 100
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "a",
+      "b"
+     ],
+     "value": 0.079157
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "b",
+      "2"
+     ],
+     "value": 2.0000000000000003e-14
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": 4e-12
+    }
+   ]
+  },
+  "footprint": "HC49",
+  "note": "Motional model: Rm 100 ohm, Lm 79.16 mH, Cm 20 fF in series (resonates at 4 MHz), 4 pF shunt capacitance."
+ },
+ {
+  "id": "xtal-8mhz",
+  "label": {
+   "en": "Crystal 8 MHz (HC-49)",
+   "tr": "Kristal 8 MHz (HC-49)"
+  },
+  "category": "passive",
+  "prefix": "Y",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2"
+   ],
+   "right": [],
+   "title": "8 MHz"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "a"
+     ],
+     "value": 60
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "a",
+      "b"
+     ],
+     "value": 0.019789
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "b",
+      "2"
+     ],
+     "value": 2.0000000000000003e-14
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": 4e-12
+    }
+   ]
+  },
+  "footprint": "HC49",
+  "note": "Motional model: Rm 60 ohm, Lm 19.79 mH, Cm 20 fF in series (resonates at 8 MHz), 4 pF shunt capacitance."
+ },
+ {
+  "id": "xtal-12mhz",
+  "label": {
+   "en": "Crystal 12 MHz (HC-49)",
+   "tr": "Kristal 12 MHz (HC-49)"
+  },
+  "category": "passive",
+  "prefix": "Y",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2"
+   ],
+   "right": [],
+   "title": "12 MHz"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "a"
+     ],
+     "value": 50
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "a",
+      "b"
+     ],
+     "value": 0.011727
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "b",
+      "2"
+     ],
+     "value": 1.5000000000000002e-14
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": 4e-12
+    }
+   ]
+  },
+  "footprint": "HC49",
+  "note": "Motional model: Rm 50 ohm, Lm 11.73 mH, Cm 15 fF in series (resonates at 12 MHz), 4 pF shunt capacitance."
+ },
+ {
+  "id": "xtal-16mhz",
+  "label": {
+   "en": "Crystal 16 MHz (HC-49)",
+   "tr": "Kristal 16 MHz (HC-49)"
+  },
+  "category": "passive",
+  "prefix": "Y",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2"
+   ],
+   "right": [],
+   "title": "16 MHz"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "a"
+     ],
+     "value": 40
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "a",
+      "b"
+     ],
+     "value": 0.0065964
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "b",
+      "2"
+     ],
+     "value": 1.5000000000000002e-14
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": 4e-12
+    }
+   ]
+  },
+  "footprint": "HC49",
+  "note": "Motional model: Rm 40 ohm, Lm 6.60 mH, Cm 15 fF in series (resonates at 16 MHz), 4 pF shunt capacitance."
+ },
+ {
+  "id": "xtal-20mhz",
+  "label": {
+   "en": "Crystal 20 MHz (HC-49)",
+   "tr": "Kristal 20 MHz (HC-49)"
+  },
+  "category": "passive",
+  "prefix": "Y",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2"
+   ],
+   "right": [],
+   "title": "20 MHz"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "a"
+     ],
+     "value": 30
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "a",
+      "b"
+     ],
+     "value": 0.0052771
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "b",
+      "2"
+     ],
+     "value": 1.2000000000000001e-14
+    },
+    {
+     "type": "C",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": 4e-12
+    }
+   ]
+  },
+  "footprint": "HC49",
+  "note": "Motional model: Rm 30 ohm, Lm 5.28 mH, Cm 12 fF in series (resonates at 20 MHz), 4 pF shunt capacitance."
+ },
+ {
+  "id": "cap-tantalum",
+  "label": {
+   "en": "Tantalum capacitor",
+   "tr": "Tantal kondansatör"
+  },
+  "category": "passive",
+  "prefix": "C",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "cap-polar"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "c",
+    "label": {
+     "en": "Capacitance (F)",
+     "tr": "Kapasite (F)"
+    },
+    "default": 1e-05
+   },
+   {
+    "name": "v",
+    "label": {
+     "en": "Rated voltage (V)",
+     "tr": "Anma gerilimi (V)"
+    },
+    "default": 16
+   },
+   {
+    "name": "esr",
+    "label": {
+     "en": "ESR (Ω)",
+     "tr": "ESR (Ω)"
+    },
+    "default": 1.5
+   },
+   {
+    "name": "ic",
+    "label": {
+     "en": "Initial voltage (V)",
+     "tr": "Başlangıç gerilimi (V)"
+    },
+    "default": 0
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "C",
+     "nodes": [
+      "+",
+      "i"
+     ],
+     "value": "$c",
+     "props": {
+      "ic": "$ic"
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "i",
+      "-"
+     ],
+     "value": "$esr"
+    }
+   ]
+  },
+  "footprint": "CAP_RADIAL_2.54",
+  "footprints": [
+   "CAP_RADIAL_5.08"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "+",
+     "b": "-",
+     "max": "$v",
+     "min": -0.3,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "rnet-sil-5",
+  "label": {
+   "en": "Resistor network SIL-5 (common pin, 4 resistors)",
+   "tr": "Sıra direnç SIL-5 (ortak uçlu, 4 direnç)"
+  },
+  "category": "passive",
+  "prefix": "RN",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COM",
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+   ],
+   "right": [],
+   "title": "SIL5"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Resistance of each (Ω)",
+     "tr": "Her direncin değeri (Ω)"
+    },
+    "default": 10000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R1"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R2"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R3"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R4"
+     ],
+     "value": "$r"
+    }
+   ]
+  },
+  "footprint": "SIP_5",
+  "note": "Pin 1 is the common pin of the bussed network."
+ },
+ {
+  "id": "rnet-sil-6",
+  "label": {
+   "en": "Resistor network SIL-6 (common pin, 5 resistors)",
+   "tr": "Sıra direnç SIL-6 (ortak uçlu, 5 direnç)"
+  },
+  "category": "passive",
+  "prefix": "RN",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COM",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+   ],
+   "right": [],
+   "title": "SIL6"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Resistance of each (Ω)",
+     "tr": "Her direncin değeri (Ω)"
+    },
+    "default": 10000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R1"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R2"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R3"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R4"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R5"
+     ],
+     "value": "$r"
+    }
+   ]
+  },
+  "footprint": "SIP_6",
+  "note": "Pin 1 is the common pin of the bussed network."
+ },
+ {
+  "id": "rnet-sil-7",
+  "label": {
+   "en": "Resistor network SIL-7 (common pin, 6 resistors)",
+   "tr": "Sıra direnç SIL-7 (ortak uçlu, 6 direnç)"
+  },
+  "category": "passive",
+  "prefix": "RN",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COM",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+   ],
+   "right": [],
+   "title": "SIL7"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Resistance of each (Ω)",
+     "tr": "Her direncin değeri (Ω)"
+    },
+    "default": 10000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R1"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R2"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R3"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R4"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R5"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R6"
+     ],
+     "value": "$r"
+    }
+   ]
+  },
+  "footprint": "SIP_7",
+  "note": "Pin 1 is the common pin of the bussed network."
+ },
+ {
+  "id": "rnet-sil-8",
+  "label": {
+   "en": "Resistor network SIL-8 (common pin, 7 resistors)",
+   "tr": "Sıra direnç SIL-8 (ortak uçlu, 7 direnç)"
+  },
+  "category": "passive",
+  "prefix": "RN",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COM",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+   ],
+   "right": [],
+   "title": "SIL8"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Resistance of each (Ω)",
+     "tr": "Her direncin değeri (Ω)"
+    },
+    "default": 10000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R1"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R2"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R3"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R4"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R5"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R6"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R7"
+     ],
+     "value": "$r"
+    }
+   ]
+  },
+  "footprint": "SIP_8",
+  "note": "Pin 1 is the common pin of the bussed network."
+ },
+ {
+  "id": "rnet-sil-9",
+  "label": {
+   "en": "Resistor network SIL-9 (common pin, 8 resistors)",
+   "tr": "Sıra direnç SIL-9 (ortak uçlu, 8 direnç)"
+  },
+  "category": "passive",
+  "prefix": "RN",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COM",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8"
+   ],
+   "right": [],
+   "title": "SIL9"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Resistance of each (Ω)",
+     "tr": "Her direncin değeri (Ω)"
+    },
+    "default": 10000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R1"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R2"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R3"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R4"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R5"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R6"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R7"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R8"
+     ],
+     "value": "$r"
+    }
+   ]
+  },
+  "footprint": "SIP_9",
+  "note": "Pin 1 is the common pin of the bussed network."
+ },
+ {
+  "id": "rnet-sil-10",
+  "label": {
+   "en": "Resistor network SIL-10 (common pin, 9 resistors)",
+   "tr": "Sıra direnç SIL-10 (ortak uçlu, 9 direnç)"
+  },
+  "category": "passive",
+  "prefix": "RN",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COM",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+   ],
+   "right": [],
+   "title": "SIL10"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Resistance of each (Ω)",
+     "tr": "Her direncin değeri (Ω)"
+    },
+    "default": 10000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R1"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R2"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R3"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R4"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R5"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R6"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R7"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R8"
+     ],
+     "value": "$r"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "COM",
+      "R9"
+     ],
+     "value": "$r"
+    }
+   ]
+  },
+  "footprint": "SIP_10",
+  "note": "Pin 1 is the common pin of the bussed network."
+ },
+ {
+  "id": "dip-switch-2",
+  "label": {
+   "en": "DIP switch 2 positions",
+   "tr": "DIP anahtar 2 konumlu"
+  },
+  "category": "switch",
+  "prefix": "SW",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2"
+   ],
+   "right": [
+    "4",
+    "3"
+   ],
+   "title": "DIP 2"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "s1",
+    "label": {
+     "en": "Switch 1 on",
+     "tr": "Anahtar 1 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s2",
+    "label": {
+     "en": "Switch 2 on",
+     "tr": "Anahtar 2 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "SW",
+     "nodes": [
+      "1",
+      "4"
+     ],
+     "props": {
+      "closed": "$s1"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "2",
+      "3"
+     ],
+     "props": {
+      "closed": "$s2"
+     }
+    }
+   ]
+  },
+  "footprint": "DIP4",
+  "note": "Switch k joins pin k to pin 5-k."
+ },
+ {
+  "id": "dip-switch-3",
+  "label": {
+   "en": "DIP switch 3 positions",
+   "tr": "DIP anahtar 3 konumlu"
+  },
+  "category": "switch",
+  "prefix": "SW",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3"
+   ],
+   "right": [
+    "6",
+    "5",
+    "4"
+   ],
+   "title": "DIP 3"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "s1",
+    "label": {
+     "en": "Switch 1 on",
+     "tr": "Anahtar 1 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s2",
+    "label": {
+     "en": "Switch 2 on",
+     "tr": "Anahtar 2 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s3",
+    "label": {
+     "en": "Switch 3 on",
+     "tr": "Anahtar 3 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "SW",
+     "nodes": [
+      "1",
+      "6"
+     ],
+     "props": {
+      "closed": "$s1"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "2",
+      "5"
+     ],
+     "props": {
+      "closed": "$s2"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "3",
+      "4"
+     ],
+     "props": {
+      "closed": "$s3"
+     }
+    }
+   ]
+  },
+  "footprint": "DIP6",
+  "note": "Switch k joins pin k to pin 7-k."
+ },
+ {
+  "id": "dip-switch-4",
+  "label": {
+   "en": "DIP switch 4 positions",
+   "tr": "DIP anahtar 4 konumlu"
+  },
+  "category": "switch",
+  "prefix": "SW",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "right": [
+    "8",
+    "7",
+    "6",
+    "5"
+   ],
+   "title": "DIP 4"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "s1",
+    "label": {
+     "en": "Switch 1 on",
+     "tr": "Anahtar 1 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s2",
+    "label": {
+     "en": "Switch 2 on",
+     "tr": "Anahtar 2 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s3",
+    "label": {
+     "en": "Switch 3 on",
+     "tr": "Anahtar 3 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s4",
+    "label": {
+     "en": "Switch 4 on",
+     "tr": "Anahtar 4 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "SW",
+     "nodes": [
+      "1",
+      "8"
+     ],
+     "props": {
+      "closed": "$s1"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "2",
+      "7"
+     ],
+     "props": {
+      "closed": "$s2"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "3",
+      "6"
+     ],
+     "props": {
+      "closed": "$s3"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "4",
+      "5"
+     ],
+     "props": {
+      "closed": "$s4"
+     }
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "Switch k joins pin k to pin 9-k."
+ },
+ {
+  "id": "dip-switch-7",
+  "label": {
+   "en": "DIP switch 7 positions",
+   "tr": "DIP anahtar 7 konumlu"
+  },
+  "category": "switch",
+  "prefix": "SW",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "right": [
+    "14",
+    "13",
+    "12",
+    "11",
+    "10",
+    "9",
+    "8"
+   ],
+   "title": "DIP 7"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "s1",
+    "label": {
+     "en": "Switch 1 on",
+     "tr": "Anahtar 1 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s2",
+    "label": {
+     "en": "Switch 2 on",
+     "tr": "Anahtar 2 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s3",
+    "label": {
+     "en": "Switch 3 on",
+     "tr": "Anahtar 3 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s4",
+    "label": {
+     "en": "Switch 4 on",
+     "tr": "Anahtar 4 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s5",
+    "label": {
+     "en": "Switch 5 on",
+     "tr": "Anahtar 5 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s6",
+    "label": {
+     "en": "Switch 6 on",
+     "tr": "Anahtar 6 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s7",
+    "label": {
+     "en": "Switch 7 on",
+     "tr": "Anahtar 7 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "SW",
+     "nodes": [
+      "1",
+      "14"
+     ],
+     "props": {
+      "closed": "$s1"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "2",
+      "13"
+     ],
+     "props": {
+      "closed": "$s2"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "3",
+      "12"
+     ],
+     "props": {
+      "closed": "$s3"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "4",
+      "11"
+     ],
+     "props": {
+      "closed": "$s4"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "5",
+      "10"
+     ],
+     "props": {
+      "closed": "$s5"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "6",
+      "9"
+     ],
+     "props": {
+      "closed": "$s6"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "7",
+      "8"
+     ],
+     "props": {
+      "closed": "$s7"
+     }
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "note": "Switch k joins pin k to pin 15-k."
+ },
+ {
+  "id": "dip-switch-8",
+  "label": {
+   "en": "DIP switch 8 positions",
+   "tr": "DIP anahtar 8 konumlu"
+  },
+  "category": "switch",
+  "prefix": "SW",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "right": [
+    "16",
+    "15",
+    "14",
+    "13",
+    "12",
+    "11",
+    "10",
+    "9"
+   ],
+   "title": "DIP 8"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "s1",
+    "label": {
+     "en": "Switch 1 on",
+     "tr": "Anahtar 1 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s2",
+    "label": {
+     "en": "Switch 2 on",
+     "tr": "Anahtar 2 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s3",
+    "label": {
+     "en": "Switch 3 on",
+     "tr": "Anahtar 3 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s4",
+    "label": {
+     "en": "Switch 4 on",
+     "tr": "Anahtar 4 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s5",
+    "label": {
+     "en": "Switch 5 on",
+     "tr": "Anahtar 5 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s6",
+    "label": {
+     "en": "Switch 6 on",
+     "tr": "Anahtar 6 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s7",
+    "label": {
+     "en": "Switch 7 on",
+     "tr": "Anahtar 7 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "s8",
+    "label": {
+     "en": "Switch 8 on",
+     "tr": "Anahtar 8 açık"
+    },
+    "default": false,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "SW",
+     "nodes": [
+      "1",
+      "16"
+     ],
+     "props": {
+      "closed": "$s1"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "2",
+      "15"
+     ],
+     "props": {
+      "closed": "$s2"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "3",
+      "14"
+     ],
+     "props": {
+      "closed": "$s3"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "4",
+      "13"
+     ],
+     "props": {
+      "closed": "$s4"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "5",
+      "12"
+     ],
+     "props": {
+      "closed": "$s5"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "6",
+      "11"
+     ],
+     "props": {
+      "closed": "$s6"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "7",
+      "10"
+     ],
+     "props": {
+      "closed": "$s7"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "8",
+      "9"
+     ],
+     "props": {
+      "closed": "$s8"
+     }
+    }
+   ]
+  },
+  "footprint": "DIP16",
+  "note": "Switch k joins pin k to pin 17-k."
+ }
+]

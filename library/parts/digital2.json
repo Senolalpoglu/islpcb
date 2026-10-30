@@ -1,0 +1,4302 @@
+[
+ {
+  "id": "cd4001",
+  "label": {
+   "en": "CD4001 quad 2-input NOR",
+   "tr": "CD4001 quad 2-input NOR"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "B",
+    "J",
+    "K",
+    "C",
+    "D",
+    "VSS"
+   ],
+   "right": [
+    "VDD",
+    "H",
+    "G",
+    "M",
+    "L",
+    "F",
+    "E"
+   ],
+   "title": "CD4001"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "g0_p",
+      "VDD",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "g0_p",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "VSS",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "VSS",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "A",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "B",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_p",
+      "VDD",
+      "C"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "g1_p",
+      "D"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "VSS",
+      "C"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "VSS",
+      "D"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "C",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "D",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_p",
+      "VDD",
+      "E"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "g2_p",
+      "F"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "VSS",
+      "E"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "VSS",
+      "F"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "E",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "F",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_p",
+      "VDD",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "g3_p",
+      "H"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "VSS",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "VSS",
+      "H"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "H",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "note": "CMOS gates built from transistors; works from 3 V to 15 V (VDD to VSS). Inputs have 1 Gohm to VSS, so unused ones read low. DIP-14: 1 A, 2 B, 3 J, 4 K, 5 C, 6 D, 7 VSS, 8 E, 9 F, 10 L, 11 M, 12 G, 13 H, 14 VDD.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VDD",
+     "b": "VSS",
+     "max": 18,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "cd4011",
+  "label": {
+   "en": "CD4011 quad 2-input NAND",
+   "tr": "CD4011 quad 2-input NAND"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "B",
+    "J",
+    "K",
+    "C",
+    "D",
+    "VSS"
+   ],
+   "right": [
+    "VDD",
+    "H",
+    "G",
+    "M",
+    "L",
+    "F",
+    "E"
+   ],
+   "title": "CD4011"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "VDD",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "VDD",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "g0_n",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_n",
+      "VSS",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "A",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "B",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "VDD",
+      "C"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "VDD",
+      "D"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "g1_n",
+      "C"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_n",
+      "VSS",
+      "D"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "C",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "D",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "VDD",
+      "E"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "VDD",
+      "F"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "g2_n",
+      "E"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_n",
+      "VSS",
+      "F"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "E",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "F",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "VDD",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "VDD",
+      "H"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "g3_n",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_n",
+      "VSS",
+      "H"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "H",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "note": "CMOS gates built from transistors; works from 3 V to 15 V (VDD to VSS). Inputs have 1 Gohm to VSS, so unused ones read low. DIP-14: 1 A, 2 B, 3 J, 4 K, 5 C, 6 D, 7 VSS, 8 E, 9 F, 10 L, 11 M, 12 G, 13 H, 14 VDD.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VDD",
+     "b": "VSS",
+     "max": 18,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "cd4071",
+  "label": {
+   "en": "CD4071 quad 2-input OR",
+   "tr": "CD4071 quad 2-input OR"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "B",
+    "J",
+    "K",
+    "C",
+    "D",
+    "VSS"
+   ],
+   "right": [
+    "VDD",
+    "H",
+    "G",
+    "M",
+    "L",
+    "F",
+    "E"
+   ],
+   "title": "CD4071"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "g0a_p",
+      "VDD",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "g0a_p",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "VSS",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "VSS",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "VSS",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "VDD",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "A",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "B",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1a_p",
+      "VDD",
+      "C"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "g1a_p",
+      "D"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "VSS",
+      "C"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "VSS",
+      "D"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "VSS",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "VDD",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "C",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "D",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2a_p",
+      "VDD",
+      "E"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "g2a_p",
+      "F"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "VSS",
+      "E"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "VSS",
+      "F"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "VSS",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "VDD",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "E",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "F",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3a_p",
+      "VDD",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "g3a_p",
+      "H"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "VSS",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "VSS",
+      "H"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "VSS",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "VDD",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "H",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "note": "CMOS gates built from transistors; works from 3 V to 15 V (VDD to VSS). Inputs have 1 Gohm to VSS, so unused ones read low. DIP-14: 1 A, 2 B, 3 J, 4 K, 5 C, 6 D, 7 VSS, 8 E, 9 F, 10 L, 11 M, 12 G, 13 H, 14 VDD.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VDD",
+     "b": "VSS",
+     "max": 18,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "cd4081",
+  "label": {
+   "en": "CD4081 quad 2-input AND",
+   "tr": "CD4081 quad 2-input AND"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "B",
+    "J",
+    "K",
+    "C",
+    "D",
+    "VSS"
+   ],
+   "right": [
+    "VDD",
+    "H",
+    "G",
+    "M",
+    "L",
+    "F",
+    "E"
+   ],
+   "title": "CD4081"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "VDD",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "VDD",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "g0a_n",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0a_n",
+      "VSS",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "VSS",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "VDD",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "A",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "B",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "VDD",
+      "C"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "VDD",
+      "D"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "g1a_n",
+      "C"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1a_n",
+      "VSS",
+      "D"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "VSS",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "VDD",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "C",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "D",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "VDD",
+      "E"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "VDD",
+      "F"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "g2a_n",
+      "E"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2a_n",
+      "VSS",
+      "F"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "VSS",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "VDD",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "E",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "F",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "VDD",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "VDD",
+      "H"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "g3a_n",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3a_n",
+      "VSS",
+      "H"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "VSS",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "VDD",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "H",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "note": "CMOS gates built from transistors; works from 3 V to 15 V (VDD to VSS). Inputs have 1 Gohm to VSS, so unused ones read low. DIP-14: 1 A, 2 B, 3 J, 4 K, 5 C, 6 D, 7 VSS, 8 E, 9 F, 10 L, 11 M, 12 G, 13 H, 14 VDD.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VDD",
+     "b": "VSS",
+     "max": 18,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "cd4070",
+  "label": {
+   "en": "CD4070 quad 2-input XOR",
+   "tr": "CD4070 quad 2-input XOR"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "B",
+    "J",
+    "K",
+    "C",
+    "D",
+    "VSS"
+   ],
+   "right": [
+    "VDD",
+    "H",
+    "G",
+    "M",
+    "L",
+    "F",
+    "E"
+   ],
+   "title": "CD4070"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "VDD",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "VDD",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "g01_n",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g01_n",
+      "VSS",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_p",
+      "VDD",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_p",
+      "VDD",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_p",
+      "g02_n",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g02_n",
+      "VSS",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_q",
+      "VDD",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_q",
+      "VDD",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_q",
+      "g03_n",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g03_n",
+      "VSS",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "VDD",
+      "g0_p"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "VDD",
+      "g0_q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "J",
+      "g04_n",
+      "g0_p"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g04_n",
+      "VSS",
+      "g0_q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "A",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "B",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "VDD",
+      "C"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "VDD",
+      "D"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "g11_n",
+      "C"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g11_n",
+      "VSS",
+      "D"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_p",
+      "VDD",
+      "C"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_p",
+      "VDD",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_p",
+      "g12_n",
+      "C"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g12_n",
+      "VSS",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_q",
+      "VDD",
+      "D"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_q",
+      "VDD",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_q",
+      "g13_n",
+      "D"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g13_n",
+      "VSS",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "VDD",
+      "g1_p"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "VDD",
+      "g1_q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "K",
+      "g14_n",
+      "g1_p"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g14_n",
+      "VSS",
+      "g1_q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "C",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "D",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "VDD",
+      "E"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "VDD",
+      "F"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "g21_n",
+      "E"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g21_n",
+      "VSS",
+      "F"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_p",
+      "VDD",
+      "E"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_p",
+      "VDD",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_p",
+      "g22_n",
+      "E"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g22_n",
+      "VSS",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_q",
+      "VDD",
+      "F"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_q",
+      "VDD",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_q",
+      "g23_n",
+      "F"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g23_n",
+      "VSS",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "VDD",
+      "g2_p"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "VDD",
+      "g2_q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "L",
+      "g24_n",
+      "g2_p"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g24_n",
+      "VSS",
+      "g2_q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "E",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "F",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "VDD",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "VDD",
+      "H"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "g31_n",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g31_n",
+      "VSS",
+      "H"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_p",
+      "VDD",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_p",
+      "VDD",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_p",
+      "g32_n",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g32_n",
+      "VSS",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_q",
+      "VDD",
+      "H"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_q",
+      "VDD",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_q",
+      "g33_n",
+      "H"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g33_n",
+      "VSS",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "VDD",
+      "g3_p"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "VDD",
+      "g3_q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "M",
+      "g34_n",
+      "g3_p"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g34_n",
+      "VSS",
+      "g3_q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "H",
+      "VSS"
+     ],
+     "value": 1000000000.0
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "note": "CMOS gates built from transistors; works from 3 V to 15 V (VDD to VSS). Inputs have 1 Gohm to VSS, so unused ones read low. DIP-14: 1 A, 2 B, 3 J, 4 K, 5 C, 6 D, 7 VSS, 8 E, 9 F, 10 L, 11 M, 12 G, 13 H, 14 VDD.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VDD",
+     "b": "VSS",
+     "max": 18,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lm555",
+  "label": {
+   "en": "LM555 timer",
+   "tr": "LM555 zamanlayıcı"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "TRIG",
+    "OUT",
+    "RESET"
+   ],
+   "right": [
+    "VCC",
+    "DISCH",
+    "THR",
+    "CTRL"
+   ],
+   "title": "LM555"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "CTRL"
+     ],
+     "value": 5000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "CTRL",
+      "n2"
+     ],
+     "value": 5000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "n2",
+      "GND"
+     ],
+     "value": 5000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "c1",
+      "CTRL",
+      "THR"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "rout": 100
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "c2",
+      "TRIG",
+      "n2"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "rout": 100
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "rn",
+      "GND",
+      "RESET"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "rn",
+      "VCC",
+      "RESET"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "q_p1",
+      "VCC",
+      "c1"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "q_p2",
+      "q_p1",
+      "rn"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "q_p2",
+      "QN"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "GND",
+      "c1"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "GND",
+      "rn"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "GND",
+      "QN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "qn_p",
+      "VCC",
+      "c2"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "QN",
+      "qn_p",
+      "Q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "QN",
+      "GND",
+      "c2"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "QN",
+      "GND",
+      "Q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OUT",
+      "GND",
+      "QN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OUT",
+      "VCC",
+      "QN"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "DISCH",
+      "GND",
+      "QN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.05,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "Same internals as the NE555: three 5 k resistors, two comparators, SR latch and discharge transistor. DIP-8.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 16,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lm556",
+  "label": {
+   "en": "LM556 dual timer",
+   "tr": "LM556 çift zamanlayıcı"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "DISCH1",
+    "THR1",
+    "CTRL1",
+    "RESET1",
+    "OUT1",
+    "TRIG1",
+    "GND"
+   ],
+   "right": [
+    "VCC",
+    "DISCH2",
+    "THR2",
+    "CTRL2",
+    "RESET2",
+    "OUT2",
+    "TRIG2"
+   ],
+   "title": "LM556"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "CTRL1"
+     ],
+     "value": 5000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "CTRL1",
+      "an2"
+     ],
+     "value": 5000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "an2",
+      "GND"
+     ],
+     "value": 5000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "ac1",
+      "CTRL1",
+      "THR1"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "rout": 100
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "ac2",
+      "TRIG1",
+      "an2"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "rout": 100
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "arn",
+      "GND",
+      "RESET1"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "arn",
+      "VCC",
+      "RESET1"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "aq_p1",
+      "VCC",
+      "ac1"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "aq_p2",
+      "aq_p1",
+      "arn"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "aQ",
+      "aq_p2",
+      "aQN"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "aQ",
+      "GND",
+      "ac1"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "aQ",
+      "GND",
+      "arn"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "aQ",
+      "GND",
+      "aQN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "aqn_p",
+      "VCC",
+      "ac2"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "aQN",
+      "aqn_p",
+      "aQ"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "aQN",
+      "GND",
+      "ac2"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "aQN",
+      "GND",
+      "aQ"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OUT1",
+      "GND",
+      "aQN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OUT1",
+      "VCC",
+      "aQN"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "DISCH1",
+      "GND",
+      "aQN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.05,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "CTRL2"
+     ],
+     "value": 5000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "CTRL2",
+      "bn2"
+     ],
+     "value": 5000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "bn2",
+      "GND"
+     ],
+     "value": 5000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "bc1",
+      "CTRL2",
+      "THR2"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "rout": 100
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "bc2",
+      "TRIG2",
+      "bn2"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "rout": 100
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "brn",
+      "GND",
+      "RESET2"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "brn",
+      "VCC",
+      "RESET2"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "bq_p1",
+      "VCC",
+      "bc1"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "bq_p2",
+      "bq_p1",
+      "brn"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "bQ",
+      "bq_p2",
+      "bQN"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "bQ",
+      "GND",
+      "bc1"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "bQ",
+      "GND",
+      "brn"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "bQ",
+      "GND",
+      "bQN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "bqn_p",
+      "VCC",
+      "bc2"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "bQN",
+      "bqn_p",
+      "bQ"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "bQN",
+      "GND",
+      "bc2"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "bQN",
+      "GND",
+      "bQ"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OUT2",
+      "GND",
+      "bQN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OUT2",
+      "VCC",
+      "bQN"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "DISCH2",
+      "GND",
+      "bQN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.05,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "note": "Two independent 555 timers sharing the supply. DIP-14: 1 DISCH1, 2 THR1, 3 CTRL1, 4 RESET1, 5 OUT1, 6 TRIG1, 7 GND, 8 TRIG2 ... 14 VCC."
+ },
+ {
+  "id": "4n25",
+  "label": {
+   "en": "4N25 optocoupler (phototransistor, with base pin)",
+   "tr": "4N25 optocoupler (phototransistor, with base pin)"
+  },
+  "category": "semi",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "K"
+   ],
+   "right": [
+    "C",
+    "E",
+    "B"
+   ],
+   "title": "4N25"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "ctr",
+    "label": {
+     "en": "Current transfer ratio (1 = 100 %)",
+     "tr": "Akım aktarım oranı (1 = %100)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "s"
+     ],
+     "props": {
+      "is": 6.32e-14,
+      "n": 1.8
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "s",
+      "K"
+     ],
+     "value": 1
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "E",
+      "B",
+      "s",
+      "K"
+     ],
+     "value": "$ctr/100"
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "B",
+      "E"
+     ],
+     "value": 100000000.0
+    }
+   ]
+  },
+  "footprint": "DIP6",
+  "padMap": [
+   "A",
+   "K",
+   "-",
+   "B",
+   "C",
+   "E"
+  ],
+  "note": "CTR 20 % minimum, about 50 % typical at 10 mA. DIP-6: 1 A, 2 K, 3 NC, 4 E, 5 C, 6 B.",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -6,
+     "polar": "min"
+    },
+    {
+     "a": "C",
+     "b": "E",
+     "max": 70,
+     "min": -0.5
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.06
+    }
+   ]
+  }
+ },
+ {
+  "id": "4n35",
+  "label": {
+   "en": "4N35 optocoupler (phototransistor, with base pin)",
+   "tr": "4N35 optocoupler (phototransistor, with base pin)"
+  },
+  "category": "semi",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "K"
+   ],
+   "right": [
+    "C",
+    "E",
+    "B"
+   ],
+   "title": "4N35"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "ctr",
+    "label": {
+     "en": "Current transfer ratio (1 = 100 %)",
+     "tr": "Akım aktarım oranı (1 = %100)"
+    },
+    "default": 1.0
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "s"
+     ],
+     "props": {
+      "is": 6.32e-14,
+      "n": 1.8
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "s",
+      "K"
+     ],
+     "value": 1
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "E",
+      "B",
+      "s",
+      "K"
+     ],
+     "value": "$ctr/100"
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "B",
+      "E"
+     ],
+     "value": 100000000.0
+    }
+   ]
+  },
+  "footprint": "DIP6",
+  "padMap": [
+   "A",
+   "K",
+   "-",
+   "B",
+   "C",
+   "E"
+  ],
+  "note": "CTR 100 % minimum at 10 mA. DIP-6: 1 A, 2 K, 3 NC, 4 E, 5 C, 6 B.",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -6,
+     "polar": "min"
+    },
+    {
+     "a": "C",
+     "b": "E",
+     "max": 70,
+     "min": -0.5
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.06
+    }
+   ]
+  }
+ },
+ {
+  "id": "el817",
+  "label": {
+   "en": "EL817 optocoupler (CTR 50-600 %)",
+   "tr": "EL817 optokuplör (CTR %50-600)"
+  },
+  "category": "semi",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "K"
+   ],
+   "right": [
+    "C",
+    "E"
+   ],
+   "title": "EL817"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "ctr",
+    "label": {
+     "en": "Current transfer ratio (1 = 100 %)",
+     "tr": "Akım aktarım oranı (1 = %100)"
+    },
+    "default": 1.0
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "s"
+     ],
+     "props": {
+      "is": 6.32e-14,
+      "n": 1.8
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "s",
+      "K"
+     ],
+     "value": 1
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "E",
+      "b",
+      "s",
+      "K"
+     ],
+     "value": "$ctr/100"
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "b"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "b",
+      "E"
+     ],
+     "value": 100000000.0
+    }
+   ]
+  },
+  "footprint": "DIP4",
+  "note": "Equivalent of the PC817. DIP-4: 1 A, 2 K, 3 E, 4 C.",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -6,
+     "polar": "min"
+    },
+    {
+     "a": "C",
+     "b": "E",
+     "max": 80,
+     "min": -0.5
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.06
+    }
+   ]
+  }
+ },
+ {
+  "id": "pc814",
+  "label": {
+   "en": "PC814 optocoupler (AC input, two antiparallel LEDs)",
+   "tr": "PC814 optokuplör (AC giriş, ters paralel iki LED)"
+  },
+  "category": "semi",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "K"
+   ],
+   "right": [
+    "C",
+    "E"
+   ],
+   "title": "PC814"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "ctr",
+    "label": {
+     "en": "Current transfer ratio (1 = 100 %)",
+     "tr": "Akım aktarım oranı (1 = %100)"
+    },
+    "default": 1.0
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "ps"
+     ],
+     "props": {
+      "is": 6.32e-14,
+      "n": 1.8
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "ps",
+      "K"
+     ],
+     "value": 1
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "E",
+      "b",
+      "ps",
+      "K"
+     ],
+     "value": "$ctr/100"
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "K",
+      "qs"
+     ],
+     "props": {
+      "is": 6.32e-14,
+      "n": 1.8
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "qs",
+      "A"
+     ],
+     "value": 1
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "E",
+      "b",
+      "qs",
+      "A"
+     ],
+     "value": "$ctr/100"
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "b"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "b",
+      "E"
+     ],
+     "value": 100000000.0
+    }
+   ]
+  },
+  "footprint": "DIP4",
+  "note": "Either polarity of the input lights the transmitter. DIP-4: 1 and 2 input, 3 E, 4 C.",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -6,
+     "polar": "min"
+    },
+    {
+     "a": "C",
+     "b": "E",
+     "max": 80,
+     "min": -0.5
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.06
+    }
+   ]
+  }
+ },
+ {
+  "id": "moc3010",
+  "label": {
+   "en": "MOC3010 opto-triac driver (IFT 15 mA)",
+   "tr": "MOC3010 opto-triac driver (IFT 15 mA)"
+  },
+  "category": "semi",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "K"
+   ],
+   "right": [
+    "T1",
+    "T2"
+   ],
+   "title": "MOC3010"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "s"
+     ],
+     "props": {
+      "is": 6.32e-14,
+      "n": 1.8
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "s",
+      "K"
+     ],
+     "value": 1
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "T2",
+      "g",
+      "s",
+      "K"
+     ],
+     "props": {
+      "vth": 0.015,
+      "vhys": 0.003,
+      "ron": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "g",
+      "T1"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "T2",
+      "T1",
+      "g"
+     ],
+     "props": {
+      "vgt": 0.5,
+      "ih": 0.0001,
+      "ron": 30,
+      "bidir": true
+     }
+    }
+   ]
+  },
+  "footprint": "DIP6",
+  "padMap": [
+   "A",
+   "K",
+   "-",
+   "T2",
+   "-",
+   "T1"
+  ],
+  "note": "Random-phase triac driver, LED trigger current 15 mA, on-state about 3 V at 100 mA. DIP-6: 1 A, 2 K, 4 T2, 6 T1."
+ },
+ {
+  "id": "moc3020",
+  "label": {
+   "en": "MOC3020 opto-triac driver (IFT 30 mA)",
+   "tr": "MOC3020 opto-triac driver (IFT 30 mA)"
+  },
+  "category": "semi",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "K"
+   ],
+   "right": [
+    "T1",
+    "T2"
+   ],
+   "title": "MOC3020"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "s"
+     ],
+     "props": {
+      "is": 6.32e-14,
+      "n": 1.8
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "s",
+      "K"
+     ],
+     "value": 1
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "T2",
+      "g",
+      "s",
+      "K"
+     ],
+     "props": {
+      "vth": 0.03,
+      "vhys": 0.006,
+      "ron": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "g",
+      "T1"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "T2",
+      "T1",
+      "g"
+     ],
+     "props": {
+      "vgt": 0.5,
+      "ih": 0.0001,
+      "ron": 30,
+      "bidir": true
+     }
+    }
+   ]
+  },
+  "footprint": "DIP6",
+  "padMap": [
+   "A",
+   "K",
+   "-",
+   "T2",
+   "-",
+   "T1"
+  ],
+  "note": "Random-phase triac driver, LED trigger current 30 mA. DIP-6: 1 A, 2 K, 4 T2, 6 T1."
+ },
+ {
+  "id": "moc3023",
+  "label": {
+   "en": "MOC3023 opto-triac driver (IFT 5 mA)",
+   "tr": "MOC3023 opto-triac driver (IFT 5 mA)"
+  },
+  "category": "semi",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "K"
+   ],
+   "right": [
+    "T1",
+    "T2"
+   ],
+   "title": "MOC3023"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "s"
+     ],
+     "props": {
+      "is": 6.32e-14,
+      "n": 1.8
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "s",
+      "K"
+     ],
+     "value": 1
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "T2",
+      "g",
+      "s",
+      "K"
+     ],
+     "props": {
+      "vth": 0.005,
+      "vhys": 0.001,
+      "ron": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "g",
+      "T1"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "T2",
+      "T1",
+      "g"
+     ],
+     "props": {
+      "vgt": 0.5,
+      "ih": 0.0001,
+      "ron": 30,
+      "bidir": true
+     }
+    }
+   ]
+  },
+  "footprint": "DIP6",
+  "padMap": [
+   "A",
+   "K",
+   "-",
+   "T2",
+   "-",
+   "T1"
+  ],
+  "note": "Random-phase triac driver, LED trigger current 5 mA. DIP-6: 1 A, 2 K, 4 T2, 6 T1."
+ },
+ {
+  "id": "6n137",
+  "label": {
+   "en": "6N137 high-speed logic optocoupler",
+   "tr": "6N137 hızlı lojik optokuplör"
+  },
+  "category": "semi",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "NC1",
+    "A",
+    "K",
+    "NC4"
+   ],
+   "right": [
+    "VCC",
+    "VE",
+    "VO",
+    "GND"
+   ],
+   "title": "6N137"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "s"
+     ],
+     "props": {
+      "is": 6.32e-14,
+      "n": 1.8
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "s",
+      "K"
+     ],
+     "value": 1
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "VO",
+      "x",
+      "s",
+      "K"
+     ],
+     "props": {
+      "vth": 0.005,
+      "vhys": 0.001,
+      "ron": 40
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "x",
+      "GND",
+      "VE",
+      "GND"
+     ],
+     "props": {
+      "vth": 1.4,
+      "vhys": 0.2,
+      "ron": 1
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VE",
+      "VCC"
+     ],
+     "value": 100000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 625
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "Open-collector output goes low while the LED current exceeds 5 mA; VE low disables the output (left open it is enabled). Propagation delay is not simulated. DIP-8: 2 A, 3 K, 5 GND, 6 VO, 7 VE, 8 VCC."
+ },
+ {
+  "id": "tlp250",
+  "label": {
+   "en": "TLP250 MOSFET/IGBT gate-drive optocoupler",
+   "tr": "TLP250 MOSFET/IGBT gate-drive optocoupler"
+  },
+  "category": "semi",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "NC1",
+    "A",
+    "K",
+    "NC4"
+   ],
+   "right": [
+    "VCC",
+    "VO1",
+    "VO2",
+    "GND"
+   ],
+   "title": "TLP250"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "s"
+     ],
+     "props": {
+      "is": 6.32e-14,
+      "n": 1.8
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "s",
+      "K"
+     ],
+     "value": 1
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "VCC",
+      "VO1",
+      "s",
+      "K"
+     ],
+     "props": {
+      "vth": 0.005,
+      "vhys": 0.001,
+      "ron": 5
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "VO1",
+      "GND",
+      "s",
+      "K"
+     ],
+     "props": {
+      "vth": 0.005,
+      "vhys": 0.001,
+      "ron": 2,
+      "inv": true
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VO1",
+      "VO2"
+     ],
+     "value": 0.001
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 1700
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "Totem-pole output swings to VCC while the LED current is above 5 mA and to GND below it (about 5 ohm high, 2 ohm low). 10-35 V supply. DIP-8: 2 A, 3 K, 5 GND, 6 and 7 VO, 8 VCC."
+ },
+ {
+  "id": "tlp251",
+  "label": {
+   "en": "TLP251 MOSFET gate-drive optocoupler",
+   "tr": "TLP251 MOSFET gate-drive optocoupler"
+  },
+  "category": "semi",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "NC1",
+    "A",
+    "K",
+    "NC4"
+   ],
+   "right": [
+    "VCC",
+    "VO1",
+    "VO2",
+    "GND"
+   ],
+   "title": "TLP251"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "s"
+     ],
+     "props": {
+      "is": 6.32e-14,
+      "n": 1.8
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "s",
+      "K"
+     ],
+     "value": 1
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "VCC",
+      "VO1",
+      "s",
+      "K"
+     ],
+     "props": {
+      "vth": 0.005,
+      "vhys": 0.001,
+      "ron": 8
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "VO1",
+      "GND",
+      "s",
+      "K"
+     ],
+     "props": {
+      "vth": 0.005,
+      "vhys": 0.001,
+      "ron": 4,
+      "inv": true
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VO1",
+      "VO2"
+     ],
+     "value": 0.001
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 1700
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "Totem-pole output: VCC while the LED current is above 5 mA, GND below it (about 8 ohm high, 4 ohm low). DIP-8: 2 A, 3 K, 5 GND, 6 and 7 VO, 8 VCC."
+ }
+]

@@ -1,0 +1,327 @@
+[
+ {
+  "id": "toggle-spst",
+  "label": {
+   "en": "Toggle switch SPST",
+   "tr": "Toggle anahtar SPST"
+  },
+  "category": "switch",
+  "prefix": "S",
+  "symbol": {
+   "kind": "like",
+   "like": "SW"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "closed",
+    "label": {
+     "en": "Closed (double-click to toggle)",
+     "tr": "Kapalı (çift tıkla)"
+    },
+    "default": false,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "SW",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "props": {
+      "closed": "$closed"
+     }
+    }
+   ]
+  },
+  "footprint": "HDR_1X2"
+ },
+ {
+  "id": "pushbutton",
+  "label": {
+   "en": "Push button (normally open)",
+   "tr": "Buton (normalde açık)"
+  },
+  "category": "switch",
+  "prefix": "S",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "pushbutton"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "closed",
+    "label": {
+     "en": "Pressed",
+     "tr": "Basılı"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "momentary",
+    "label": {
+     "en": "Momentary (hold the mouse button)",
+     "tr": "Anlık (fare tuşunu basılı tut)"
+    },
+    "default": true,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "SW",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "props": {
+      "closed": "$closed"
+     }
+    }
+   ]
+  },
+  "footprint": "PUSH_6MM",
+  "padMap": [
+   "1",
+   "-",
+   "2",
+   "-"
+  ]
+ },
+ {
+  "id": "pushbutton-nc",
+  "label": {
+   "en": "Push button (normally closed)",
+   "tr": "Buton (normalde kapalı)"
+  },
+  "category": "switch",
+  "prefix": "S",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "pushbutton"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "closed",
+    "label": {
+     "en": "Pressed",
+     "tr": "Basılı"
+    },
+    "default": false,
+    "kind": "bool"
+   },
+   {
+    "name": "momentary",
+    "label": {
+     "en": "Momentary (hold the mouse button)",
+     "tr": "Anlık (fare tuşunu basılı tut)"
+    },
+    "default": true,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "SW",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "props": {
+      "closed": "$closed<0.5"
+     }
+    }
+   ]
+  },
+  "footprint": "PUSH_6MM",
+  "padMap": [
+   "1",
+   "-",
+   "2",
+   "-"
+  ]
+ },
+ {
+  "id": "spdt",
+  "label": {
+   "en": "SPDT switch (changeover)",
+   "tr": "SPDT anahtar (değiştirmeli)"
+  },
+  "category": "switch",
+  "prefix": "S",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "spdt"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "closed",
+    "label": {
+     "en": "Thrown to NO (double-click to toggle)",
+     "tr": "NO konumunda (çift tıkla)"
+    },
+    "default": false,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "SW",
+     "nodes": [
+      "COM",
+      "NO"
+     ],
+     "props": {
+      "closed": "$closed"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "COM",
+      "NC"
+     ],
+     "props": {
+      "closed": "$closed<0.5"
+     }
+    }
+   ]
+  },
+  "footprint": "SIP_3",
+  "padMap": [
+   "NO",
+   "COM",
+   "NC"
+  ]
+ },
+ {
+  "id": "dpdt",
+  "label": {
+   "en": "DPDT switch (double changeover)",
+   "tr": "DPDT anahtar (çift değiştirmeli)"
+  },
+  "category": "switch",
+  "prefix": "S",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COM1",
+    "NO1",
+    "NC1"
+   ],
+   "right": [
+    "COM2",
+    "NO2",
+    "NC2"
+   ],
+   "title": "DPDT"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "closed",
+    "label": {
+     "en": "Thrown to NO (double-click to toggle)",
+     "tr": "NO konumunda (çift tıkla)"
+    },
+    "default": false,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "SW",
+     "nodes": [
+      "COM1",
+      "NO1"
+     ],
+     "props": {
+      "closed": "$closed"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "COM1",
+      "NC1"
+     ],
+     "props": {
+      "closed": "$closed<0.5"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "COM2",
+      "NO2"
+     ],
+     "props": {
+      "closed": "$closed"
+     }
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "COM2",
+      "NC2"
+     ],
+     "props": {
+      "closed": "$closed<0.5"
+     }
+    }
+   ]
+  },
+  "footprint": "DIP6"
+ },
+ {
+  "id": "reed-switch",
+  "label": {
+   "en": "Reed switch",
+   "tr": "Reed anahtar"
+  },
+  "category": "switch",
+  "prefix": "S",
+  "symbol": {
+   "kind": "like",
+   "like": "SW"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "closed",
+    "label": {
+     "en": "Magnet present (double-click)",
+     "tr": "Mıknatıs var (çift tıkla)"
+    },
+    "default": false,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "SW",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "props": {
+      "closed": "$closed"
+     }
+    }
+   ]
+  },
+  "footprint": "AXIAL_12.7"
+ }
+]

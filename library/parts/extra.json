@@ -1,0 +1,1255 @@
+[
+ {
+  "id": "1n4148",
+  "label": {
+   "en": "1N4148 signal diode",
+   "tr": "1N4148 sinyal diyodu"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "D",
+   "pins": [
+    "A",
+    "K"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "props": {
+      "is": 2.5e-09,
+      "n": 1.75
+     }
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -100
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.2
+    }
+   ]
+  }
+ },
+ {
+  "id": "1n4007",
+  "label": {
+   "en": "1N4007 rectifier diode (1 A, 1000 V)",
+   "tr": "1N4007 doğrultucu diyot (1 A, 1000 V)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "D",
+   "pins": [
+    "A",
+    "K"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "props": {
+      "is": 7e-09,
+      "n": 1.8
+     }
+    }
+   ]
+  },
+  "footprint": "AXIAL_10.16",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -1000
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 1
+    }
+   ]
+  }
+ },
+ {
+  "id": "1n5819",
+  "label": {
+   "en": "1N5819 Schottky diode (1 A)",
+   "tr": "1N5819 Schottky diyot (1 A)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "schottky"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "props": {
+      "is": 3e-06,
+      "n": 1.0
+     }
+    }
+   ]
+  },
+  "footprint": "AXIAL_10.16",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -40
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 1
+    }
+   ]
+  }
+ },
+ {
+  "id": "led-orange",
+  "label": {
+   "en": "LED orange",
+   "tr": "LED turuncu"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "LED"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "props": {
+      "is": 5e-20,
+      "n": 2
+     }
+    }
+   ]
+  },
+  "footprint": "LED_5MM",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.03
+    }
+   ]
+  }
+ },
+ {
+  "id": "led-ir",
+  "label": {
+   "en": "IR LED (940 nm)",
+   "tr": "IR LED (940 nm)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "LED"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "props": {
+      "is": 1e-16,
+      "n": 1.8
+     }
+    }
+   ]
+  },
+  "footprint": "LED_5MM",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.03
+    }
+   ]
+  }
+ },
+ {
+  "id": "cell-aa",
+  "label": {
+   "en": "AA cell 1.5 V",
+   "tr": "AA pil 1,5 V"
+  },
+  "category": "source",
+  "prefix": "BT",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "cell"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "v",
+    "label": {
+     "en": "Voltage (V)",
+     "tr": "Gerilim (V)"
+    },
+    "default": 1.5
+   },
+   {
+    "name": "rint",
+    "label": {
+     "en": "Internal resistance (Ω)",
+     "tr": "İç direnç (Ω)"
+    },
+    "default": 0.2
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "+",
+      "m"
+     ],
+     "value": "$v"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "-"
+     ],
+     "value": "$rint"
+    }
+   ]
+  },
+  "footprint": "TERM_5.08"
+ },
+ {
+  "id": "cell-9v",
+  "label": {
+   "en": "9 V battery",
+   "tr": "9 V pil"
+  },
+  "category": "source",
+  "prefix": "BT",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "cell"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "v",
+    "label": {
+     "en": "Voltage (V)",
+     "tr": "Gerilim (V)"
+    },
+    "default": 9
+   },
+   {
+    "name": "rint",
+    "label": {
+     "en": "Internal resistance (Ω)",
+     "tr": "İç direnç (Ω)"
+    },
+    "default": 1.7
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "+",
+      "m"
+     ],
+     "value": "$v"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "-"
+     ],
+     "value": "$rint"
+    }
+   ]
+  },
+  "footprint": "TERM_5.08"
+ },
+ {
+  "id": "cell-cr2032",
+  "label": {
+   "en": "CR2032 coin cell 3 V",
+   "tr": "CR2032 düğme pil 3 V"
+  },
+  "category": "source",
+  "prefix": "BT",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "cell"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "v",
+    "label": {
+     "en": "Voltage (V)",
+     "tr": "Gerilim (V)"
+    },
+    "default": 3
+   },
+   {
+    "name": "rint",
+    "label": {
+     "en": "Internal resistance (Ω)",
+     "tr": "İç direnç (Ω)"
+    },
+    "default": 15
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "+",
+      "m"
+     ],
+     "value": "$v"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "-"
+     ],
+     "value": "$rint"
+    }
+   ]
+  },
+  "footprint": "TERM_5.08"
+ },
+ {
+  "id": "cell-lipo",
+  "label": {
+   "en": "Li-Po cell 3.7 V",
+   "tr": "Li-Po pil 3,7 V"
+  },
+  "category": "source",
+  "prefix": "BT",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "cell"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "v",
+    "label": {
+     "en": "Voltage (V)",
+     "tr": "Gerilim (V)"
+    },
+    "default": 3.7
+   },
+   {
+    "name": "rint",
+    "label": {
+     "en": "Internal resistance (Ω)",
+     "tr": "İç direnç (Ω)"
+    },
+    "default": 0.15
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "+",
+      "m"
+     ],
+     "value": "$v"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "-"
+     ],
+     "value": "$rint"
+    }
+   ]
+  },
+  "footprint": "TERM_5.08"
+ },
+ {
+  "id": "cell-lead-acid",
+  "label": {
+   "en": "Lead-acid battery 12 V",
+   "tr": "Akü 12 V"
+  },
+  "category": "source",
+  "prefix": "BT",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "cell"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "v",
+    "label": {
+     "en": "Voltage (V)",
+     "tr": "Gerilim (V)"
+    },
+    "default": 12
+   },
+   {
+    "name": "rint",
+    "label": {
+     "en": "Internal resistance (Ω)",
+     "tr": "İç direnç (Ω)"
+    },
+    "default": 0.03
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "+",
+      "m"
+     ],
+     "value": "$v"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "-"
+     ],
+     "value": "$rint"
+    }
+   ]
+  },
+  "footprint": "TERM_5.08"
+ },
+ {
+  "id": "mains-230v",
+  "label": {
+   "en": "Mains 230 V / 50 Hz",
+   "tr": "Şebeke 230 V / 50 Hz"
+  },
+  "category": "source",
+  "prefix": "V",
+  "symbol": {
+   "kind": "like",
+   "like": "VAC"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "wave": {
+      "kind": "sin",
+      "amp": 325.3,
+      "freq": 50
+     }
+    }
+   ]
+  },
+  "footprint": "TERM_5.08"
+ },
+ {
+  "id": "mains-110v",
+  "label": {
+   "en": "Mains 110 V / 60 Hz",
+   "tr": "Şebeke 110 V / 60 Hz"
+  },
+  "category": "source",
+  "prefix": "V",
+  "symbol": {
+   "kind": "like",
+   "like": "VAC"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "wave": {
+      "kind": "sin",
+      "amp": 155.6,
+      "freq": 60
+     }
+    }
+   ]
+  },
+  "footprint": "TERM_5.08"
+ },
+ {
+  "id": "tl072",
+  "label": {
+   "en": "TL072 dual JFET op-amp",
+   "tr": "TL072 çift JFET op-amp"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "OUT1",
+    "IN1-",
+    "IN1+",
+    "V-"
+   ],
+   "right": [
+    "V+",
+    "OUT2",
+    "IN2-",
+    "IN2+"
+   ],
+   "title": "TL072"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT1",
+      "IN1-",
+      "IN1+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 1.5,
+      "rout": 80
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT2",
+      "IN2-",
+      "IN2+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 1.5,
+      "rout": 80
+     }
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "ratings": {
+   "v": [
+    {
+     "a": "V+",
+     "b": "V-",
+     "max": 36,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "ne5532",
+  "label": {
+   "en": "NE5532 dual audio op-amp",
+   "tr": "NE5532 çift ses op-amp"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "OUT1",
+    "IN1-",
+    "IN1+",
+    "V-"
+   ],
+   "right": [
+    "V+",
+    "OUT2",
+    "IN2-",
+    "IN2+"
+   ],
+   "title": "NE5532"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT1",
+      "IN1-",
+      "IN1+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 1.5,
+      "rout": 80
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT2",
+      "IN2-",
+      "IN2+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 1.5,
+      "rout": 80
+     }
+    }
+   ]
+  },
+  "footprint": "DIP8"
+ },
+ {
+  "id": "lm324",
+  "label": {
+   "en": "LM324 quad op-amp",
+   "tr": "LM324 dörtlü op-amp"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1OUT",
+    "1IN-",
+    "1IN+",
+    "VCC",
+    "2IN+",
+    "2IN-",
+    "2OUT"
+   ],
+   "right": [
+    "4OUT",
+    "4IN-",
+    "4IN+",
+    "GND",
+    "3IN+",
+    "3IN-",
+    "3OUT"
+   ],
+   "title": "LM324"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "1OUT",
+      "1IN-",
+      "1IN+"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "2OUT",
+      "2IN-",
+      "2IN+"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "3OUT",
+      "3IN-",
+      "3IN+"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "4OUT",
+      "4IN-",
+      "4IN+"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 32,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "uln2003",
+  "label": {
+   "en": "ULN2003 Darlington array (7 x 0.5 A)",
+   "tr": "ULN2003 Darlington dizisi (7 x 0,5 A)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1B",
+    "2B",
+    "3B",
+    "4B",
+    "5B",
+    "6B",
+    "7B",
+    "GND"
+   ],
+   "right": [
+    "1C",
+    "2C",
+    "3C",
+    "4C",
+    "5C",
+    "6C",
+    "7C",
+    "COM"
+   ],
+   "title": "ULN2003"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1B",
+      "b1"
+     ],
+     "value": 2700
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "1C",
+      "x1",
+      "b1"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "1C",
+      "GND",
+      "x1"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 40,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "x1",
+      "GND"
+     ],
+     "value": 8000
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "1C",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "2B",
+      "b2"
+     ],
+     "value": 2700
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "2C",
+      "x2",
+      "b2"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "2C",
+      "GND",
+      "x2"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 40,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "x2",
+      "GND"
+     ],
+     "value": 8000
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "2C",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "3B",
+      "b3"
+     ],
+     "value": 2700
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "3C",
+      "x3",
+      "b3"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "3C",
+      "GND",
+      "x3"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 40,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "x3",
+      "GND"
+     ],
+     "value": 8000
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "3C",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "4B",
+      "b4"
+     ],
+     "value": 2700
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "4C",
+      "x4",
+      "b4"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "4C",
+      "GND",
+      "x4"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 40,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "x4",
+      "GND"
+     ],
+     "value": 8000
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "4C",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "5B",
+      "b5"
+     ],
+     "value": 2700
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "5C",
+      "x5",
+      "b5"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "5C",
+      "GND",
+      "x5"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 40,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "x5",
+      "GND"
+     ],
+     "value": 8000
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "5C",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "6B",
+      "b6"
+     ],
+     "value": 2700
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "6C",
+      "x6",
+      "b6"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "6C",
+      "GND",
+      "x6"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 40,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "x6",
+      "GND"
+     ],
+     "value": 8000
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "6C",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "7B",
+      "b7"
+     ],
+     "value": 2700
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "7C",
+      "x7",
+      "b7"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "7C",
+      "GND",
+      "x7"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 40,
+      "is": 1e-13
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "x7",
+      "GND"
+     ],
+     "value": 8000
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "7C",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-12,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "DIP16",
+  "ratings": {
+   "v": [
+    {
+     "a": "COM",
+     "b": "GND",
+     "max": 50,
+     "min": -0.5
+    }
+   ],
+   "i": [
+    {
+     "pin": "1C",
+     "max": 0.5
+    },
+    {
+     "pin": "2C",
+     "max": 0.5
+    },
+    {
+     "pin": "3C",
+     "max": 0.5
+    },
+    {
+     "pin": "4C",
+     "max": 0.5
+    },
+    {
+     "pin": "5C",
+     "max": 0.5
+    },
+    {
+     "pin": "6C",
+     "max": 0.5
+    },
+    {
+     "pin": "7C",
+     "max": 0.5
+    }
+   ]
+  }
+ }
+]

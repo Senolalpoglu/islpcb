@@ -1,0 +1,1438 @@
+[
+ {
+  "id": "zener",
+  "label": {
+   "en": "Zener diode",
+   "tr": "Zener diyot"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "D",
+   "pins": [
+    "A",
+    "K"
+   ]
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vz",
+    "label": {
+     "en": "Zener voltage (V)",
+     "tr": "Zener gerilimi (V)"
+    },
+    "default": 5.1
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "props": {
+      "bv": "$vz"
+     }
+    }
+   ]
+  },
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "schottky",
+  "label": {
+   "en": "Schottky diode",
+   "tr": "Schottky diyot"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "D",
+   "pins": [
+    "A",
+    "K"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "props": {
+      "is": 1e-07,
+      "n": 1.05
+     }
+    }
+   ]
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -40
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 1
+    }
+   ]
+  }
+ },
+ {
+  "id": "led-green",
+  "label": {
+   "en": "LED green",
+   "tr": "LED yeşil"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "LED"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "props": {
+      "is": 1e-19,
+      "n": 2
+     }
+    }
+   ]
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.03
+    }
+   ]
+  }
+ },
+ {
+  "id": "led-yellow",
+  "label": {
+   "en": "LED yellow",
+   "tr": "LED sarı"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "LED"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "props": {
+      "is": 3e-20,
+      "n": 2
+     }
+    }
+   ]
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.03
+    }
+   ]
+  }
+ },
+ {
+  "id": "led-blue",
+  "label": {
+   "en": "LED blue",
+   "tr": "LED mavi"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "LED"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "props": {
+      "is": 1e-22,
+      "n": 2.5
+     }
+    }
+   ]
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.03
+    }
+   ]
+  }
+ },
+ {
+  "id": "led-white",
+  "label": {
+   "en": "LED white",
+   "tr": "LED beyaz"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "LED"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "props": {
+      "is": 5e-23,
+      "n": 2.5
+     }
+    }
+   ]
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.03
+    }
+   ]
+  }
+ },
+ {
+  "id": "bridge",
+  "label": {
+   "en": "Bridge rectifier",
+   "tr": "Köprü diyot"
+  },
+  "category": "semi",
+  "prefix": "BR",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "AC1",
+    "AC2"
+   ],
+   "right": [
+    "DC+",
+    "DC-"
+   ],
+   "title": "BRIDGE"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "AC1",
+      "DC+"
+     ]
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "AC2",
+      "DC+"
+     ]
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "DC-",
+      "AC1"
+     ]
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "DC-",
+      "AC2"
+     ]
+    }
+   ]
+  },
+  "footprint": "DIP4",
+  "padMap": [
+   "DC+",
+   "AC1",
+   "DC-",
+   "AC2"
+  ]
+ },
+ {
+  "id": "nmos-power",
+  "label": {
+   "en": "N-MOSFET power (IRF540)",
+   "tr": "N-MOSFET güç (IRF540)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 8,
+      "vth": 3.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 100
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 30
+    }
+   ],
+   "p": 100
+  }
+ },
+ {
+  "id": "pmos-power",
+  "label": {
+   "en": "P-MOSFET power (IRF9540)",
+   "tr": "P-MOSFET güç (IRF9540)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "PMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 4,
+      "vth": 3.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "S",
+     "b": "D",
+     "max": 100
+    },
+    {
+     "a": "S",
+     "b": "G",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 30
+    }
+   ],
+   "p": 100
+  }
+ },
+ {
+  "id": "potentiometer",
+  "label": {
+   "en": "Potentiometer",
+   "tr": "Potansiyometre"
+  },
+  "category": "passive",
+  "prefix": "RV",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "B"
+   ],
+   "right": [
+    "W"
+   ],
+   "title": "POT"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Total resistance (Ω)",
+     "tr": "Toplam direnç (Ω)"
+    },
+    "default": 10000
+   },
+   {
+    "name": "pos",
+    "label": {
+     "en": "Wiper position (0-1)",
+     "tr": "Kayar konumu (0-1)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "A",
+      "W"
+     ],
+     "value": "max($r*$pos,0.01)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "W",
+      "B"
+     ],
+     "value": "max($r*(1-$pos),0.01)"
+    }
+   ]
+  },
+  "footprint": "SIP_3",
+  "padMap": [
+   "A",
+   "W",
+   "B"
+  ]
+ },
+ {
+  "id": "ldr",
+  "label": {
+   "en": "Photoresistor (LDR)",
+   "tr": "Fotodirenç (LDR)"
+  },
+  "category": "passive",
+  "prefix": "R",
+  "symbol": {
+   "kind": "like",
+   "like": "R",
+   "pins": [
+    "1",
+    "2"
+   ]
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Resistance in the light (Ω)",
+     "tr": "Aydınlıktaki direnç (Ω)"
+    },
+    "default": 10000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$r"
+    }
+   ]
+  }
+ },
+ {
+  "id": "ntc",
+  "label": {
+   "en": "Thermistor (NTC)",
+   "tr": "Termistör (NTC)"
+  },
+  "category": "passive",
+  "prefix": "RT",
+  "symbol": {
+   "kind": "like",
+   "like": "R",
+   "pins": [
+    "1",
+    "2"
+   ]
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Resistance at the temperature (Ω)",
+     "tr": "Sıcaklıktaki direnç (Ω)"
+    },
+    "default": 10000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$r"
+    }
+   ]
+  }
+ },
+ {
+  "id": "cap-electrolytic",
+  "label": {
+   "en": "Electrolytic capacitor",
+   "tr": "Elektrolitik kondansatör"
+  },
+  "category": "passive",
+  "prefix": "C",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "cap-polar"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "c",
+    "label": {
+     "en": "Capacitance (F)",
+     "tr": "Kapasite (F)"
+    },
+    "default": 0.0001
+   },
+   {
+    "name": "v",
+    "label": {
+     "en": "Rated voltage (V)",
+     "tr": "Anma gerilimi (V)"
+    },
+    "default": 25
+   },
+   {
+    "name": "esr",
+    "label": {
+     "en": "ESR (Ω)",
+     "tr": "ESR (Ω)"
+    },
+    "default": 0.1
+   },
+   {
+    "name": "ic",
+    "label": {
+     "en": "Initial voltage (V)",
+     "tr": "Başlangıç gerilimi (V)"
+    },
+    "default": 0
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "C",
+     "nodes": [
+      "+",
+      "i"
+     ],
+     "value": "$c",
+     "props": {
+      "ic": "$ic"
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "i",
+      "-"
+     ],
+     "value": "$esr"
+    }
+   ]
+  },
+  "footprint": "CAP_RADIAL_D6.3_P2.5",
+  "footprints": [
+   "CAP_RADIAL_D5_P2",
+   "CAP_RADIAL_D8_P3.5",
+   "CAP_RADIAL_D10_P5",
+   "CAP_RADIAL_D12.5_P5",
+   "CAP_RADIAL_D16_P7.5"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "+",
+     "b": "-",
+     "max": "$v",
+     "min": -1,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "speaker",
+  "label": {
+   "en": "Speaker / buzzer",
+   "tr": "Hoparlör / buzzer"
+  },
+  "category": "passive",
+  "prefix": "LS",
+  "symbol": {
+   "kind": "like",
+   "like": "R",
+   "pins": [
+    "+",
+    "-"
+   ]
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Impedance (Ω)",
+     "tr": "Empedans (Ω)"
+    },
+    "default": 8
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "value": "$r"
+    }
+   ]
+  },
+  "footprint": "HDR_1X2"
+ },
+ {
+  "id": "battery",
+  "label": {
+   "en": "Battery with internal resistance",
+   "tr": "İç dirençli pil"
+  },
+  "category": "source",
+  "prefix": "BT",
+  "symbol": {
+   "kind": "like",
+   "like": "VDC",
+   "pins": [
+    "+",
+    "-"
+   ]
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "v",
+    "label": {
+     "en": "Voltage (V)",
+     "tr": "Gerilim (V)"
+    },
+    "default": 9
+   },
+   {
+    "name": "esr",
+    "label": {
+     "en": "Internal resistance (Ω)",
+     "tr": "İç direnç (Ω)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "i",
+      "-"
+     ],
+     "value": "$v"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "+",
+      "i"
+     ],
+     "value": "$esr"
+    }
+   ]
+  },
+  "footprint": "TERM_5.08"
+ },
+ {
+  "id": "vtri",
+  "label": {
+   "en": "Triangle voltage source",
+   "tr": "Üçgen dalga kaynağı"
+  },
+  "category": "source",
+  "prefix": "V",
+  "symbol": {
+   "kind": "like",
+   "like": "VAC",
+   "pins": [
+    "+",
+    "-"
+   ]
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "low",
+    "label": {
+     "en": "Low level (V)",
+     "tr": "Alt seviye (V)"
+    },
+    "default": 0
+   },
+   {
+    "name": "high",
+    "label": {
+     "en": "High level (V)",
+     "tr": "Üst seviye (V)"
+    },
+    "default": 5
+   },
+   {
+    "name": "freq",
+    "label": {
+     "en": "Frequency (Hz)",
+     "tr": "Frekans (Hz)"
+    },
+    "default": 1000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "wave": {
+      "kind": "tri",
+      "low": "$low",
+      "high": "$high",
+      "freq": "$freq"
+     }
+    }
+   ]
+  },
+  "footprint": "TERM_5.08"
+ },
+ {
+  "id": "voltmeter",
+  "label": {
+   "en": "Voltmeter",
+   "tr": "Voltmetre"
+  },
+  "category": "meter",
+  "prefix": "VM",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+"
+   ],
+   "right": [
+    "-"
+   ],
+   "title": "V"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "value": 10000000.0
+    }
+   ]
+  },
+  "footprint": "HDR_1X2",
+  "meter": "voltage"
+ },
+ {
+  "id": "ammeter",
+  "label": {
+   "en": "Ammeter",
+   "tr": "Ampermetre"
+  },
+  "category": "meter",
+  "prefix": "AM",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+"
+   ],
+   "right": [
+    "-"
+   ],
+   "title": "A"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "+",
+      "-"
+     ],
+     "value": 0.001
+    }
+   ]
+  },
+  "footprint": "HDR_1X2",
+  "meter": "current"
+ },
+ {
+  "id": "7seg-cc",
+  "label": {
+   "en": "7-segment display, common cathode",
+   "tr": "7 segment gösterge, ortak katot"
+  },
+  "category": "semi",
+  "prefix": "DS",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "dp"
+   ],
+   "right": [
+    "COM"
+   ],
+   "title": "7SEG CC"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "a",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "b",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "c",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "d",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "e",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "f",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "g",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "dp",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    }
+   ]
+  },
+  "footprint": "SEG7",
+  "padMap": [
+   "e",
+   "d",
+   "COM",
+   "c",
+   "dp",
+   "g",
+   "f",
+   "COM",
+   "a",
+   "b"
+  ],
+  "ratings": {
+   "i": [
+    {
+     "pin": "a",
+     "max": 0.03
+    },
+    {
+     "pin": "b",
+     "max": 0.03
+    },
+    {
+     "pin": "c",
+     "max": 0.03
+    },
+    {
+     "pin": "d",
+     "max": 0.03
+    },
+    {
+     "pin": "e",
+     "max": 0.03
+    },
+    {
+     "pin": "f",
+     "max": 0.03
+    },
+    {
+     "pin": "g",
+     "max": 0.03
+    },
+    {
+     "pin": "dp",
+     "max": 0.03
+    }
+   ]
+  }
+ },
+ {
+  "id": "7seg-ca",
+  "label": {
+   "en": "7-segment display, common anode",
+   "tr": "7 segment gösterge, ortak anot"
+  },
+  "category": "semi",
+  "prefix": "DS",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "dp"
+   ],
+   "right": [
+    "COM"
+   ],
+   "title": "7SEG CA"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "COM",
+      "a"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "COM",
+      "b"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "COM",
+      "c"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "COM",
+      "d"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "COM",
+      "e"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "COM",
+      "f"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "COM",
+      "g"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "COM",
+      "dp"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    }
+   ]
+  },
+  "footprint": "SEG7",
+  "padMap": [
+   "e",
+   "d",
+   "COM",
+   "c",
+   "dp",
+   "g",
+   "f",
+   "COM",
+   "a",
+   "b"
+  ],
+  "ratings": {
+   "i": [
+    {
+     "pin": "a",
+     "max": 0.03
+    },
+    {
+     "pin": "b",
+     "max": 0.03
+    },
+    {
+     "pin": "c",
+     "max": 0.03
+    },
+    {
+     "pin": "d",
+     "max": 0.03
+    },
+    {
+     "pin": "e",
+     "max": 0.03
+    },
+    {
+     "pin": "f",
+     "max": 0.03
+    },
+    {
+     "pin": "g",
+     "max": 0.03
+    },
+    {
+     "pin": "dp",
+     "max": 0.03
+    }
+   ]
+  }
+ },
+ {
+  "id": "led-rgb",
+  "label": {
+   "en": "RGB LED, common cathode",
+   "tr": "RGB LED, ortak katot"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "R",
+    "G",
+    "B"
+   ],
+   "right": [
+    "COM"
+   ],
+   "title": "RGB"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "R",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "G",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-19,
+      "n": 2
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "B",
+      "COM"
+     ],
+     "props": {
+      "is": 1e-22,
+      "n": 2.5
+     }
+    }
+   ]
+  },
+  "footprint": "SIP_4",
+  "padMap": [
+   "R",
+   "COM",
+   "G",
+   "B"
+  ]
+ },
+ {
+  "id": "optocoupler",
+  "label": {
+   "en": "Optocoupler (PC817)",
+   "tr": "Optokuplör (PC817)"
+  },
+  "category": "semi",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "K"
+   ],
+   "right": [
+    "C",
+    "E"
+   ],
+   "title": "OPTO"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "ctr",
+    "label": {
+     "en": "Current transfer ratio",
+     "tr": "Akım aktarım oranı"
+    },
+    "default": 1.0
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "s"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "s",
+      "K"
+     ],
+     "value": 0.1
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "E",
+      "b",
+      "s",
+      "K"
+     ],
+     "value": "$ctr/100/0.1"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "b",
+      "E"
+     ],
+     "value": 100000000.0
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "b"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "DIP4",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -6,
+     "polar": "min"
+    },
+    {
+     "a": "C",
+     "b": "E",
+     "max": 70,
+     "min": -0.5
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.06
+    }
+   ]
+  }
+ }
+]

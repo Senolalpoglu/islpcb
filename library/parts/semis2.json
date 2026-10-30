@@ -1,0 +1,3685 @@
+[
+ {
+  "id": "bc107",
+  "label": {
+   "en": "BC107 NPN (45 V, 0.1 A, TO-18)",
+   "tr": "BC107 NPN (45 V, 0.1 A, TO-18)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 250,
+      "is": 2.41e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO18",
+  "padMap": [
+   "E",
+   "B",
+   "C"
+  ],
+  "note": "hFE 110-450 (typ. 250), Vbe 0.65 V at 2 mA. TO-18 can: E, B, C.",
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 45
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 0.1
+    }
+   ],
+   "p": 0.3
+  }
+ },
+ {
+  "id": "bc108",
+  "label": {
+   "en": "BC108 NPN (20 V, 0.1 A, TO-18)",
+   "tr": "BC108 NPN (20 V, 0.1 A, TO-18)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 300,
+      "is": 2.41e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO18",
+  "padMap": [
+   "E",
+   "B",
+   "C"
+  ],
+  "note": "hFE 110-800 (typ. 300), Vbe 0.65 V at 2 mA. TO-18 can: E, B, C.",
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 20
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 0.1
+    }
+   ],
+   "p": 0.3
+  }
+ },
+ {
+  "id": "bc140",
+  "label": {
+   "en": "BC140 NPN (40 V, 1 A, TO-39)",
+   "tr": "BC140 NPN (40 V, 1 A, TO-39)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 100,
+      "is": 8.03e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO39",
+  "padMap": [
+   "E",
+   "B",
+   "C"
+  ],
+  "note": "hFE 40-250 (typ. 100), Vbe 0.72 V at 100 mA. TO-39 can: E, B, C.",
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 40
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 1
+    }
+   ],
+   "p": 3.7
+  }
+ },
+ {
+  "id": "bd138",
+  "label": {
+   "en": "BD138 PNP (60 V, 1.5 A, TO-126)",
+   "tr": "BD138 PNP (60 V, 1.5 A, TO-126)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 100,
+      "is": 1.82e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO126",
+  "padMap": [
+   "E",
+   "C",
+   "B"
+  ],
+  "note": "hFE 40-250 (typ. 100), Vbe 0.8 V at 0.5 A. TO-126: E, C, B.",
+  "ratings": {
+   "v": [
+    {
+     "a": "E",
+     "b": "C",
+     "max": 60
+    },
+    {
+     "a": "E",
+     "b": "B",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 1.5
+    }
+   ],
+   "p": 12.5
+  }
+ },
+ {
+  "id": "tip29c",
+  "label": {
+   "en": "TIP29C NPN power (100 V, 1 A)",
+   "tr": "TIP29C NPN power (100 V, 1 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 40,
+      "is": 7.6e-16
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "B",
+   "C",
+   "E"
+  ],
+  "note": "hFE 15-75 (typ. 40), Vbe 0.9 V at 1 A. TO-220: B, C, E.",
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 100
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 1
+    }
+   ],
+   "p": 30
+  }
+ },
+ {
+  "id": "bu508a",
+  "label": {
+   "en": "BU508A NPN high-voltage (1500 V, 8 A, TO-247)",
+   "tr": "BU508A NPN high-voltage (1500 V, 8 A, TO-247)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QNPN",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 10,
+      "is": 7.14e-17
+     }
+    }
+   ]
+  },
+  "footprint": "TO247",
+  "padMap": [
+   "B",
+   "C",
+   "E"
+  ],
+  "note": "Horizontal-deflection switch: hFE about 10 at 4.5 A, Vbe 1 V. TO-247: B, C, E.",
+  "ratings": {
+   "v": [
+    {
+     "a": "C",
+     "b": "E",
+     "max": 700
+    },
+    {
+     "a": "B",
+     "b": "E",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 8
+    }
+   ],
+   "p": 125
+  }
+ },
+ {
+  "id": "bc856b",
+  "label": {
+   "en": "BC856B PNP (65 V, 0.1 A, SOT-23)",
+   "tr": "BC856B PNP (65 V, 0.1 A, SOT-23)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 330,
+      "is": 2.41e-14
+     }
+    }
+   ]
+  },
+  "footprint": "SOT23",
+  "padMap": [
+   "B",
+   "E",
+   "C"
+  ],
+  "note": "hFE 220-475 (typ. 330). SOT-23: 1 B, 2 E, 3 C.",
+  "ratings": {
+   "v": [
+    {
+     "a": "E",
+     "b": "C",
+     "max": 65
+    },
+    {
+     "a": "E",
+     "b": "B",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 0.1
+    }
+   ],
+   "p": 0.3
+  }
+ },
+ {
+  "id": "mmbt2907a",
+  "label": {
+   "en": "MMBT2907A PNP (60 V, 0.6 A, SOT-23)",
+   "tr": "MMBT2907A PNP (60 V, 0.6 A, SOT-23)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "QPNP",
+   "pins": [
+    "C",
+    "B",
+    "E"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "Q",
+     "nodes": [
+      "C",
+      "E",
+      "B"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 150,
+      "is": 3.77e-14
+     }
+    }
+   ]
+  },
+  "footprint": "SOT23",
+  "padMap": [
+   "B",
+   "E",
+   "C"
+  ],
+  "note": "hFE 100-300 (typ. 150). SOT-23: 1 B, 2 E, 3 C.",
+  "ratings": {
+   "v": [
+    {
+     "a": "E",
+     "b": "C",
+     "max": 60
+    },
+    {
+     "a": "E",
+     "b": "B",
+     "min": -6
+    }
+   ],
+   "i": [
+    {
+     "pin": "C",
+     "max": 0.6
+    }
+   ],
+   "p": 0.3
+  }
+ },
+ {
+  "id": "irf510",
+  "label": {
+   "en": "IRF510 N-MOSFET (100 V, 5.6 A)",
+   "tr": "IRF510 N-MOSFET (100 V, 5.6 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.29899,
+      "vth": 3.0,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "S",
+      "D"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "note": "Rds(on) 0.54 ohm at Vgs 10 V, Vth 2-4 V. TO-220: G, D, S. Body diode included.",
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 100
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 5.6
+    }
+   ],
+   "p": 43
+  }
+ },
+ {
+  "id": "irf530",
+  "label": {
+   "en": "IRF530 N-MOSFET (100 V, 14 A)",
+   "tr": "IRF530 N-MOSFET (100 V, 14 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.97458,
+      "vth": 3.0,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "S",
+      "D"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "note": "Rds(on) 0.16 ohm at Vgs 10 V, Vth 2-4 V. TO-220: G, D, S. Body diode included.",
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 100
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 14
+    }
+   ],
+   "p": 88
+  }
+ },
+ {
+  "id": "irf540",
+  "label": {
+   "en": "IRF540 N-MOSFET (100 V, 28 A)",
+   "tr": "IRF540 N-MOSFET (100 V, 28 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 2.0202,
+      "vth": 3.0,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "S",
+      "D"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "note": "Rds(on) 77 mohm at Vgs 10 V, Vth 2-4 V. TO-220: G, D, S. Body diode included.",
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 100
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 28
+    }
+   ],
+   "p": 150
+  }
+ },
+ {
+  "id": "irf630",
+  "label": {
+   "en": "IRF630 N-MOSFET (200 V, 9 A)",
+   "tr": "IRF630 N-MOSFET (200 V, 9 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.41337,
+      "vth": 3.0,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "S",
+      "D"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "note": "Rds(on) 0.4 ohm at Vgs 10 V, Vth 2-4 V. TO-220: G, D, S. Body diode included.",
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 200
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 9
+    }
+   ],
+   "p": 74
+  }
+ },
+ {
+  "id": "irf9z24n",
+  "label": {
+   "en": "IRF9Z24N P-MOSFET (55 V, 12 A)",
+   "tr": "IRF9Z24N P-MOSFET (55 V, 12 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "PMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.8859,
+      "vth": 3.0,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "D",
+      "S"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "note": "Rds(on) 0.175 ohm at Vgs -10 V, Vth -2 to -4 V. TO-220: G, D, S. Body diode included.",
+  "ratings": {
+   "v": [
+    {
+     "a": "S",
+     "b": "D",
+     "max": 55
+    },
+    {
+     "a": "S",
+     "b": "G",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 12
+    }
+   ],
+   "p": 45
+  }
+ },
+ {
+  "id": "irf5210",
+  "label": {
+   "en": "IRF5210 P-MOSFET (100 V, 40 A)",
+   "tr": "IRF5210 P-MOSFET (100 V, 40 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "PMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 2.58387,
+      "vth": 3.0,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "D",
+      "S"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "note": "Rds(on) 60 mohm at Vgs -10 V, Vth -2 to -4 V. TO-220: G, D, S. Body diode included.",
+  "ratings": {
+   "v": [
+    {
+     "a": "S",
+     "b": "D",
+     "max": 100
+    },
+    {
+     "a": "S",
+     "b": "G",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 40
+    }
+   ],
+   "p": 200
+  }
+ },
+ {
+  "id": "6n60",
+  "label": {
+   "en": "6N60 N-MOSFET (600 V, 6 A)",
+   "tr": "6N60 N-MOSFET (600 V, 6 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.17114,
+      "vth": 3.5,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "S",
+      "D"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "note": "Rds(on) 1.2 ohm at Vgs 10 V. TO-220: G, D, S. Body diode included.",
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 600
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 30,
+     "min": -30
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 6
+    }
+   ],
+   "p": 125
+  }
+ },
+ {
+  "id": "6n90",
+  "label": {
+   "en": "6N90 N-MOSFET (900 V, 6 A)",
+   "tr": "6N90 N-MOSFET (900 V, 6 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.13477,
+      "vth": 3.5,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "S",
+      "D"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "note": "Rds(on) about 2 ohm at Vgs 10 V. TO-220: G, D, S. Body diode included."
+ },
+ {
+  "id": "12n65",
+  "label": {
+   "en": "12N65 N-MOSFET (650 V, 12 A)",
+   "tr": "12N65 N-MOSFET (650 V, 12 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.31159,
+      "vth": 3.5,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "S",
+      "D"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "G",
+   "D",
+   "S"
+  ],
+  "note": "Rds(on) about 0.7 ohm at Vgs 10 V. TO-220: G, D, S. Body diode included.",
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 650
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 30,
+     "min": -30
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 12
+    }
+   ],
+   "p": 150
+  }
+ },
+ {
+  "id": "2n7002",
+  "label": {
+   "en": "2N7002 N-MOSFET (60 V, 0.3 A, SOT-23)",
+   "tr": "2N7002 N-MOSFET (60 V, 0.3 A, SOT-23)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "like",
+   "like": "NMOS",
+   "pins": [
+    "D",
+    "G",
+    "S"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "D",
+      "S",
+      "G"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.0669,
+      "vth": 2.1,
+      "lambda": 0.01
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "S",
+      "D"
+     ],
+     "props": {
+      "is": 2e-11,
+      "n": 1.5
+     }
+    }
+   ]
+  },
+  "footprint": "SOT23",
+  "padMap": [
+   "G",
+   "S",
+   "D"
+  ],
+  "note": "Rds(on) about 2 ohm at Vgs 10 V, Vth 1-2.5 V (also covers 2N7002K / CK / KW). SOT-23: 1 G, 2 S, 3 D.",
+  "ratings": {
+   "v": [
+    {
+     "a": "D",
+     "b": "S",
+     "max": 60
+    },
+    {
+     "a": "G",
+     "b": "S",
+     "max": 20,
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "D",
+     "max": 0.115
+    }
+   ],
+   "p": 0.2
+  }
+ },
+ {
+  "id": "1n5817",
+  "label": {
+   "en": "1N5817 Schottky (20 V, 1 A)",
+   "tr": "1N5817 Schottky (20 V, 1 A)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "schottky"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 0.0001,
+      "n": 1.05
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 0.0901
+    }
+   ]
+  },
+  "footprint": "AXIAL_10.16",
+  "note": "Typical forward curve: 0.34 V at 1 A, 0.55 V at 3 A.",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -20
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 1
+    }
+   ]
+  }
+ },
+ {
+  "id": "1n5822",
+  "label": {
+   "en": "1N5822 Schottky (40 V, 3 A)",
+   "tr": "1N5822 Schottky (40 V, 3 A)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "schottky"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1.1e-05,
+      "n": 1.05
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 0.0401
+    }
+   ]
+  },
+  "footprint": "AXIAL_12.7",
+  "note": "Typical forward curve: 0.35 V at 1 A, 0.46 V at 3 A.",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -40
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 3
+    }
+   ]
+  }
+ },
+ {
+  "id": "1n4001",
+  "label": {
+   "en": "1N4001 rectifier (50 V, 1 A)",
+   "tr": "1N4001 rectifier (50 V, 1 A)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "D",
+   "pins": [
+    "A",
+    "K"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 2.2e-08,
+      "n": 1.8,
+      "bv": 55
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 0.0594
+    }
+   ]
+  },
+  "footprint": "AXIAL_10.16",
+  "note": "Forward 0.88 V at 1 A, 1.05 V at 3 A (typical).",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -50
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 1
+    }
+   ]
+  }
+ },
+ {
+  "id": "1n4004",
+  "label": {
+   "en": "1N4004 rectifier (400 V, 1 A)",
+   "tr": "1N4004 rectifier (400 V, 1 A)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "D",
+   "pins": [
+    "A",
+    "K"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 2.2e-08,
+      "n": 1.8,
+      "bv": 450
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 0.0594
+    }
+   ]
+  },
+  "footprint": "AXIAL_10.16",
+  "note": "Forward 0.88 V at 1 A, 1.05 V at 3 A (typical).",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -400
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 1
+    }
+   ]
+  }
+ },
+ {
+  "id": "1n5408",
+  "label": {
+   "en": "1N5408 rectifier (1000 V, 3 A)",
+   "tr": "1N5408 rectifier (1000 V, 3 A)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "D",
+   "pins": [
+    "A",
+    "K"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 3.38e-08,
+      "n": 1.8,
+      "bv": 1100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 0.0494
+    }
+   ]
+  },
+  "footprint": "AXIAL_12.7",
+  "note": "Forward 0.85 V at 1 A, 1.0 V at 3 A (typical).",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -1000
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 3
+    }
+   ]
+  }
+ },
+ {
+  "id": "ba159",
+  "label": {
+   "en": "BA159 fast rectifier (1000 V, 1 A, 500 ns)",
+   "tr": "BA159 fast rectifier (1000 V, 1 A, 500 ns)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "D",
+   "pins": [
+    "A",
+    "K"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1.06e-08,
+      "n": 1.9,
+      "bv": 1100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 0.098
+    }
+   ]
+  },
+  "footprint": "AXIAL_10.16",
+  "note": "Forward about 1 V at 1 A. Reverse recovery time is not simulated.",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -1000
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 1
+    }
+   ]
+  }
+ },
+ {
+  "id": "uf4007",
+  "label": {
+   "en": "UF4007 ultrafast rectifier (1000 V, 1 A, 75 ns)",
+   "tr": "UF4007 ultrafast rectifier (1000 V, 1 A, 75 ns)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "D",
+   "pins": [
+    "A",
+    "K"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 2.05e-10,
+      "n": 2.0,
+      "bv": 1100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 0.0966
+    }
+   ]
+  },
+  "footprint": "AXIAL_10.16",
+  "note": "Forward about 1.25 V at 1 A. Reverse recovery time is not simulated.",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -1000
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 1
+    }
+   ]
+  }
+ },
+ {
+  "id": "bas16",
+  "label": {
+   "en": "BAS16 switching diode (85 V, 0.2 A, SOT-23)",
+   "tr": "BAS16 anahtarlama diyodu (85 V, 0,2 A, SOT-23)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "like",
+   "like": "D",
+   "pins": [
+    "A",
+    "K"
+   ]
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 2.35e-08,
+      "n": 2.0,
+      "bv": 95
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 2.932
+    }
+   ]
+  },
+  "footprint": "SOT23",
+  "padMap": [
+   "A",
+   "-",
+   "K"
+  ],
+  "note": "SOT-23: 1 anode, 3 cathode (pin 2 unused). Forward 0.9 V at 50 mA, 1.25 V at 150 mA.",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "min": -75
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.2
+    }
+   ]
+  }
+ },
+ {
+  "id": "baw56",
+  "label": {
+   "en": "BAW56 dual switching diode, common anode (SOT-23)",
+   "tr": "BAW56 dual switching diode, common anode (SOT-23)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "K1",
+    "K2"
+   ],
+   "right": [
+    "A"
+   ],
+   "title": "BAW56"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m0"
+     ],
+     "props": {
+      "is": 2.35e-08,
+      "n": 2.0,
+      "bv": 95
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m0",
+      "K1"
+     ],
+     "value": 2.932
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m1"
+     ],
+     "props": {
+      "is": 2.35e-08,
+      "n": 2.0,
+      "bv": 95
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m1",
+      "K2"
+     ],
+     "value": 2.932
+    }
+   ]
+  },
+  "footprint": "SOT23",
+  "padMap": [
+   "K1",
+   "K2",
+   "A"
+  ],
+  "note": "SOT-23 dual diode (NXP pinout). Forward 0.9 V at 50 mA."
+ },
+ {
+  "id": "bav70",
+  "label": {
+   "en": "BAV70 dual switching diode, common cathode (SOT-23)",
+   "tr": "BAV70 dual switching diode, common cathode (SOT-23)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A1",
+    "A2"
+   ],
+   "right": [
+    "K"
+   ],
+   "title": "BAV70"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A1",
+      "m0"
+     ],
+     "props": {
+      "is": 2.35e-08,
+      "n": 2.0,
+      "bv": 95
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m0",
+      "K"
+     ],
+     "value": 2.932
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "A2",
+      "m1"
+     ],
+     "props": {
+      "is": 2.35e-08,
+      "n": 2.0,
+      "bv": 95
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m1",
+      "K"
+     ],
+     "value": 2.932
+    }
+   ]
+  },
+  "footprint": "SOT23",
+  "padMap": [
+   "A1",
+   "A2",
+   "K"
+  ],
+  "note": "SOT-23 dual diode (NXP pinout). Forward 0.9 V at 50 mA."
+ },
+ {
+  "id": "1n4727",
+  "label": {
+   "en": "Zener 1N4727A (3 V, 1 W)",
+   "tr": "Zener 1N4727A (3 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 2.176,
+      "ibv": 0.085
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 9.696
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 3 V at 85 mA, dynamic impedance 10 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4728",
+  "label": {
+   "en": "Zener 1N4728A (3.3 V, 1 W)",
+   "tr": "Zener 1N4728A (3,3 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 2.566,
+      "ibv": 0.076
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 9.66
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 3.3 V at 76 mA, dynamic impedance 10 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4729",
+  "label": {
+   "en": "Zener 1N4729A (3.6 V, 1 W)",
+   "tr": "Zener 1N4729A (3,6 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 2.936,
+      "ibv": 0.069
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 9.625
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 3.6 V at 69 mA, dynamic impedance 10 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4730",
+  "label": {
+   "en": "Zener 1N4730A (3.9 V, 1 W)",
+   "tr": "Zener 1N4730A (3,9 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 3.35,
+      "ibv": 0.064
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 8.596
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 3.9 V at 64 mA, dynamic impedance 9 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4731",
+  "label": {
+   "en": "Zener 1N4731A (4.3 V, 1 W)",
+   "tr": "Zener 1N4731A (4,3 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 3.804,
+      "ibv": 0.058
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 8.554
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 4.3 V at 58 mA, dynamic impedance 9 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4732",
+  "label": {
+   "en": "Zener 1N4732A (4.7 V, 1 W)",
+   "tr": "Zener 1N4732A (4,7 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 4.302,
+      "ibv": 0.053
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 7.512
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 4.7 V at 53 mA, dynamic impedance 8 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4733",
+  "label": {
+   "en": "Zener 1N4733A (5.1 V, 1 W)",
+   "tr": "Zener 1N4733A (5,1 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 4.783,
+      "ibv": 0.049
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 6.472
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 5.1 V at 49 mA, dynamic impedance 7 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4734",
+  "label": {
+   "en": "Zener 1N4734A (5.6 V, 1 W)",
+   "tr": "Zener 1N4734A (5,6 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 5.401,
+      "ibv": 0.045
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 4.426
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 5.6 V at 45 mA, dynamic impedance 5 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4735",
+  "label": {
+   "en": "Zener 1N4735A (6.2 V, 1 W)",
+   "tr": "Zener 1N4735A (6,2 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 6.144,
+      "ibv": 0.041
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 1.369
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 6.2 V at 41 mA, dynamic impedance 2 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4736",
+  "label": {
+   "en": "Zener 1N4736A (6.8 V, 1 W)",
+   "tr": "Zener 1N4736A (6,8 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 6.696,
+      "ibv": 0.037
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 2.801
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 6.8 V at 37 mA, dynamic impedance 3.5 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4737",
+  "label": {
+   "en": "Zener 1N4737A (7.5 V, 1 W)",
+   "tr": "Zener 1N4737A (7,5 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 7.39,
+      "ibv": 0.034
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 3.24
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 7.5 V at 34 mA, dynamic impedance 4 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4738",
+  "label": {
+   "en": "Zener 1N4738A (8.2 V, 1 W)",
+   "tr": "Zener 1N4738A (8,2 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 8.086,
+      "ibv": 0.031
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 3.666
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 8.2 V at 31 mA, dynamic impedance 4.5 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4739",
+  "label": {
+   "en": "Zener 1N4739A (9.1 V, 1 W)",
+   "tr": "Zener 1N4739A (9,1 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 8.986,
+      "ibv": 0.028
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 4.077
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 9.1 V at 28 mA, dynamic impedance 5 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4740",
+  "label": {
+   "en": "Zener 1N4740A (10 V, 1 W)",
+   "tr": "Zener 1N4740A (10 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 9.851,
+      "ibv": 0.025
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 5.966
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 10 V at 25 mA, dynamic impedance 7 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4741",
+  "label": {
+   "en": "Zener 1N4741A (11 V, 1 W)",
+   "tr": "Zener 1N4741A (11 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 10.842,
+      "ibv": 0.023
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 6.876
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 11 V at 23 mA, dynamic impedance 8 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4742",
+  "label": {
+   "en": "Zener 1N4742A (12 V, 1 W)",
+   "tr": "Zener 1N4742A (12 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 11.837,
+      "ibv": 0.021
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 7.769
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 12 V at 21 mA, dynamic impedance 9 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4743",
+  "label": {
+   "en": "Zener 1N4743A (13 V, 1 W)",
+   "tr": "Zener 1N4743A (13 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 12.836,
+      "ibv": 0.019
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 8.639
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 13 V at 19 mA, dynamic impedance 10 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4744",
+  "label": {
+   "en": "Zener 1N4744A (15 V, 1 W)",
+   "tr": "Zener 1N4744A (15 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 14.788,
+      "ibv": 0.017
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 12.479
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 15 V at 17 mA, dynamic impedance 14 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4745",
+  "label": {
+   "en": "Zener 1N4745A (16 V, 1 W)",
+   "tr": "Zener 1N4745A (16 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 15.778,
+      "ibv": 0.0155
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 14.332
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 16 V at 15.5 mA, dynamic impedance 16 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4746",
+  "label": {
+   "en": "Zener 1N4746A (18 V, 1 W)",
+   "tr": "Zener 1N4746A (18 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 17.746,
+      "ibv": 0.014
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 18.153
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 18 V at 14 mA, dynamic impedance 20 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4747",
+  "label": {
+   "en": "Zener 1N4747A (20 V, 1 W)",
+   "tr": "Zener 1N4747A (20 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 19.751,
+      "ibv": 0.0125
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 19.932
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 20 V at 12.5 mA, dynamic impedance 22 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4748",
+  "label": {
+   "en": "Zener 1N4748A (22 V, 1 W)",
+   "tr": "Zener 1N4748A (22 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 21.761,
+      "ibv": 0.0115
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 20.752
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 22 V at 11.5 mA, dynamic impedance 23 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4749",
+  "label": {
+   "en": "Zener 1N4749A (24 V, 1 W)",
+   "tr": "Zener 1N4749A (24 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 23.763,
+      "ibv": 0.0105
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 22.538
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 24 V at 10.5 mA, dynamic impedance 25 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4750",
+  "label": {
+   "en": "Zener 1N4750A (27 V, 1 W)",
+   "tr": "Zener 1N4750A (27 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 26.693,
+      "ibv": 0.0095
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 32.279
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 27 V at 9.5 mA, dynamic impedance 35 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4751",
+  "label": {
+   "en": "Zener 1N4751A (30 V, 1 W)",
+   "tr": "Zener 1N4751A (30 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 29.686,
+      "ibv": 0.0085
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 36.959
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 30 V at 8.5 mA, dynamic impedance 40 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4752",
+  "label": {
+   "en": "Zener 1N4752A (33 V, 1 W)",
+   "tr": "Zener 1N4752A (33 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 32.688,
+      "ibv": 0.0075
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 41.553
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 33 V at 7.5 mA, dynamic impedance 45 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4753",
+  "label": {
+   "en": "Zener 1N4753A (36 V, 1 W)",
+   "tr": "Zener 1N4753A (36 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 35.676,
+      "ibv": 0.007
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 46.307
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 36 V at 7 mA, dynamic impedance 50 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4754",
+  "label": {
+   "en": "Zener 1N4754A (39 V, 1 W)",
+   "tr": "Zener 1N4754A (39 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 38.636,
+      "ibv": 0.006500000000000001
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 56.023
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 39 V at 6.5 mA, dynamic impedance 60 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4755",
+  "label": {
+   "en": "Zener 1N4755A (43 V, 1 W)",
+   "tr": "Zener 1N4755A (43 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 42.606,
+      "ibv": 0.006
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 65.691
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 43 V at 6 mA, dynamic impedance 70 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4756",
+  "label": {
+   "en": "Zener 1N4756A (47 V, 1 W)",
+   "tr": "Zener 1N4756A (47 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 46.586,
+      "ibv": 0.0055
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 75.3
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 47 V at 5.5 mA, dynamic impedance 80 ohm (Fairchild 1N47xxA series).",
+  "ratings": {
+   "p": 1.0
+  }
+ },
+ {
+  "id": "1n4757",
+  "label": {
+   "en": "Zener 1N4757A (51 V, 1 W)",
+   "tr": "Zener 1N4757A (51 V, 1 W)"
+  },
+  "category": "semi",
+  "prefix": "D",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "zener"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "m"
+     ],
+     "props": {
+      "is": 1e-14,
+      "n": 1,
+      "bv": 50.551,
+      "ibv": 0.005
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "K"
+     ],
+     "value": 89.83
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62",
+  "note": "Vz 51 V at 5 mA, dynamic impedance 95 ohm (Fairchild 1N47xxA series)."
+ },
+ {
+  "id": "triac-bt137",
+  "label": {
+   "en": "Triac BT137-600 (8 A, 600 V)",
+   "tr": "Triac BT137-600 (8 A, 600 V)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "triac"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rg",
+    "label": {
+     "en": "Gate resistance (Ω)",
+     "tr": "Gate direnci (Ω)"
+    },
+    "default": 100
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "MT1"
+     ],
+     "value": "$rg"
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "MT2",
+      "x"
+     ],
+     "props": {
+      "is": 3.02e-10,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "x",
+      "MT2"
+     ],
+     "props": {
+      "is": 3.02e-10,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "x",
+      "MT1",
+      "G"
+     ],
+     "props": {
+      "vgt": 1.0,
+      "ih": 0.015,
+      "ron": 0.0711,
+      "bidir": true
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "MT1",
+   "MT2",
+   "G"
+  ],
+  "note": "VT 1.65 V at 10 A, IGT about 10 mA. TO-220: MT1, MT2, G.",
+  "ratings": {
+   "v": [
+    {
+     "a": "MT2",
+     "b": "MT1",
+     "max": 600,
+     "min": -600
+    }
+   ],
+   "i": [
+    {
+     "pin": "MT2",
+     "max": 8
+    }
+   ]
+  }
+ },
+ {
+  "id": "triac-bt138",
+  "label": {
+   "en": "Triac BT138-600 (12 A, 600 V)",
+   "tr": "Triac BT138-600 (12 A, 600 V)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "triac"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rg",
+    "label": {
+     "en": "Gate resistance (Ω)",
+     "tr": "Gate direnci (Ω)"
+    },
+    "default": 100
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "MT1"
+     ],
+     "value": "$rg"
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "MT2",
+      "x"
+     ],
+     "props": {
+      "is": 3.02e-10,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "x",
+      "MT2"
+     ],
+     "props": {
+      "is": 3.02e-10,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "x",
+      "MT1",
+      "G"
+     ],
+     "props": {
+      "vgt": 1.0,
+      "ih": 0.015,
+      "ron": 0.0463,
+      "bidir": true
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "MT1",
+   "MT2",
+   "G"
+  ],
+  "note": "VT 1.65 V at 15 A, IGT about 10 mA. TO-220: MT1, MT2, G.",
+  "ratings": {
+   "v": [
+    {
+     "a": "MT2",
+     "b": "MT1",
+     "max": 600,
+     "min": -600
+    }
+   ],
+   "i": [
+    {
+     "pin": "MT2",
+     "max": 12
+    }
+   ]
+  }
+ },
+ {
+  "id": "triac-bt139",
+  "label": {
+   "en": "Triac BT139-600 (16 A, 600 V)",
+   "tr": "Triac BT139-600 (16 A, 600 V)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "triac"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rg",
+    "label": {
+     "en": "Gate resistance (Ω)",
+     "tr": "Gate direnci (Ω)"
+    },
+    "default": 100
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "MT1"
+     ],
+     "value": "$rg"
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "MT2",
+      "x"
+     ],
+     "props": {
+      "is": 3.02e-10,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "x",
+      "MT2"
+     ],
+     "props": {
+      "is": 3.02e-10,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "x",
+      "MT1",
+      "G"
+     ],
+     "props": {
+      "vgt": 1.0,
+      "ih": 0.015,
+      "ron": 0.0342,
+      "bidir": true
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "MT1",
+   "MT2",
+   "G"
+  ],
+  "note": "VT 1.65 V at 20 A, IGT about 10 mA. TO-220: MT1, MT2, G.",
+  "ratings": {
+   "v": [
+    {
+     "a": "MT2",
+     "b": "MT1",
+     "max": 600,
+     "min": -600
+    }
+   ],
+   "i": [
+    {
+     "pin": "MT2",
+     "max": 16
+    }
+   ]
+  }
+ },
+ {
+  "id": "scr-bt152",
+  "label": {
+   "en": "Thyristor SCR BT152-600 (13 A)",
+   "tr": "Thyristor SCR BT152-600 (13 A)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "scr"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rg",
+    "label": {
+     "en": "Gate-cathode resistance (Ω)",
+     "tr": "Gate-katot direnci (Ω)"
+    },
+    "default": 100
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "K"
+     ],
+     "value": "$rg"
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "x"
+     ],
+     "props": {
+      "is": 3.02e-10,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "x",
+      "K",
+      "G"
+     ],
+     "props": {
+      "vgt": 1.0,
+      "ih": 0.02,
+      "ron": 0.0392
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "K",
+   "A",
+   "G"
+  ],
+  "note": "VT 1.75 V at 20 A, IH about 20 mA. TO-220: K, A, G.",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "max": 650,
+     "min": -650
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 20
+    }
+   ]
+  }
+ },
+ {
+  "id": "scr-bt169",
+  "label": {
+   "en": "Thyristor SCR BT169 (0.8 A, sensitive gate)",
+   "tr": "Thyristor SCR BT169 (0.8 A, sensitive gate)"
+  },
+  "category": "semi",
+  "prefix": "Q",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "scr"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rg",
+    "label": {
+     "en": "Gate-cathode resistance (Ω)",
+     "tr": "Gate-katot direnci (Ω)"
+    },
+    "default": 10000
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "G",
+      "K"
+     ],
+     "value": "$rg"
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "x"
+     ],
+     "props": {
+      "is": 3.02e-10,
+      "n": 1.5
+     }
+    },
+    {
+     "type": "THY",
+     "nodes": [
+      "x",
+      "K",
+      "G"
+     ],
+     "props": {
+      "vgt": 0.5,
+      "ih": 0.002,
+      "ron": 0.3011
+     }
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "K",
+   "G",
+   "A"
+  ],
+  "note": "IGT about 50 uA, VGT 0.5 V, IH 2 mA. TO-92: K, G, A.",
+  "ratings": {
+   "v": [
+    {
+     "a": "A",
+     "b": "K",
+     "max": 500,
+     "min": -500
+    }
+   ],
+   "i": [
+    {
+     "pin": "A",
+     "max": 0.8
+    }
+   ]
+  }
+ }
+]

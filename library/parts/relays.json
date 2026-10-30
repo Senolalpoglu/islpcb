@@ -1,0 +1,1698 @@
+[
+ {
+  "id": "relay-spst-no",
+  "label": {
+   "en": "Relay SPST-NO, generic (single contact)",
+   "tr": "Röle SPST-NO, genel (tek kontak)"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COIL+",
+    "COIL-"
+   ],
+   "right": [
+    "COM",
+    "NO"
+   ],
+   "title": "RELAY NO"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rcoil",
+    "label": {
+     "en": "Coil resistance (Ω)",
+     "tr": "Bobin direnci (Ω)"
+    },
+    "default": 200
+   },
+   {
+    "name": "vpull",
+    "label": {
+     "en": "Pull-in voltage (V)",
+     "tr": "Çekme gerilimi (V)"
+    },
+    "default": 3.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COIL+",
+      "m"
+     ],
+     "value": "$rcoil"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "COIL-"
+     ],
+     "value": 0.05
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NO",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "$vpull",
+      "vhys": 0.6
+     }
+    }
+   ]
+  },
+  "footprint": "RELAY_4",
+  "padMap": [
+   "COIL+",
+   "COIL-",
+   "COM",
+   "NO"
+  ],
+  "visual": {
+   "kind": "relay",
+   "threshold": "vpull"
+  }
+ },
+ {
+  "id": "relay-spst-nc",
+  "label": {
+   "en": "Relay SPST-NC, generic (single contact)",
+   "tr": "Röle SPST-NC, genel (tek kontak)"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COIL+",
+    "COIL-"
+   ],
+   "right": [
+    "COM",
+    "NC"
+   ],
+   "title": "RELAY NC"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rcoil",
+    "label": {
+     "en": "Coil resistance (Ω)",
+     "tr": "Bobin direnci (Ω)"
+    },
+    "default": 200
+   },
+   {
+    "name": "vpull",
+    "label": {
+     "en": "Pull-in voltage (V)",
+     "tr": "Çekme gerilimi (V)"
+    },
+    "default": 3.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COIL+",
+      "m"
+     ],
+     "value": "$rcoil"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "COIL-"
+     ],
+     "value": 0.05
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NC",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "$vpull",
+      "vhys": 0.6,
+      "inv": true
+     }
+    }
+   ]
+  },
+  "footprint": "RELAY_4",
+  "padMap": [
+   "COIL+",
+   "COIL-",
+   "COM",
+   "NC"
+  ],
+  "visual": {
+   "kind": "relay",
+   "threshold": "vpull"
+  }
+ },
+ {
+  "id": "relay-dpdt",
+  "label": {
+   "en": "Relay DPDT, generic (double contact)",
+   "tr": "Röle DPDT, genel (çift kontak)"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COIL+",
+    "COIL-",
+    "COM1",
+    "NC1",
+    "NO1"
+   ],
+   "right": [
+    "COM2",
+    "NC2",
+    "NO2"
+   ],
+   "title": "RELAY 2C"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rcoil",
+    "label": {
+     "en": "Coil resistance (Ω)",
+     "tr": "Bobin direnci (Ω)"
+    },
+    "default": 200
+   },
+   {
+    "name": "vpull",
+    "label": {
+     "en": "Pull-in voltage (V)",
+     "tr": "Çekme gerilimi (V)"
+    },
+    "default": 3.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COIL+",
+      "m"
+     ],
+     "value": "$rcoil"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "COIL-"
+     ],
+     "value": 0.05
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM1",
+      "NO1",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "$vpull",
+      "vhys": 0.6
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM1",
+      "NC1",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "$vpull",
+      "vhys": 0.6,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM2",
+      "NO2",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "$vpull",
+      "vhys": 0.6
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM2",
+      "NC2",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "$vpull",
+      "vhys": 0.6,
+      "inv": true
+     }
+    }
+   ]
+  },
+  "footprint": "RELAY_8",
+  "padMap": [
+   "COIL+",
+   "COIL-",
+   "COM1",
+   "NC1",
+   "NO1",
+   "COM2",
+   "NC2",
+   "NO2"
+  ],
+  "visual": {
+   "kind": "relay",
+   "threshold": "vpull"
+  }
+ },
+ {
+  "id": "relay-3pdt",
+  "label": {
+   "en": "Relay 3PDT, generic (triple contact)",
+   "tr": "Röle 3PDT, genel (üç kontak)"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COIL+",
+    "COIL-",
+    "COM1",
+    "NC1",
+    "NO1",
+    "COM2"
+   ],
+   "right": [
+    "NC2",
+    "NO2",
+    "COM3",
+    "NC3",
+    "NO3"
+   ],
+   "title": "RELAY 3C"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rcoil",
+    "label": {
+     "en": "Coil resistance (Ω)",
+     "tr": "Bobin direnci (Ω)"
+    },
+    "default": 200
+   },
+   {
+    "name": "vpull",
+    "label": {
+     "en": "Pull-in voltage (V)",
+     "tr": "Çekme gerilimi (V)"
+    },
+    "default": 3.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COIL+",
+      "m"
+     ],
+     "value": "$rcoil"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "COIL-"
+     ],
+     "value": 0.05
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM1",
+      "NO1",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "$vpull",
+      "vhys": 0.6
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM1",
+      "NC1",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "$vpull",
+      "vhys": 0.6,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM2",
+      "NO2",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "$vpull",
+      "vhys": 0.6
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM2",
+      "NC2",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "$vpull",
+      "vhys": 0.6,
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM3",
+      "NO3",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "$vpull",
+      "vhys": 0.6
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM3",
+      "NC3",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "$vpull",
+      "vhys": 0.6,
+      "inv": true
+     }
+    }
+   ]
+  },
+  "footprint": "RELAY_11",
+  "padMap": [
+   "COIL+",
+   "COIL-",
+   "COM1",
+   "NC1",
+   "NO1",
+   "COM2",
+   "NC2",
+   "NO2",
+   "COM3",
+   "NC3",
+   "NO3"
+  ],
+  "visual": {
+   "kind": "relay",
+   "threshold": "vpull"
+  }
+ },
+ {
+  "id": "ssr-dc",
+  "label": {
+   "en": "Solid-state relay, DC load",
+   "tr": "Katı hal rölesi (SSR), DC yük"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN+",
+    "IN-"
+   ],
+   "right": [
+    "OUT+",
+    "OUT-"
+   ],
+   "title": "SSR DC"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "von",
+    "label": {
+     "en": "Turn-on input voltage (V)",
+     "tr": "Açma giriş gerilimi (V)"
+    },
+    "default": 3
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "IN+",
+      "m"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "IN-"
+     ],
+     "value": 100
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT+",
+      "OUT-",
+      "IN+",
+      "IN-"
+     ],
+     "props": {
+      "vth": "$von",
+      "vhys": 0.4,
+      "ron": 0.05
+     }
+    }
+   ]
+  },
+  "footprint": "DIP4",
+  "visual": {
+   "kind": "relay",
+   "threshold": "von"
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "IN+",
+     "b": "IN-",
+     "max": 32,
+     "min": -32
+    }
+   ]
+  }
+ },
+ {
+  "id": "ssr-ac",
+  "label": {
+   "en": "Solid-state relay, AC load (SSR)",
+   "tr": "Katı hal rölesi (SSR), AC yük"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN+",
+    "IN-"
+   ],
+   "right": [
+    "T1",
+    "T2"
+   ],
+   "title": "SSR AC"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "von",
+    "label": {
+     "en": "Turn-on input voltage (V)",
+     "tr": "Açma giriş gerilimi (V)"
+    },
+    "default": 3
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "IN+",
+      "m"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "IN-"
+     ],
+     "value": 100
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "T1",
+      "T2",
+      "IN+",
+      "IN-"
+     ],
+     "props": {
+      "vth": "$von",
+      "vhys": 0.4,
+      "ron": 0.1
+     }
+    }
+   ]
+  },
+  "footprint": "DIP4",
+  "visual": {
+   "kind": "relay",
+   "threshold": "von"
+  }
+ },
+ {
+  "id": "moc3021",
+  "label": {
+   "en": "MOC3021 opto-triac driver",
+   "tr": "MOC3021 opto-triyak sürücü"
+  },
+  "category": "semi",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "K"
+   ],
+   "right": [
+    "T1",
+    "T2"
+   ],
+   "title": "MOC3021"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "A",
+      "K"
+     ],
+     "props": {
+      "is": 1e-18,
+      "n": 2
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "T2",
+      "T1",
+      "A",
+      "K"
+     ],
+     "props": {
+      "vth": 1.1,
+      "vhys": 0.2,
+      "ron": 60
+     }
+    }
+   ]
+  },
+  "footprint": "DIP6",
+  "padMap": [
+   "A",
+   "K",
+   "-",
+   "T2",
+   "-",
+   "T1"
+  ]
+ },
+ {
+  "id": "relay",
+  "label": {
+   "en": "Relay SPDT 5 V 10 A (SRD-05VDC-SL-C)",
+   "tr": "Röle SPDT 5 V 10 A (SRD-05VDC-SL-C)"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COIL+",
+    "COIL-"
+   ],
+   "right": [
+    "COM",
+    "NC",
+    "NO"
+   ],
+   "title": "RELAY SPDT"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rcoil",
+    "label": {
+     "en": "Coil resistance (Ω)",
+     "tr": "Bobin direnci (Ω)"
+    },
+    "default": 70
+   },
+   {
+    "name": "vpull",
+    "label": {
+     "en": "Pull-in voltage (V)",
+     "tr": "Çekme gerilimi (V)"
+    },
+    "default": 3.75
+   },
+   {
+    "name": "vdrop",
+    "label": {
+     "en": "Drop-out voltage (V)",
+     "tr": "Bırakma gerilimi (V)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COIL+",
+      "m"
+     ],
+     "value": "$rcoil"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "COIL-"
+     ],
+     "value": 0.05
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NO",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop"
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NC",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop",
+      "inv": true
+     }
+    }
+   ]
+  },
+  "footprint": "RELAY_SRD_C",
+  "padMap": [
+   "COM",
+   "COIL+",
+   "NO",
+   "NC",
+   "COIL-"
+  ],
+  "note": "Songle SRD-xxVDC-SL, 10 A 250 VAC. Pins: 1 COM, 2 and 5 coil, 3 NO, 4 NC.",
+  "visual": {
+   "kind": "relay",
+   "threshold": "vpull"
+  }
+ },
+ {
+  "id": "relay-srd-5v-a",
+  "label": {
+   "en": "Relay SPST-NO 5 V 10 A (SRD-05VDC-SL-A)",
+   "tr": "Röle SPST-NO 5 V 10 A (SRD-05VDC-SL-A)"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COIL+",
+    "COIL-"
+   ],
+   "right": [
+    "COM",
+    "NO"
+   ],
+   "title": "RELAY SPST"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rcoil",
+    "label": {
+     "en": "Coil resistance (Ω)",
+     "tr": "Bobin direnci (Ω)"
+    },
+    "default": 70
+   },
+   {
+    "name": "vpull",
+    "label": {
+     "en": "Pull-in voltage (V)",
+     "tr": "Çekme gerilimi (V)"
+    },
+    "default": 3.75
+   },
+   {
+    "name": "vdrop",
+    "label": {
+     "en": "Drop-out voltage (V)",
+     "tr": "Bırakma gerilimi (V)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COIL+",
+      "m"
+     ],
+     "value": "$rcoil"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "COIL-"
+     ],
+     "value": 0.05
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NO",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop"
+     }
+    }
+   ]
+  },
+  "footprint": "RELAY_SRD_A",
+  "padMap": [
+   "COM",
+   "COIL+",
+   "NO",
+   "COIL-"
+  ],
+  "note": "Songle SRD-xxVDC-SL, 10 A 250 VAC. Pins: 1 COM, 2 and 5 coil, 3 NO, 4 NC.",
+  "visual": {
+   "kind": "relay",
+   "threshold": "vpull"
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "COIL+",
+     "b": "COIL-",
+     "max": 7,
+     "min": -7
+    }
+   ],
+   "i": [
+    {
+     "pin": "COM",
+     "max": 10
+    }
+   ]
+  }
+ },
+ {
+  "id": "relay-srd-12v-c",
+  "label": {
+   "en": "Relay SPDT 12 V 10 A (SRD-12VDC-SL-C)",
+   "tr": "Röle SPDT 12 V 10 A (SRD-12VDC-SL-C)"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COIL+",
+    "COIL-"
+   ],
+   "right": [
+    "COM",
+    "NC",
+    "NO"
+   ],
+   "title": "RELAY SPDT"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rcoil",
+    "label": {
+     "en": "Coil resistance (Ω)",
+     "tr": "Bobin direnci (Ω)"
+    },
+    "default": 400
+   },
+   {
+    "name": "vpull",
+    "label": {
+     "en": "Pull-in voltage (V)",
+     "tr": "Çekme gerilimi (V)"
+    },
+    "default": 9.0
+   },
+   {
+    "name": "vdrop",
+    "label": {
+     "en": "Drop-out voltage (V)",
+     "tr": "Bırakma gerilimi (V)"
+    },
+    "default": 1.2
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COIL+",
+      "m"
+     ],
+     "value": "$rcoil"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "COIL-"
+     ],
+     "value": 0.05
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NO",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop"
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NC",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop",
+      "inv": true
+     }
+    }
+   ]
+  },
+  "footprint": "RELAY_SRD_C",
+  "padMap": [
+   "COM",
+   "COIL+",
+   "NO",
+   "NC",
+   "COIL-"
+  ],
+  "note": "Songle SRD-xxVDC-SL, 10 A 250 VAC. Pins: 1 COM, 2 and 5 coil, 3 NO, 4 NC.",
+  "visual": {
+   "kind": "relay",
+   "threshold": "vpull"
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "COIL+",
+     "b": "COIL-",
+     "max": 17,
+     "min": -17
+    }
+   ],
+   "i": [
+    {
+     "pin": "COM",
+     "max": 10
+    }
+   ]
+  }
+ },
+ {
+  "id": "relay-srd-12v-a",
+  "label": {
+   "en": "Relay SPST-NO 12 V 10 A (SRD-12VDC-SL-A)",
+   "tr": "Röle SPST-NO 12 V 10 A (SRD-12VDC-SL-A)"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COIL+",
+    "COIL-"
+   ],
+   "right": [
+    "COM",
+    "NO"
+   ],
+   "title": "RELAY SPST"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rcoil",
+    "label": {
+     "en": "Coil resistance (Ω)",
+     "tr": "Bobin direnci (Ω)"
+    },
+    "default": 400
+   },
+   {
+    "name": "vpull",
+    "label": {
+     "en": "Pull-in voltage (V)",
+     "tr": "Çekme gerilimi (V)"
+    },
+    "default": 9.0
+   },
+   {
+    "name": "vdrop",
+    "label": {
+     "en": "Drop-out voltage (V)",
+     "tr": "Bırakma gerilimi (V)"
+    },
+    "default": 1.2
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COIL+",
+      "m"
+     ],
+     "value": "$rcoil"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "COIL-"
+     ],
+     "value": 0.05
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NO",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop"
+     }
+    }
+   ]
+  },
+  "footprint": "RELAY_SRD_A",
+  "padMap": [
+   "COM",
+   "COIL+",
+   "NO",
+   "COIL-"
+  ],
+  "note": "Songle SRD-xxVDC-SL, 10 A 250 VAC. Pins: 1 COM, 2 and 5 coil, 3 NO, 4 NC.",
+  "visual": {
+   "kind": "relay",
+   "threshold": "vpull"
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "COIL+",
+     "b": "COIL-",
+     "max": 17,
+     "min": -17
+    }
+   ],
+   "i": [
+    {
+     "pin": "COM",
+     "max": 10
+    }
+   ]
+  }
+ },
+ {
+  "id": "relay-srd-24v-c",
+  "label": {
+   "en": "Relay SPDT 24 V 10 A (SRD-24VDC-SL-C)",
+   "tr": "Röle SPDT 24 V 10 A (SRD-24VDC-SL-C)"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COIL+",
+    "COIL-"
+   ],
+   "right": [
+    "COM",
+    "NC",
+    "NO"
+   ],
+   "title": "RELAY SPDT"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rcoil",
+    "label": {
+     "en": "Coil resistance (Ω)",
+     "tr": "Bobin direnci (Ω)"
+    },
+    "default": 1600
+   },
+   {
+    "name": "vpull",
+    "label": {
+     "en": "Pull-in voltage (V)",
+     "tr": "Çekme gerilimi (V)"
+    },
+    "default": 18.0
+   },
+   {
+    "name": "vdrop",
+    "label": {
+     "en": "Drop-out voltage (V)",
+     "tr": "Bırakma gerilimi (V)"
+    },
+    "default": 2.4
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COIL+",
+      "m"
+     ],
+     "value": "$rcoil"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "COIL-"
+     ],
+     "value": 0.05
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NO",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop"
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NC",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop",
+      "inv": true
+     }
+    }
+   ]
+  },
+  "footprint": "RELAY_SRD_C",
+  "padMap": [
+   "COM",
+   "COIL+",
+   "NO",
+   "NC",
+   "COIL-"
+  ],
+  "note": "Songle SRD-xxVDC-SL, 10 A 250 VAC. Pins: 1 COM, 2 and 5 coil, 3 NO, 4 NC.",
+  "visual": {
+   "kind": "relay",
+   "threshold": "vpull"
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "COIL+",
+     "b": "COIL-",
+     "max": 34,
+     "min": -34
+    }
+   ],
+   "i": [
+    {
+     "pin": "COM",
+     "max": 10
+    }
+   ]
+  }
+ },
+ {
+  "id": "relay-srd-24v-a",
+  "label": {
+   "en": "Relay SPST-NO 24 V 10 A (SRD-24VDC-SL-A)",
+   "tr": "Röle SPST-NO 24 V 10 A (SRD-24VDC-SL-A)"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COIL+",
+    "COIL-"
+   ],
+   "right": [
+    "COM",
+    "NO"
+   ],
+   "title": "RELAY SPST"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rcoil",
+    "label": {
+     "en": "Coil resistance (Ω)",
+     "tr": "Bobin direnci (Ω)"
+    },
+    "default": 1600
+   },
+   {
+    "name": "vpull",
+    "label": {
+     "en": "Pull-in voltage (V)",
+     "tr": "Çekme gerilimi (V)"
+    },
+    "default": 18.0
+   },
+   {
+    "name": "vdrop",
+    "label": {
+     "en": "Drop-out voltage (V)",
+     "tr": "Bırakma gerilimi (V)"
+    },
+    "default": 2.4
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COIL+",
+      "m"
+     ],
+     "value": "$rcoil"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "COIL-"
+     ],
+     "value": 0.05
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM",
+      "NO",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop"
+     }
+    }
+   ]
+  },
+  "footprint": "RELAY_SRD_A",
+  "padMap": [
+   "COM",
+   "COIL+",
+   "NO",
+   "COIL-"
+  ],
+  "note": "Songle SRD-xxVDC-SL, 10 A 250 VAC. Pins: 1 COM, 2 and 5 coil, 3 NO, 4 NC.",
+  "visual": {
+   "kind": "relay",
+   "threshold": "vpull"
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "COIL+",
+     "b": "COIL-",
+     "max": 34,
+     "min": -34
+    }
+   ],
+   "i": [
+    {
+     "pin": "COM",
+     "max": 10
+    }
+   ]
+  }
+ },
+ {
+  "id": "relay-g2rl-2-12v",
+  "label": {
+   "en": "Relay DPDT 12 V 8 A (Omron G2RL-2)",
+   "tr": "Röle DPDT 12 V 8 A (Omron G2RL-2)"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COIL+",
+    "COIL-",
+    "COM1",
+    "NC1",
+    "NO1"
+   ],
+   "right": [
+    "COM2",
+    "NC2",
+    "NO2"
+   ],
+   "title": "RELAY DPDT"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rcoil",
+    "label": {
+     "en": "Coil resistance (Ω)",
+     "tr": "Bobin direnci (Ω)"
+    },
+    "default": 360
+   },
+   {
+    "name": "vpull",
+    "label": {
+     "en": "Pull-in voltage (V)",
+     "tr": "Çekme gerilimi (V)"
+    },
+    "default": 9.0
+   },
+   {
+    "name": "vdrop",
+    "label": {
+     "en": "Drop-out voltage (V)",
+     "tr": "Bırakma gerilimi (V)"
+    },
+    "default": 1.2
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COIL+",
+      "m"
+     ],
+     "value": "$rcoil"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "COIL-"
+     ],
+     "value": 0.05
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM1",
+      "NO1",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop"
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM1",
+      "NC1",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop",
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM2",
+      "NO2",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop"
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM2",
+      "NC2",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop",
+      "inv": true
+     }
+    }
+   ]
+  },
+  "footprint": "RELAY_G2RL_2",
+  "padMap": [
+   "COIL+",
+   "NO1",
+   "NC1",
+   "COM1",
+   "COM2",
+   "NC2",
+   "NO2",
+   "COIL-"
+  ],
+  "note": "Omron G2RL-2, 8 A 250 VAC. Pins 1 and 8 coil; 4/3/2 are COM/NC/NO of pole 1 and 5/6/7 of pole 2 (check against the datasheet of your maker).",
+  "visual": {
+   "kind": "relay",
+   "threshold": "vpull"
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "COIL+",
+     "b": "COIL-",
+     "max": 17,
+     "min": -17
+    }
+   ],
+   "i": [
+    {
+     "pin": "COM1",
+     "max": 8
+    },
+    {
+     "pin": "COM2",
+     "max": 8
+    }
+   ]
+  }
+ },
+ {
+  "id": "relay-g2rl-2-24v",
+  "label": {
+   "en": "Relay DPDT 24 V 8 A (Omron G2RL-2)",
+   "tr": "Röle DPDT 24 V 8 A (Omron G2RL-2)"
+  },
+  "category": "electromech",
+  "prefix": "K",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "COIL+",
+    "COIL-",
+    "COM1",
+    "NC1",
+    "NO1"
+   ],
+   "right": [
+    "COM2",
+    "NC2",
+    "NO2"
+   ],
+   "title": "RELAY DPDT"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "rcoil",
+    "label": {
+     "en": "Coil resistance (Ω)",
+     "tr": "Bobin direnci (Ω)"
+    },
+    "default": 1440
+   },
+   {
+    "name": "vpull",
+    "label": {
+     "en": "Pull-in voltage (V)",
+     "tr": "Çekme gerilimi (V)"
+    },
+    "default": 18.0
+   },
+   {
+    "name": "vdrop",
+    "label": {
+     "en": "Drop-out voltage (V)",
+     "tr": "Bırakma gerilimi (V)"
+    },
+    "default": 2.4
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "COIL+",
+      "m"
+     ],
+     "value": "$rcoil"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "COIL-"
+     ],
+     "value": 0.05
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM1",
+      "NO1",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop"
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM1",
+      "NC1",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop",
+      "inv": true
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM2",
+      "NO2",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop"
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "COM2",
+      "NC2",
+      "COIL+",
+      "COIL-"
+     ],
+     "props": {
+      "vth": "($vpull+$vdrop)/2",
+      "vhys": "$vpull-$vdrop",
+      "inv": true
+     }
+    }
+   ]
+  },
+  "footprint": "RELAY_G2RL_2",
+  "padMap": [
+   "COIL+",
+   "NO1",
+   "NC1",
+   "COM1",
+   "COM2",
+   "NC2",
+   "NO2",
+   "COIL-"
+  ],
+  "note": "Omron G2RL-2, 8 A 250 VAC. Pins 1 and 8 coil; 4/3/2 are COM/NC/NO of pole 1 and 5/6/7 of pole 2 (check against the datasheet of your maker).",
+  "visual": {
+   "kind": "relay",
+   "threshold": "vpull"
+  },
+  "ratings": {
+   "v": [
+    {
+     "a": "COIL+",
+     "b": "COIL-",
+     "max": 34,
+     "min": -34
+    }
+   ],
+   "i": [
+    {
+     "pin": "COM1",
+     "max": 8
+    },
+    {
+     "pin": "COM2",
+     "max": 8
+    }
+   ]
+  }
+ }
+]

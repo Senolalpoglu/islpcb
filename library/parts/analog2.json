@@ -1,0 +1,2295 @@
+[
+ {
+  "id": "lm7806",
+  "label": {
+   "en": "LM7806 regulator +6 V (1 A)",
+   "tr": "LM7806 regulator +6 V (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM7806"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 3.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN",
+      "GND"
+     ],
+     "value": 1800.0
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ],
+  "note": "Dropout about 2 V, quiescent current about 5 mA, no current limit. TO-220: IN, GND, OUT.",
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1.5
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "lm7808",
+  "label": {
+   "en": "LM7808 regulator +8 V (1 A)",
+   "tr": "LM7808 regulator +8 V (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM7808"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 4.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN",
+      "GND"
+     ],
+     "value": 2200.0
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ],
+  "note": "Dropout about 2 V, quiescent current about 5 mA, no current limit. TO-220: IN, GND, OUT.",
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1.5
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "lm7818",
+  "label": {
+   "en": "LM7818 regulator +18 V (1 A)",
+   "tr": "LM7818 regulator +18 V (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM7818"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 9.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN",
+      "GND"
+     ],
+     "value": 4200.0
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ],
+  "note": "Dropout about 2 V, quiescent current about 5 mA, no current limit. TO-220: IN, GND, OUT.",
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1.5
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "lm7824",
+  "label": {
+   "en": "LM7824 regulator +24 V (1 A)",
+   "tr": "LM7824 regulator +24 V (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM7824"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 12.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN",
+      "GND"
+     ],
+     "value": 5400.0
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ],
+  "note": "Dropout about 2 V, quiescent current about 5 mA, no current limit. TO-220: IN, GND, OUT.",
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 40,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1.5
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "lm78m05",
+  "label": {
+   "en": "78M05 regulator +5 V (0.5 A)",
+   "tr": "78M05 regulator +5 V (0.5 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM78M05"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 2.5
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN",
+      "GND"
+     ],
+     "value": 1777.8
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ],
+  "note": "Dropout about 2 V, quiescent current about 4.5 mA, no current limit. TO-220: IN, GND, OUT.",
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 0.5
+    }
+   ],
+   "p": 3
+  }
+ },
+ {
+  "id": "lm78m12",
+  "label": {
+   "en": "78M12 regulator +12 V (0.5 A)",
+   "tr": "78M12 regulator +12 V (0.5 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM78M12"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 6.0
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN",
+      "GND"
+     ],
+     "value": 3333.3
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ],
+  "note": "Dropout about 2 V, quiescent current about 4.5 mA, no current limit. TO-220: IN, GND, OUT.",
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 0.5
+    }
+   ],
+   "p": 3
+  }
+ },
+ {
+  "id": "ka78t05",
+  "label": {
+   "en": "KA78T05 regulator +5 V (3 A)",
+   "tr": "KA78T05 regulator +5 V (3 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "KA78T05"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 2.5
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.8,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN",
+      "GND"
+     ],
+     "value": 1333.3
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ],
+  "note": "Dropout about 2.5 V, quiescent current about 6 mA, no current limit. TO-220: IN, GND, OUT.",
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 35,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 3
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "ams1117-5v",
+  "label": {
+   "en": "AMS1117-5 LDO regulator (1 A)",
+   "tr": "AMS1117-5 LDO regulator (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "AMS1117-5V"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 2.5
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 0.5,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN",
+      "GND"
+     ],
+     "value": 1240.0
+    }
+   ]
+  },
+  "footprint": "SOT223",
+  "padMap": [
+   "GND",
+   "OUT",
+   "IN",
+   "OUT"
+  ],
+  "note": "Dropout about 1.2 V, quiescent current about 5 mA, no current limit. SOT-223: 1 GND, 2 OUT, 3 IN, tab OUT.",
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 15,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "ams1117-2v5",
+  "label": {
+   "en": "AMS1117-2.5 LDO regulator (1 A)",
+   "tr": "AMS1117-2.5 LDO regulator (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "AMS1117-2V5"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 1.25
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 0.5,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN",
+      "GND"
+     ],
+     "value": 740.0
+    }
+   ]
+  },
+  "footprint": "SOT223",
+  "padMap": [
+   "GND",
+   "OUT",
+   "IN",
+   "OUT"
+  ],
+  "note": "Dropout about 1.2 V, quiescent current about 5 mA, no current limit. SOT-223: 1 GND, 2 OUT, 3 IN, tab OUT.",
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 15,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "ams1117-1v8",
+  "label": {
+   "en": "AMS1117-1.8 LDO regulator (1 A)",
+   "tr": "AMS1117-1.8 LDO regulator (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "AMS1117-1V8"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 0.9
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 0.5,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN",
+      "GND"
+     ],
+     "value": 600.0
+    }
+   ]
+  },
+  "footprint": "SOT223",
+  "padMap": [
+   "GND",
+   "OUT",
+   "IN",
+   "OUT"
+  ],
+  "note": "Dropout about 1.2 V, quiescent current about 5 mA, no current limit. SOT-223: 1 GND, 2 OUT, 3 IN, tab OUT.",
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 15,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "ams1117-1v2",
+  "label": {
+   "en": "AMS1117-1.2 LDO regulator (1 A)",
+   "tr": "AMS1117-1.2 LDO regulator (1 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "AMS1117-1V2"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": 0.6
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 0.5,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "IN",
+      "GND"
+     ],
+     "value": 480.0
+    }
+   ]
+  },
+  "footprint": "SOT223",
+  "padMap": [
+   "GND",
+   "OUT",
+   "IN",
+   "OUT"
+  ],
+  "note": "Dropout about 1.2 V, quiescent current about 5 mA, no current limit. SOT-223: 1 GND, 2 OUT, 3 IN, tab OUT.",
+  "ratings": {
+   "v": [
+    {
+     "a": "IN",
+     "b": "GND",
+     "max": 15,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ],
+   "i": [
+    {
+     "pin": "OUT",
+     "max": 1
+    }
+   ],
+   "p": 15
+  }
+ },
+ {
+  "id": "lm337",
+  "label": {
+   "en": "LM337 adjustable negative regulator (1.5 A)",
+   "tr": "LM337 ayarlı negatif regülatör (1,5 A)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "ADJ",
+    "IN"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "LM337"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "ADJ"
+     ],
+     "value": -1.25
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "OUT",
+      "ref"
+     ],
+     "p": "ADJ",
+     "n": "IN",
+     "props": {
+      "headroom": 1.3,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": false,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "ADJ",
+   "IN",
+   "OUT"
+  ],
+  "note": "Vadj - Vout = 1.25 V: with R1 from OUT to ADJ and R2 from ADJ to ground, Vout = -1.25 V * (1 + R2 / R1). TO-220: 1 ADJ, 2 IN, 3 OUT."
+ },
+ {
+  "id": "ca3140",
+  "label": {
+   "en": "CA3140 MOSFET-input op-amp",
+   "tr": "CA3140 MOSFET-input op-amp"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "NULL",
+    "IN-",
+    "IN+",
+    "V-"
+   ],
+   "right": [
+    "STROBE",
+    "V+",
+    "OUT",
+    "NULL2"
+   ],
+   "title": "CA3140"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT",
+      "IN-",
+      "IN+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "gain": 100000.0,
+      "headroom": 2.0,
+      "headroomLo": 0.6,
+      "rout": 60
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "V+",
+      "V-"
+     ],
+     "value": 7500.0
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "100 dB open-loop gain, output swings to V+ -2 V / V- +0.6 V, 4 mA supply current at +-15 V. DIP-8: 741 pinout (offset null and strobe pins are not simulated).",
+  "ratings": {
+   "v": [
+    {
+     "a": "V+",
+     "b": "V-",
+     "max": 36,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "ca3130",
+  "label": {
+   "en": "CA3130 CMOS op-amp",
+   "tr": "CA3130 CMOS op-amp"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "NULL",
+    "IN-",
+    "IN+",
+    "V-"
+   ],
+   "right": [
+    "STROBE",
+    "V+",
+    "OUT",
+    "NULL2"
+   ],
+   "title": "CA3130"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT",
+      "IN-",
+      "IN+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "gain": 320000.0,
+      "headroom": 1.7,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "V+",
+      "V-"
+     ],
+     "value": 3000.0
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "110 dB open-loop gain, output to within 0.02 V of V- and 1.7 V of V+. DIP-8: 741 pinout (offset null and strobe pins are not simulated)."
+ },
+ {
+  "id": "ca3240",
+  "label": {
+   "en": "CA3240 dual MOSFET-input op-amp",
+   "tr": "CA3240 dual MOSFET-input op-amp"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "OUT1",
+    "IN1-",
+    "IN1+",
+    "V-"
+   ],
+   "right": [
+    "V+",
+    "OUT2",
+    "IN2-",
+    "IN2+"
+   ],
+   "title": "CA3240"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT1",
+      "IN1-",
+      "IN1+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "gain": 100000.0,
+      "headroom": 2.0,
+      "headroomLo": 0.6,
+      "rout": 60
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT2",
+      "IN2-",
+      "IN2+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "gain": 100000.0,
+      "headroom": 2.0,
+      "headroomLo": 0.6,
+      "rout": 60
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "V+",
+      "V-"
+     ],
+     "value": 6000.0
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "Two CA3140-class amplifiers, 100 dB gain. DIP-8: 1 OUT1 ... 8 V+."
+ },
+ {
+  "id": "lm833",
+  "label": {
+   "en": "LM833 dual audio op-amp",
+   "tr": "LM833 dual audio op-amp"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "OUT1",
+    "IN1-",
+    "IN1+",
+    "V-"
+   ],
+   "right": [
+    "V+",
+    "OUT2",
+    "IN2-",
+    "IN2+"
+   ],
+   "title": "LM833"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT1",
+      "IN1-",
+      "IN1+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "gain": 320000.0,
+      "headroom": 1.1,
+      "headroomLo": 1.1,
+      "rout": 30
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT2",
+      "IN2-",
+      "IN2+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "gain": 320000.0,
+      "headroom": 1.1,
+      "headroomLo": 1.1,
+      "rout": 30
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "V+",
+      "V-"
+     ],
+     "value": 7500.0
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "110 dB gain, 15 MHz, output +-13.9 V at +-15 V, 4 mA. DIP-8: 1 OUT1 ... 8 V+."
+ },
+ {
+  "id": "lm258",
+  "label": {
+   "en": "LM258 dual op-amp (single supply)",
+   "tr": "LM258 dual op-amp (single supply)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "OUT1",
+    "IN1-",
+    "IN1+",
+    "GND"
+   ],
+   "right": [
+    "VCC",
+    "OUT2",
+    "IN2-",
+    "IN2+"
+   ],
+   "title": "LM258"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT1",
+      "IN1-",
+      "IN1+"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "gain": 100000.0,
+      "headroom": 1.5,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT2",
+      "IN2-",
+      "IN2+"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "gain": 100000.0,
+      "headroom": 1.5,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "Same amplifier as the LM358. Output to the negative rail, V+ -1.5 V. DIP-8."
+ },
+ {
+  "id": "lm224",
+  "label": {
+   "en": "LM224 quad op-amp (single supply)",
+   "tr": "LM224 dörtlü op-amp (tek besleme)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1OUT",
+    "1IN-",
+    "1IN+",
+    "VCC",
+    "2IN+",
+    "2IN-",
+    "2OUT"
+   ],
+   "right": [
+    "4OUT",
+    "4IN-",
+    "4IN+",
+    "GND",
+    "3IN+",
+    "3IN-",
+    "3OUT"
+   ],
+   "title": "LM224"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "1OUT",
+      "1IN-",
+      "1IN+"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "2OUT",
+      "2IN-",
+      "2IN+"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "3OUT",
+      "3IN-",
+      "3IN+"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "4OUT",
+      "4IN-",
+      "4IN+"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "note": "Same amplifiers as the LM324. Output to the negative rail, V+ -1.5 V. DIP-14."
+ },
+ {
+  "id": "ad620",
+  "label": {
+   "en": "AD620 instrumentation amplifier (gain = 1 + 49.4 k / Rg)",
+   "tr": "AD620 enstrümantasyon yükselticisi (kazanç = 1 + 49,4 k / Rg)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "RG1",
+    "IN-",
+    "IN+",
+    "V-"
+   ],
+   "right": [
+    "RG2",
+    "V+",
+    "OUT",
+    "REF"
+   ],
+   "title": "AD620"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "a1",
+      "RG1",
+      "IN+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "gain": 300000.0,
+      "headroom": 1.0,
+      "headroomLo": 1.0,
+      "rout": 10
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "a1",
+      "RG1"
+     ],
+     "value": 24700
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "a2",
+      "RG2",
+      "IN-"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "gain": 300000.0,
+      "headroom": 1.0,
+      "headroomLo": 1.0,
+      "rout": 10
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "a2",
+      "RG2"
+     ],
+     "value": 24700
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "a1",
+      "pb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "pb",
+      "REF"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "a2",
+      "pa"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "pa",
+      "OUT"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT",
+      "pa",
+      "pb"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "gain": 300000.0,
+      "headroom": 1.4,
+      "headroomLo": 1.2,
+      "rout": 10
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "V+",
+      "V-"
+     ],
+     "value": 11000
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "Put the gain resistor Rg between RG1 and RG2 (open: gain 1). DIP-8: 1 RG, 2 -IN, 3 +IN, 4 -Vs, 5 REF, 6 OUT, 7 +Vs, 8 RG. Output is referenced to REF."
+ },
+ {
+  "id": "lm393",
+  "label": {
+   "en": "LM393 dual comparator (open collector)",
+   "tr": "LM393 çift karşılaştırıcı (açık kollektör)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "OUT1",
+    "IN1-",
+    "IN1+",
+    "GND"
+   ],
+   "right": [
+    "VCC",
+    "OUT2",
+    "IN2-",
+    "IN2+"
+   ],
+   "title": "LM393"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT1",
+      "GND",
+      "IN1-",
+      "IN1+"
+     ],
+     "props": {
+      "vth": 0,
+      "vhys": 0.002,
+      "ron": 40
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT2",
+      "GND",
+      "IN2-",
+      "IN2+"
+     ],
+     "props": {
+      "vth": 0,
+      "vhys": 0.002,
+      "ron": 40
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 6250
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "The output pulls to ground while IN- is above IN+ and is open otherwise: add a pull-up resistor. Saturation about 40 ohm (0.16 V at 4 mA), 0.8 mA supply current. DIP-8.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 36,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lm339",
+  "label": {
+   "en": "LM339 quad comparator (open collector)",
+   "tr": "LM339 quad comparator (open collector)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "2OUT",
+    "1OUT",
+    "VCC",
+    "1IN-",
+    "1IN+",
+    "2IN-",
+    "2IN+"
+   ],
+   "right": [
+    "3OUT",
+    "4OUT",
+    "GND",
+    "4IN+",
+    "4IN-",
+    "3IN+",
+    "3IN-"
+   ],
+   "title": "LM339"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "VSW",
+     "nodes": [
+      "1OUT",
+      "GND",
+      "1IN-",
+      "1IN+"
+     ],
+     "props": {
+      "vth": 0,
+      "vhys": 0.002,
+      "ron": 40
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "2OUT",
+      "GND",
+      "2IN-",
+      "2IN+"
+     ],
+     "props": {
+      "vth": 0,
+      "vhys": 0.002,
+      "ron": 40
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "3OUT",
+      "GND",
+      "3IN-",
+      "3IN+"
+     ],
+     "props": {
+      "vth": 0,
+      "vhys": 0.002,
+      "ron": 40
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "4OUT",
+      "GND",
+      "4IN-",
+      "4IN+"
+     ],
+     "props": {
+      "vth": 0,
+      "vhys": 0.002,
+      "ron": 40
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 5000
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "note": "Outputs pull to ground while IN- is above IN+, open otherwise: add pull-up resistors. About 40 ohm saturation, 1 mA supply current. DIP-14: 1 OUT2, 2 OUT1, 3 VCC, 4 IN1- ... 12 GND, 13 OUT4, 14 OUT3.",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 36,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lm239",
+  "label": {
+   "en": "LM239 quad comparator (open collector)",
+   "tr": "LM239 quad comparator (open collector)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "2OUT",
+    "1OUT",
+    "VCC",
+    "1IN-",
+    "1IN+",
+    "2IN-",
+    "2IN+"
+   ],
+   "right": [
+    "3OUT",
+    "4OUT",
+    "GND",
+    "4IN+",
+    "4IN-",
+    "3IN+",
+    "3IN-"
+   ],
+   "title": "LM239"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "VSW",
+     "nodes": [
+      "1OUT",
+      "GND",
+      "1IN-",
+      "1IN+"
+     ],
+     "props": {
+      "vth": 0,
+      "vhys": 0.002,
+      "ron": 40
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "2OUT",
+      "GND",
+      "2IN-",
+      "2IN+"
+     ],
+     "props": {
+      "vth": 0,
+      "vhys": 0.002,
+      "ron": 40
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "3OUT",
+      "GND",
+      "3IN-",
+      "3IN+"
+     ],
+     "props": {
+      "vth": 0,
+      "vhys": 0.002,
+      "ron": 40
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "4OUT",
+      "GND",
+      "4IN-",
+      "4IN+"
+     ],
+     "props": {
+      "vth": 0,
+      "vhys": 0.002,
+      "ron": 40
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 5000
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "note": "Outputs pull to ground while IN- is above IN+, open otherwise: add pull-up resistors. About 40 ohm saturation, 1 mA supply current. DIP-14: 1 OUT2, 2 OUT1, 3 VCC, 4 IN1- ... 12 GND, 13 OUT4, 14 OUT3."
+ },
+ {
+  "id": "lm311",
+  "label": {
+   "en": "LM311 voltage comparator (single, open collector)",
+   "tr": "LM311 voltage comparator (single, open collector)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "IN+",
+    "IN-",
+    "V-"
+   ],
+   "right": [
+    "V+",
+    "OUT",
+    "STROBE",
+    "BAL"
+   ],
+   "title": "LM311"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT",
+      "x",
+      "IN-",
+      "IN+"
+     ],
+     "props": {
+      "vth": 0,
+      "vhys": 0.002,
+      "ron": 40
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "x",
+      "GND",
+      "STROBE",
+      "GND"
+     ],
+     "props": {
+      "vth": 0.7,
+      "vhys": 0.1,
+      "ron": 1
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "STROBE",
+      "V+"
+     ],
+     "value": 100000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "V+",
+      "V-"
+     ],
+     "value": 6000
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "Output transistor between OUT and GND: on while IN- is above IN+. Pulling STROBE to ground switches it off. The balance pin is not simulated. DIP-8: 1 GND, 2 IN+, 3 IN-, 4 V-, 5 BAL, 6 STROBE, 7 OUT, 8 V+."
+ },
+ {
+  "id": "lm211",
+  "label": {
+   "en": "LM211 voltage comparator (single, open collector)",
+   "tr": "LM211 voltage comparator (single, open collector)"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "IN+",
+    "IN-",
+    "V-"
+   ],
+   "right": [
+    "V+",
+    "OUT",
+    "STROBE",
+    "BAL"
+   ],
+   "title": "LM211"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "VSW",
+     "nodes": [
+      "OUT",
+      "x",
+      "IN-",
+      "IN+"
+     ],
+     "props": {
+      "vth": 0,
+      "vhys": 0.002,
+      "ron": 40
+     }
+    },
+    {
+     "type": "VSW",
+     "nodes": [
+      "x",
+      "GND",
+      "STROBE",
+      "GND"
+     ],
+     "props": {
+      "vth": 0.7,
+      "vhys": 0.1,
+      "ron": 1
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "STROBE",
+      "V+"
+     ],
+     "value": 100000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "V+",
+      "V-"
+     ],
+     "value": 6000
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "note": "Output transistor between OUT and GND: on while IN- is above IN+. Pulling STROBE to ground switches it off. The balance pin is not simulated. DIP-8: 1 GND, 2 IN+, 3 IN-, 4 V-, 5 BAL, 6 STROBE, 7 OUT, 8 V+."
+ }
+]

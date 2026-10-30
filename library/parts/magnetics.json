@@ -1,0 +1,388 @@
+[
+ {
+  "id": "coil",
+  "label": {
+   "en": "Coil with winding resistance",
+   "tr": "Bobin (sargı dirençli)"
+  },
+  "category": "passive",
+  "prefix": "L",
+  "symbol": {
+   "kind": "like",
+   "like": "L",
+   "pins": [
+    "1",
+    "2"
+   ]
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "l",
+    "label": {
+     "en": "Inductance (H)",
+     "tr": "Endüktans (H)"
+    },
+    "default": 0.01
+   },
+   {
+    "name": "rdc",
+    "label": {
+     "en": "Winding resistance (Ω)",
+     "tr": "Sargı direnci (Ω)"
+    },
+    "default": 2
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "L",
+     "nodes": [
+      "1",
+      "m"
+     ],
+     "value": "$l"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "2"
+     ],
+     "value": "$rdc"
+    }
+   ]
+  },
+  "footprint": "AXIAL_10.16"
+ },
+ {
+  "id": "choke",
+  "label": {
+   "en": "Choke with iron core",
+   "tr": "Çekirdekli şok bobini"
+  },
+  "category": "passive",
+  "prefix": "L",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "ind-core"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "l",
+    "label": {
+     "en": "Inductance (H)",
+     "tr": "Endüktans (H)"
+    },
+    "default": 0.1
+   },
+   {
+    "name": "rdc",
+    "label": {
+     "en": "Winding resistance (Ω)",
+     "tr": "Sargı direnci (Ω)"
+    },
+    "default": 5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "L",
+     "nodes": [
+      "1",
+      "m"
+     ],
+     "value": "$l"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "2"
+     ],
+     "value": "$rdc"
+    }
+   ]
+  },
+  "footprint": "AXIAL_12.7"
+ },
+ {
+  "id": "transformer",
+  "label": {
+   "en": "Transformer (ratio model)",
+   "tr": "Trafo (oran modeli)"
+  },
+  "category": "passive",
+  "prefix": "TR",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "transformer"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "n",
+    "label": {
+     "en": "Turns ratio (secondary / primary)",
+     "tr": "Sarım oranı (ikincil / birincil)"
+    },
+    "default": 0.1
+   },
+   {
+    "name": "lp",
+    "label": {
+     "en": "Primary inductance (H)",
+     "tr": "Birincil endüktans (H)"
+    },
+    "default": 5
+   },
+   {
+    "name": "rp",
+    "label": {
+     "en": "Primary resistance (Ω)",
+     "tr": "Birincil direnç (Ω)"
+    },
+    "default": 1
+   },
+   {
+    "name": "rs",
+    "label": {
+     "en": "Secondary resistance (Ω)",
+     "tr": "İkincil direnç (Ω)"
+    },
+    "default": 1
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "P1",
+      "m"
+     ],
+     "value": "$rp"
+    },
+    {
+     "type": "L",
+     "nodes": [
+      "m",
+      "P2"
+     ],
+     "value": "$lp"
+    },
+    {
+     "type": "G",
+     "nodes": [
+      "S2",
+      "S1",
+      "P1",
+      "P2"
+     ],
+     "value": "$n/$rs"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "S1",
+      "S2"
+     ],
+     "value": "$rs"
+    }
+   ]
+  },
+  "footprint": "TRAFO_4",
+  "padMap": [
+   "P1",
+   "P2",
+   "S1",
+   "S2"
+  ]
+ },
+ {
+  "id": "ptc",
+  "label": {
+   "en": "PTC thermistor",
+   "tr": "PTC termistör"
+  },
+  "category": "passive",
+  "prefix": "RT",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "ptc"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Resistance at the temperature (Ω)",
+     "tr": "Sıcaklıktaki direnç (Ω)"
+    },
+    "default": 50
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$r"
+    }
+   ]
+  },
+  "footprint": "AXIAL_7.62"
+ },
+ {
+  "id": "varistor",
+  "label": {
+   "en": "Varistor (MOV)",
+   "tr": "Varistör (MOV)"
+  },
+  "category": "passive",
+  "prefix": "RV",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "varistor"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vclamp",
+    "label": {
+     "en": "Clamping voltage (V)",
+     "tr": "Kıskaç gerilimi (V)"
+    },
+    "default": 275
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "D",
+     "nodes": [
+      "1",
+      "m"
+     ],
+     "props": {
+      "bv": "$vclamp",
+      "is": 1e-12
+     }
+    },
+    {
+     "type": "D",
+     "nodes": [
+      "2",
+      "m"
+     ],
+     "props": {
+      "bv": "$vclamp",
+      "is": 1e-12
+     }
+    }
+   ]
+  },
+  "footprint": "HDR_1X2"
+ },
+ {
+  "id": "fuse",
+  "label": {
+   "en": "Fuse",
+   "tr": "Sigorta"
+  },
+  "category": "passive",
+  "prefix": "F",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "fuse"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Resistance (Ω)",
+     "tr": "Direnç (Ω)"
+    },
+    "default": 0.05
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "1",
+      "2"
+     ],
+     "value": "$r"
+    }
+   ]
+  },
+  "footprint": "AXIAL_22.5"
+ },
+ {
+  "id": "trimpot",
+  "label": {
+   "en": "Trimmer potentiometer",
+   "tr": "Trimpot"
+  },
+  "category": "passive",
+  "prefix": "RV",
+  "symbol": {
+   "kind": "glyph",
+   "glyph": "pot"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "r",
+    "label": {
+     "en": "Total resistance (Ω)",
+     "tr": "Toplam direnç (Ω)"
+    },
+    "default": 10000
+   },
+   {
+    "name": "pos",
+    "label": {
+     "en": "Wiper position (0-1)",
+     "tr": "Kayar konumu (0-1)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "A",
+      "W"
+     ],
+     "value": "max($r*$pos,0.01)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "W",
+      "B"
+     ],
+     "value": "max($r*(1-$pos),0.01)"
+    }
+   ]
+  },
+  "footprint": "SIP_3",
+  "padMap": [
+   "A",
+   "W",
+   "B"
+  ]
+ }
+]

@@ -1,0 +1,18 @@
+{
+  "id": "rc-lowpass",
+  "label": { "en": "RC low-pass filter", "tr": "RC alçak geçiren filtre" },
+  "category": "misc",
+  "prefix": "U",
+  "symbol": { "kind": "box", "left": ["IN", "GND"], "right": ["OUT"], "title": "RC LPF" },
+  "params": [
+    { "name": "r", "label": { "en": "Resistance (Ω)", "tr": "Direnç (Ω)" }, "default": 1000 },
+    { "name": "c", "label": { "en": "Capacitance (F)", "tr": "Kapasite (F)" }, "default": 1e-6 }
+  ],
+  "model": {
+    "elements": [
+      { "type": "R", "nodes": ["IN", "OUT"], "value": "$r" },
+      { "type": "C", "nodes": ["OUT", "GND"], "value": "$c" }
+    ]
+  },
+  "footprint": "SIP_3"
+}

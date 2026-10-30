@@ -1,0 +1,679 @@
+[
+ {
+  "id": "ne555",
+  "label": {
+   "en": "555 timer",
+   "tr": "555 zamanlayıcı"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "TRIG",
+    "OUT",
+    "RESET"
+   ],
+   "right": [
+    "VCC",
+    "DISCH",
+    "THR",
+    "CTRL"
+   ],
+   "title": "NE555"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "CTRL"
+     ],
+     "value": 5000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "CTRL",
+      "n2"
+     ],
+     "value": 5000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "n2",
+      "GND"
+     ],
+     "value": 5000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "c1",
+      "CTRL",
+      "THR"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "rout": 100
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "c2",
+      "TRIG",
+      "n2"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "rout": 100
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "rn",
+      "GND",
+      "RESET"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "rn",
+      "VCC",
+      "RESET"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "q_p1",
+      "VCC",
+      "c1"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "q_p2",
+      "q_p1",
+      "rn"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "q_p2",
+      "QN"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "GND",
+      "c1"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "GND",
+      "rn"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "GND",
+      "QN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "qn_p",
+      "VCC",
+      "c2"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "QN",
+      "qn_p",
+      "Q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "QN",
+      "GND",
+      "c2"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "QN",
+      "GND",
+      "Q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OUT",
+      "GND",
+      "QN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "OUT",
+      "VCC",
+      "QN"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "DISCH",
+      "GND",
+      "QN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.05,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "footprint": "DIP8"
+ },
+ {
+  "id": "lm358",
+  "label": {
+   "en": "LM358 dual op-amp",
+   "tr": "LM358 çift op-amp"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "OUT1",
+    "IN1-",
+    "IN1+",
+    "GND"
+   ],
+   "right": [
+    "VCC",
+    "OUT2",
+    "IN2-",
+    "IN2+"
+   ],
+   "title": "LM358"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT1",
+      "IN1-",
+      "IN1+"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT2",
+      "IN2-",
+      "IN2+"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 32,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lm741",
+  "label": {
+   "en": "LM741 op-amp",
+   "tr": "LM741 op-amp"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "NULL",
+    "IN-",
+    "IN+",
+    "V-"
+   ],
+   "right": [
+    "NC",
+    "V+",
+    "OUT",
+    "NULL2"
+   ],
+   "title": "LM741"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT",
+      "IN-",
+      "IN+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "headroom": 2,
+      "rout": 75
+     }
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "ratings": {
+   "v": [
+    {
+     "a": "V+",
+     "b": "V-",
+     "max": 36,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "opamp-supply",
+  "label": {
+   "en": "Op-amp with supply pins",
+   "tr": "Besleme uçlu op-amp"
+  },
+  "category": "ic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "opamp5"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "headroom",
+    "label": {
+     "en": "Output headroom to the rails (V)",
+     "tr": "Raylara çıkış payı (V)"
+    },
+    "default": 1.0
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "OA",
+     "nodes": [
+      "OUT",
+      "-",
+      "+"
+     ],
+     "p": "V+",
+     "n": "V-",
+     "props": {
+      "headroom": "$headroom",
+      "headroomLo": "$headroom"
+     }
+    }
+   ]
+  },
+  "footprint": "DIP8",
+  "padMap": [
+   "NC",
+   "@1",
+   "@2",
+   "@4",
+   "NC",
+   "@3",
+   "@0",
+   "NC"
+  ]
+ },
+ {
+  "id": "regulator",
+  "label": {
+   "en": "Linear regulator (78xx)",
+   "tr": "Lineer regülatör (78xx)"
+  },
+  "category": "power",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "IN",
+    "GND"
+   ],
+   "right": [
+    "OUT"
+   ],
+   "title": "78xx"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "vout",
+    "label": {
+     "en": "Output voltage (V)",
+     "tr": "Çıkış gerilimi (V)"
+    },
+    "default": 5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "ref",
+      "GND"
+     ],
+     "value": "$vout/2"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "OUT",
+      "fb"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "fb",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "drv",
+      "fb",
+      "ref"
+     ],
+     "p": "IN",
+     "n": "GND",
+     "props": {
+      "headroom": 1.5,
+      "headroomLo": 0,
+      "rout": 20
+     }
+    },
+    {
+     "type": "Q",
+     "nodes": [
+      "IN",
+      "OUT",
+      "drv"
+     ],
+     "props": {
+      "npn": true,
+      "bf": 50,
+      "is": 1e-14
+     }
+    }
+   ]
+  },
+  "footprint": "TO220",
+  "padMap": [
+   "IN",
+   "GND",
+   "OUT"
+  ]
+ },
+ {
+  "id": "conn-2",
+  "label": {
+   "en": "Connector 2 pins",
+   "tr": "Konnektör 2 pin"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2"
+   ],
+   "right": [],
+   "title": "CONN2"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_2"
+ },
+ {
+  "id": "conn-3",
+  "label": {
+   "en": "Connector 3 pins",
+   "tr": "Konnektör 3 pin"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3"
+   ],
+   "right": [],
+   "title": "CONN3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_3"
+ },
+ {
+  "id": "conn-4",
+  "label": {
+   "en": "Connector 4 pins",
+   "tr": "Konnektör 4 pin"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "right": [],
+   "title": "CONN4"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_4"
+ },
+ {
+  "id": "conn-6",
+  "label": {
+   "en": "Connector 6 pins",
+   "tr": "Konnektör 6 pin"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "right": [],
+   "title": "CONN6"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_6"
+ },
+ {
+  "id": "conn-8",
+  "label": {
+   "en": "Connector 8 pins",
+   "tr": "Konnektör 8 pin"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "right": [],
+   "title": "CONN8"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_8"
+ }
+]

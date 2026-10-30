@@ -1,0 +1,959 @@
+[
+ {
+  "id": "tunik-254-2",
+  "label": {
+   "en": "Tunik male header 2 poles (2.54 mm)",
+   "tr": "Tunik erkek header 2 kutuplu (2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+",
+    "-"
+   ],
+   "right": [],
+   "title": "TUNIK 2"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK254_2",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-254-3",
+  "label": {
+   "en": "Tunik male header 3 poles (2.54 mm)",
+   "tr": "Tunik erkek header 3 kutuplu (2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3"
+   ],
+   "right": [],
+   "title": "TUNIK 3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK254_3",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-254-4",
+  "label": {
+   "en": "Tunik male header 4 poles (2.54 mm)",
+   "tr": "Tunik erkek header 4 kutuplu (2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "right": [],
+   "title": "TUNIK 4"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK254_4",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-254-5",
+  "label": {
+   "en": "Tunik male header 5 poles (2.54 mm)",
+   "tr": "Tunik erkek header 5 kutuplu (2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "right": [],
+   "title": "TUNIK 5"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK254_5",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-254-6",
+  "label": {
+   "en": "Tunik male header 6 poles (2.54 mm)",
+   "tr": "Tunik erkek header 6 kutuplu (2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "right": [],
+   "title": "TUNIK 6"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK254_6",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-254-7",
+  "label": {
+   "en": "Tunik male header 7 poles (2.54 mm)",
+   "tr": "Tunik erkek header 7 kutuplu (2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "right": [],
+   "title": "TUNIK 7"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK254_7",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-254-8",
+  "label": {
+   "en": "Tunik male header 8 poles (2.54 mm)",
+   "tr": "Tunik erkek header 8 kutuplu (2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "right": [],
+   "title": "TUNIK 8"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK254_8",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-254-9",
+  "label": {
+   "en": "Tunik male header 9 poles (2.54 mm)",
+   "tr": "Tunik erkek header 9 kutuplu (2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "right": [],
+   "title": "TUNIK 9"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK254_9",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-254-10",
+  "label": {
+   "en": "Tunik male header 10 poles (2.54 mm)",
+   "tr": "Tunik erkek header 10 kutuplu (2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+   ],
+   "right": [],
+   "title": "TUNIK 10"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK254_10",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-254-11",
+  "label": {
+   "en": "Tunik male header 11 poles (2.54 mm)",
+   "tr": "Tunik erkek header 11 kutuplu (2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   "right": [],
+   "title": "TUNIK 11"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK254_11",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-254-12",
+  "label": {
+   "en": "Tunik male header 12 poles (2.54 mm)",
+   "tr": "Tunik erkek header 12 kutuplu (2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "right": [],
+   "title": "TUNIK 12"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK254_12",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-396-2",
+  "label": {
+   "en": "Tunik male header 2 poles (3.96 mm)",
+   "tr": "Tunik erkek header 2 kutuplu (3,96 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+",
+    "-"
+   ],
+   "right": [],
+   "title": "TUNIK 2"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK396_2",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-396-3",
+  "label": {
+   "en": "Tunik male header 3 poles (3.96 mm)",
+   "tr": "Tunik erkek header 3 kutuplu (3,96 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3"
+   ],
+   "right": [],
+   "title": "TUNIK 3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK396_3",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-396-4",
+  "label": {
+   "en": "Tunik male header 4 poles (3.96 mm)",
+   "tr": "Tunik erkek header 4 kutuplu (3,96 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "right": [],
+   "title": "TUNIK 4"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK396_4",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-396-5",
+  "label": {
+   "en": "Tunik male header 5 poles (3.96 mm)",
+   "tr": "Tunik erkek header 5 kutuplu (3,96 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "right": [],
+   "title": "TUNIK 5"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK396_5",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-396-6",
+  "label": {
+   "en": "Tunik male header 6 poles (3.96 mm)",
+   "tr": "Tunik erkek header 6 kutuplu (3,96 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "right": [],
+   "title": "TUNIK 6"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK396_6",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-396-7",
+  "label": {
+   "en": "Tunik male header 7 poles (3.96 mm)",
+   "tr": "Tunik erkek header 7 kutuplu (3,96 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "right": [],
+   "title": "TUNIK 7"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK396_7",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-396-8",
+  "label": {
+   "en": "Tunik male header 8 poles (3.96 mm)",
+   "tr": "Tunik erkek header 8 kutuplu (3,96 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "right": [],
+   "title": "TUNIK 8"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK396_8",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-396-9",
+  "label": {
+   "en": "Tunik male header 9 poles (3.96 mm)",
+   "tr": "Tunik erkek header 9 kutuplu (3,96 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "right": [],
+   "title": "TUNIK 9"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK396_9",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-396-10",
+  "label": {
+   "en": "Tunik male header 10 poles (3.96 mm)",
+   "tr": "Tunik erkek header 10 kutuplu (3,96 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+   ],
+   "right": [],
+   "title": "TUNIK 10"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK396_10",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-396-11",
+  "label": {
+   "en": "Tunik male header 11 poles (3.96 mm)",
+   "tr": "Tunik erkek header 11 kutuplu (3,96 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   "right": [],
+   "title": "TUNIK 11"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK396_11",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-396-12",
+  "label": {
+   "en": "Tunik male header 12 poles (3.96 mm)",
+   "tr": "Tunik erkek header 12 kutuplu (3,96 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "right": [],
+   "title": "TUNIK 12"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TUNIK396_12",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-250-2",
+  "label": {
+   "en": "Tunik male header 2 poles (2.5 mm)",
+   "tr": "Tunik erkek header 2 kutuplu (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+",
+    "-"
+   ],
+   "right": [],
+   "title": "TUNIK 2"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_2",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-250-3",
+  "label": {
+   "en": "Tunik male header 3 poles (2.5 mm)",
+   "tr": "Tunik erkek header 3 kutuplu (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3"
+   ],
+   "right": [],
+   "title": "TUNIK 3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_3",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-250-4",
+  "label": {
+   "en": "Tunik male header 4 poles (2.5 mm)",
+   "tr": "Tunik erkek header 4 kutuplu (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "right": [],
+   "title": "TUNIK 4"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_4",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-250-5",
+  "label": {
+   "en": "Tunik male header 5 poles (2.5 mm)",
+   "tr": "Tunik erkek header 5 kutuplu (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "right": [],
+   "title": "TUNIK 5"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_5",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-250-6",
+  "label": {
+   "en": "Tunik male header 6 poles (2.5 mm)",
+   "tr": "Tunik erkek header 6 kutuplu (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "right": [],
+   "title": "TUNIK 6"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_6",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-250-7",
+  "label": {
+   "en": "Tunik male header 7 poles (2.5 mm)",
+   "tr": "Tunik erkek header 7 kutuplu (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "right": [],
+   "title": "TUNIK 7"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_7",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-250-8",
+  "label": {
+   "en": "Tunik male header 8 poles (2.5 mm)",
+   "tr": "Tunik erkek header 8 kutuplu (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "right": [],
+   "title": "TUNIK 8"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_8",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-250-9",
+  "label": {
+   "en": "Tunik male header 9 poles (2.5 mm)",
+   "tr": "Tunik erkek header 9 kutuplu (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "right": [],
+   "title": "TUNIK 9"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_9",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-250-10",
+  "label": {
+   "en": "Tunik male header 10 poles (2.5 mm)",
+   "tr": "Tunik erkek header 10 kutuplu (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+   ],
+   "right": [],
+   "title": "TUNIK 10"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_10",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-250-11",
+  "label": {
+   "en": "Tunik male header 11 poles (2.5 mm)",
+   "tr": "Tunik erkek header 11 kutuplu (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   "right": [],
+   "title": "TUNIK 11"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_11",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ },
+ {
+  "id": "tunik-250-12",
+  "label": {
+   "en": "Tunik male header 12 poles (2.5 mm)",
+   "tr": "Tunik erkek header 12 kutuplu (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "right": [],
+   "title": "TUNIK 12"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_12",
+  "note": "The PCB side of a Tunik (Molex KK type) connector; the female housing with crimped pins plugs onto it."
+ }
+]

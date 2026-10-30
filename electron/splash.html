@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ISL PCB</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:" />
+<style>
+  html, body { margin: 0; height: 100%; background: transparent; overflow: hidden; font-family: 'Segoe UI', system-ui, sans-serif; -webkit-user-select: none; user-select: none; -webkit-app-region: drag; }
+  .card { position: absolute; inset: 14px; border-radius: 22px; background: #12161c; border: 1.5px solid #2a313b; box-shadow: 0 10px 38px rgba(0, 0, 0, 0.6); overflow: hidden; }
+  svg.art { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .brand { position: absolute; left: 38px; top: 74px; display: flex; align-items: center; gap: 22px; }
+  .icon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 0 0 1.5px #2a313b, 0 8px 22px rgba(0, 0, 0, 0.5); animation: pop 0.7s cubic-bezier(0.2, 1.3, 0.4, 1) both; }
+  .name { font-size: 58px; font-weight: 800; line-height: 1; letter-spacing: 1px; color: #ff8a1f; text-shadow: 0 0 26px rgba(255, 138, 31, 0.35); animation: rise 0.8s 0.25s ease-out both; }
+  .tag { margin-top: 10px; font-size: 14px; letter-spacing: 3px; color: #8d99a9; text-transform: uppercase; animation: rise 0.8s 0.5s ease-out both; }
+  .foot { position: absolute; left: 38px; right: 30px; bottom: 20px; display: flex; justify-content: space-between; font-size: 11px; color: #5d6978; letter-spacing: 1px; }
+  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: #1c222b; }
+  .bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #ff8a1f, #ffb35c); animation: fill 5s linear forwards; }
+  /* The drawing: every path is drawn in, one after the other. */
+  .wire { fill: none; stroke: #3d4a5c; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.4s ease-out forwards; }
+  .hot { stroke: #ff8a1f; }
+  .flow { fill: none; stroke: #ff8a1f; stroke-width: 2.4; stroke-linecap: round; stroke-dasharray: 7 11; opacity: 0; animation: show 0.4s 2.4s forwards, run 1.1s 2.4s linear infinite; }
+  .dot { fill: #232b36; }
+  .led { fill: #ff8a1f; opacity: 0; animation: glow 1.6s 2.6s ease-in-out infinite; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes show { to { opacity: 0.95; } }
+  @keyframes run { to { stroke-dashoffset: -18; } }
+  @keyframes glow { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.75; } }
+  @keyframes pop { from { transform: scale(0.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  @keyframes rise { from { transform: translateY(10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  @keyframes fill { to { width: 100%; } }
+</style>
+</head>
+<body>
+<div class="card">
+  <svg class="art" viewBox="0 0 532 312" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" class="dot" /></pattern>
+    </defs>
+    <rect width="532" height="312" fill="url(#dots)" />
+
+    <!-- printed-circuit traces with 45 degree bends and vias, top left -->
+    <g>
+      <path class="wire" pathLength="1" style="animation-delay: 0.1s" d="M24 34 H64 L80 18 H138" />
+      <path class="wire" pathLength="1" style="animation-delay: 0.3s" d="M24 52 H54 L70 68 H112" />
+      <circle cx="24" cy="34" r="4" class="wire" pathLength="1" style="animation-delay: 0.1s" />
+      <circle cx="24" cy="52" r="4" class="wire" pathLength="1" style="animation-delay: 0.3s" />
+      <circle cx="138" cy="18" r="4" class="wire hot" pathLength="1" style="animation-delay: 0.9s" />
+      <circle cx="112" cy="68" r="4" class="wire" pathLength="1" style="animation-delay: 0.9s" />
+    </g>
+
+    <!-- a small op-amp, top right -->
+    <g>
+      <path class="wire" pathLength="1" style="animation-delay: 0.4s" d="M350 28 H384 M350 56 H384" />
+      <path class="wire" pathLength="1" style="animation-delay: 0.6s" d="M384 14 V70 L436 42 Z" />
+      <path class="wire" pathLength="1" style="animation-delay: 0.9s" d="M436 42 H508" />
+      <path class="wire" pathLength="1" style="animation-delay: 1.1s" d="M390 28 h8 M394 24 v8 M390 56 h8" />
+    </g>
+
+    <!-- the circuit along the bottom: source, resistor, capacitor, LED, ground (raised to leave the footer line clear) -->
+    <g transform="translate(0 -16)">
+      <path class="wire" pathLength="1" style="animation-delay: 0.7s" d="M60 224 V205 H130" />
+      <circle cx="60" cy="238" r="14" class="wire" pathLength="1" style="animation-delay: 0.7s" />
+      <path class="wire" pathLength="1" style="animation-delay: 1s" d="M55 233 h10 M60 228 v10 M55 245 h10" />
+      <path class="wire" pathLength="1" style="animation-delay: 0.7s" d="M60 252 V282 H470" />
+      <path class="wire" pathLength="1" style="animation-delay: 1.1s" d="M130 205 h12 l5 -10 l10 20 l10 -20 l10 20 l10 -20 l5 10 h12" />
+      <path class="wire" pathLength="1" style="animation-delay: 1.4s" d="M204 205 H246 M246 192 V218 M254 192 V218 M254 205 H300" />
+      <path class="wire hot" pathLength="1" style="animation-delay: 1.7s" d="M300 205 H322 M322 191 V219 L348 205 Z M348 191 V219 M348 205 H400" />
+      <path class="wire hot" pathLength="1" style="animation-delay: 1.9s" d="M336 188 l10 -10 M346 190 l10 -10" />
+      <path class="wire" pathLength="1" style="animation-delay: 1.9s" d="M400 205 H470 V282" />
+      <path class="wire" pathLength="1" style="animation-delay: 2.1s" d="M265 282 V290 M254 290 H276 M259 295 H271 M263 300 H267" />
+      <!-- the current runs round the loop once it is drawn -->
+      <path class="flow" d="M60 224 V205 H400 H470 V282 H60 V252" />
+      <circle cx="334" cy="205" r="22" class="led" />
+    </g>
+  </svg>
+
+  <div class="brand">
+    <svg class="icon" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+      <rect width="256" height="256" rx="48" fill="#0c0f13" />
+      <g stroke="#ff8a1f" stroke-width="13" stroke-linecap="round"><line x1="64" y1="90" x2="136" y2="18" /><line x1="90" y1="116" x2="162" y2="44" /><line x1="116" y1="142" x2="188" y2="70" /></g>
+      <text x="128" y="226" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="92" fill="#ff8a1f">ISL</text>
+    </svg>
+    <div>
+      <div class="name">ISL PCB</div>
+      <div class="tag">Schematic · Simulation · PCB</div>
+    </div>
+  </div>
+
+  <div class="foot"><span>Loading…</span><span id="ver"></span></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+  const v = new URLSearchParams(location.search).get('v');
+  if (v) document.getElementById('ver').textContent = 'v' + v;
+</script>
+</body>
+</html>

@@ -1,0 +1,1237 @@
+[
+ {
+  "id": "hx711",
+  "label": {
+   "en": "HX711 load-cell amplifier (pinout only)",
+   "tr": "HX711 yük hücresi yükselticisi (yalnızca pin bağlantısı)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "DT",
+    "SCK",
+    "VCC"
+   ],
+   "right": [
+    "E+",
+    "E-",
+    "A-",
+    "A+",
+    "B-",
+    "B+"
+   ],
+   "title": "HX711"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 3333.3
+    }
+   ]
+  },
+  "footprint": "MOD_HX711",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "mpu6050",
+  "label": {
+   "en": "MPU-6050 accelerometer / gyro (GY-521) (pinout only)",
+   "tr": "MPU-6050 ivme / jiroskop (GY-521) (yalnızca pin bağlantısı)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "SCL",
+    "SDA",
+    "XDA",
+    "XCL",
+    "AD0",
+    "INT"
+   ],
+   "right": [],
+   "title": "MPU6050"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 1250.0
+    }
+   ]
+  },
+  "footprint": "MOD_GY521",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "bmp280",
+  "label": {
+   "en": "BMP280 / BME280 pressure sensor (pinout only)",
+   "tr": "BMP280 / BME280 basınç sensörü (yalnızca pin bağlantısı)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "SCL",
+    "SDA",
+    "CSB",
+    "SDO"
+   ],
+   "right": [],
+   "title": "BMP280"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 5000.0
+    }
+   ]
+  },
+  "footprint": "MOD_BMP280",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 3.6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "hc-sr04",
+  "label": {
+   "en": "HC-SR04 ultrasonic sensor (pinout only)",
+   "tr": "HC-SR04 ultrasonik sensör (yalnızca pin bağlantısı)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "TRIG",
+    "ECHO",
+    "GND"
+   ],
+   "right": [],
+   "title": "HC-SR04"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 333.3
+    }
+   ]
+  },
+  "footprint": "MOD_SR04",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "lm35",
+  "label": {
+   "en": "LM35 temperature sensor (10 mV/°C)",
+   "tr": "LM35 sıcaklık sensörü (10 mV/°C)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+VS",
+    "VOUT",
+    "GND"
+   ],
+   "right": [],
+   "title": "LM35"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "temp",
+    "label": {
+     "en": "Temperature (°C)",
+     "tr": "Sıcaklık (°C)"
+    },
+    "default": 25
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "VOUT",
+      "m"
+     ],
+     "value": "$temp*0.01"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "GND"
+     ],
+     "value": 0.001
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VOUT",
+      "GND"
+     ],
+     "value": 100000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "+VS",
+      "GND"
+     ],
+     "value": 83000
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "+VS",
+   "VOUT",
+   "GND"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "+VS",
+     "b": "GND",
+     "max": 30,
+     "min": -0.2,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "tmp36",
+  "label": {
+   "en": "TMP36 temperature sensor (10 mV/°C, 0.5 V at 0 °C)",
+   "tr": "TMP36 sıcaklık sensörü (10 mV/°C, 0 °C'de 0,5 V)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+VS",
+    "VOUT",
+    "GND"
+   ],
+   "right": [],
+   "title": "TMP36"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "temp",
+    "label": {
+     "en": "Temperature (°C)",
+     "tr": "Sıcaklık (°C)"
+    },
+    "default": 25
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "VOUT",
+      "m"
+     ],
+     "value": "0.5+$temp*0.01"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "m",
+      "GND"
+     ],
+     "value": 0.001
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VOUT",
+      "GND"
+     ],
+     "value": 100000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "+VS",
+      "GND"
+     ],
+     "value": 83000
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "+VS",
+   "VOUT",
+   "GND"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "+VS",
+     "b": "GND",
+     "max": 6,
+     "min": -0.3,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "ds18b20",
+  "label": {
+   "en": "DS18B20 temperature sensor, 1-Wire (pinout only)",
+   "tr": "DS18B20 sıcaklık sensörü, 1-Wire (yalnızca pin bağlantısı)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "DQ",
+    "VDD"
+   ],
+   "right": [],
+   "title": "DS18B20"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VDD",
+      "GND"
+     ],
+     "value": 5000.0
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "GND",
+   "DQ",
+   "VDD"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "VDD",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "dht11",
+  "label": {
+   "en": "DHT11 temperature and humidity (pinout only)",
+   "tr": "DHT11 sıcaklık ve nem (yalnızca pin bağlantısı)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "DATA",
+    "NC",
+    "GND"
+   ],
+   "right": [],
+   "title": "DHT11"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 5000.0
+    }
+   ]
+  },
+  "footprint": "SIP_4",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "dht22",
+  "label": {
+   "en": "DHT22 temperature and humidity (pinout only)",
+   "tr": "DHT22 sıcaklık ve nem (yalnızca pin bağlantısı)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "DATA",
+    "NC",
+    "GND"
+   ],
+   "right": [],
+   "title": "DHT22"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 3333.3
+    }
+   ]
+  },
+  "footprint": "SIP_4",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 5.5,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "tsop1838",
+  "label": {
+   "en": "TSOP1838 infrared receiver (pinout only)",
+   "tr": "TSOP1838 kızılötesi alıcı (yalnızca pin bağlantısı)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "OUT",
+    "GND",
+    "VCC"
+   ],
+   "right": [],
+   "title": "TSOP1838"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 5000.0
+    }
+   ]
+  },
+  "footprint": "TO92",
+  "padMap": [
+   "OUT",
+   "GND",
+   "VCC"
+  ],
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "ldr-module",
+  "label": {
+   "en": "Light sensor module (LDR)",
+   "tr": "Işık sensörü modülü (LDR)"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "DO",
+    "AO"
+   ],
+   "right": [],
+   "title": "LDR"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "level",
+    "label": {
+     "en": "Light level (0 dark - 1 bright)",
+     "tr": "Işık düzeyi (0 karanlık - 1 aydınlık)"
+    },
+    "default": 0.5
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "AO"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "AO",
+      "GND"
+     ],
+     "value": "max(10000*$level/(1-min($level,0.99)),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "half"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "half",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "DO",
+      "half",
+      "AO"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.1,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 625.0
+    }
+   ]
+  },
+  "footprint": "MOD_SENSOR4",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "mq2-module",
+  "label": {
+   "en": "MQ-2 gas sensor module",
+   "tr": "MQ-2 gaz sensörü modülü"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "DO",
+    "AO"
+   ],
+   "right": [],
+   "title": "MQ-2"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "level",
+    "label": {
+     "en": "Gas level (0 clean - 1 heavy)",
+     "tr": "Gaz düzeyi (0 temiz - 1 yoğun)"
+    },
+    "default": 0.2
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "AO"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "AO",
+      "GND"
+     ],
+     "value": "max(10000*$level/(1-min($level,0.99)),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "half"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "half",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "DO",
+      "half",
+      "AO"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.1,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 625.0
+    }
+   ]
+  },
+  "footprint": "MOD_SENSOR4",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "soil-moisture",
+  "label": {
+   "en": "Soil moisture sensor module",
+   "tr": "Toprak nem sensörü modülü"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "DO",
+    "AO"
+   ],
+   "right": [],
+   "title": "SOIL"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "level",
+    "label": {
+     "en": "Moisture (0 dry - 1 wet)",
+     "tr": "Nem (0 kuru - 1 ıslak)"
+    },
+    "default": 0.4
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "AO"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "AO",
+      "GND"
+     ],
+     "value": "max(10000*$level/(1-min($level,0.99)),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "half"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "half",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "DO",
+      "half",
+      "AO"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.1,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 625.0
+    }
+   ]
+  },
+  "footprint": "MOD_SENSOR4",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "sound-sensor",
+  "label": {
+   "en": "Sound sensor module",
+   "tr": "Ses sensörü modülü"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "DO",
+    "AO"
+   ],
+   "right": [],
+   "title": "SOUND"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "level",
+    "label": {
+     "en": "Sound level (0 quiet - 1 loud)",
+     "tr": "Ses düzeyi (0 sessiz - 1 yüksek)"
+    },
+    "default": 0.3
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "AO"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "AO",
+      "GND"
+     ],
+     "value": "max(10000*$level/(1-min($level,0.99)),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "half"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "half",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "DO",
+      "half",
+      "AO"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.1,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 625.0
+    }
+   ]
+  },
+  "footprint": "MOD_SENSOR4",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "rain-sensor",
+  "label": {
+   "en": "Rain sensor module",
+   "tr": "Yağmur sensörü modülü"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "GND",
+    "DO",
+    "AO"
+   ],
+   "right": [],
+   "title": "RAIN"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "level",
+    "label": {
+     "en": "Wetness (0 dry - 1 wet)",
+     "tr": "Islaklık (0 kuru - 1 ıslak)"
+    },
+    "default": 0.1
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "AO"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "AO",
+      "GND"
+     ],
+     "value": "max(10000*$level/(1-min($level,0.99)),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "half"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "half",
+      "GND"
+     ],
+     "value": 10000
+    },
+    {
+     "type": "OA",
+     "nodes": [
+      "DO",
+      "half",
+      "AO"
+     ],
+     "p": "VCC",
+     "n": "GND",
+     "props": {
+      "headroom": 0.1,
+      "headroomLo": 0.02,
+      "rout": 100
+     }
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 625.0
+    }
+   ]
+  },
+  "footprint": "MOD_SENSOR4",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "pir-hc-sr501",
+  "label": {
+   "en": "PIR motion sensor HC-SR501",
+   "tr": "PIR hareket sensörü HC-SR501"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "VCC",
+    "OUT",
+    "GND"
+   ],
+   "right": [],
+   "title": "PIR"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "closed",
+    "label": {
+     "en": "Motion detected (double-click)",
+     "tr": "Hareket var (çift tıkla)"
+    },
+    "default": false,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "hi",
+      "GND"
+     ],
+     "value": "3.3*$closed"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "hi",
+      "OUT"
+     ],
+     "value": 100
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VCC",
+      "GND"
+     ],
+     "value": 83333.3
+    }
+   ]
+  },
+  "footprint": "MOD_PIR",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 20,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "joystick",
+  "label": {
+   "en": "Joystick module KY-023",
+   "tr": "Joystick modülü KY-023"
+  },
+  "category": "sensor",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "GND",
+    "+5V",
+    "VRX",
+    "VRY",
+    "SW"
+   ],
+   "right": [],
+   "title": "JOYSTICK"
+  },
+  "builtin": true,
+  "params": [
+   {
+    "name": "x",
+    "label": {
+     "en": "X position (0-1)",
+     "tr": "X konumu (0-1)"
+    },
+    "default": 0.5
+   },
+   {
+    "name": "y",
+    "label": {
+     "en": "Y position (0-1)",
+     "tr": "Y konumu (0-1)"
+    },
+    "default": 0.5
+   },
+   {
+    "name": "closed",
+    "label": {
+     "en": "Button pressed (double-click)",
+     "tr": "Butona basılı (çift tıkla)"
+    },
+    "default": false,
+    "kind": "bool"
+   }
+  ],
+  "model": {
+   "elements": [
+    {
+     "type": "R",
+     "nodes": [
+      "+5V",
+      "VRX"
+     ],
+     "value": "max(10000*(1-$x),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VRX",
+      "GND"
+     ],
+     "value": "max(10000*$x,1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "+5V",
+      "VRY"
+     ],
+     "value": "max(10000*(1-$y),1)"
+    },
+    {
+     "type": "R",
+     "nodes": [
+      "VRY",
+      "GND"
+     ],
+     "value": "max(10000*$y,1)"
+    },
+    {
+     "type": "SW",
+     "nodes": [
+      "SW",
+      "GND"
+     ],
+     "props": {
+      "closed": "$closed"
+     }
+    }
+   ]
+  },
+  "footprint": "MOD_JOYSTICK",
+  "ratings": {
+   "v": [
+    {
+     "a": "+5V",
+     "b": "GND",
+     "max": 6,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ }
+]

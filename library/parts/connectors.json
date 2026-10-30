@@ -1,0 +1,1294 @@
+[
+ {
+  "id": "term-508-2",
+  "label": {
+   "en": "Screw terminal block 2 poles (5.08 mm)",
+   "tr": "Vidalı klemens 2 kutuplu (5,08 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+",
+    "-"
+   ],
+   "right": [],
+   "title": "TERM 2"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TB508_2"
+ },
+ {
+  "id": "term-508-3",
+  "label": {
+   "en": "Screw terminal block 3 poles (5.08 mm)",
+   "tr": "Vidalı klemens 3 kutuplu (5,08 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3"
+   ],
+   "right": [],
+   "title": "TERM 3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TB508_3"
+ },
+ {
+  "id": "term-508-4",
+  "label": {
+   "en": "Screw terminal block 4 poles (5.08 mm)",
+   "tr": "Vidalı klemens 4 kutuplu (5,08 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "right": [],
+   "title": "TERM 4"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TB508_4"
+ },
+ {
+  "id": "term-508-5",
+  "label": {
+   "en": "Screw terminal block 5 poles (5.08 mm)",
+   "tr": "Vidalı klemens 5 kutuplu (5,08 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "right": [],
+   "title": "TERM 5"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TB508_5"
+ },
+ {
+  "id": "term-508-6",
+  "label": {
+   "en": "Screw terminal block 6 poles (5.08 mm)",
+   "tr": "Vidalı klemens 6 kutuplu (5,08 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "right": [],
+   "title": "TERM 6"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TB508_6"
+ },
+ {
+  "id": "term-508-8",
+  "label": {
+   "en": "Screw terminal block 8 poles (5.08 mm)",
+   "tr": "Vidalı klemens 8 kutuplu (5,08 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "right": [],
+   "title": "TERM 8"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TB508_8"
+ },
+ {
+  "id": "term-350-2",
+  "label": {
+   "en": "Screw terminal block 2 poles (3.5 mm)",
+   "tr": "Vidalı klemens 2 kutuplu (3,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+",
+    "-"
+   ],
+   "right": [],
+   "title": "TERM 2"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TB350_2"
+ },
+ {
+  "id": "term-350-3",
+  "label": {
+   "en": "Screw terminal block 3 poles (3.5 mm)",
+   "tr": "Vidalı klemens 3 kutuplu (3,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3"
+   ],
+   "right": [],
+   "title": "TERM 3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TB350_3"
+ },
+ {
+  "id": "term-350-4",
+  "label": {
+   "en": "Screw terminal block 4 poles (3.5 mm)",
+   "tr": "Vidalı klemens 4 kutuplu (3,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "right": [],
+   "title": "TERM 4"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TB350_4"
+ },
+ {
+  "id": "term-350-6",
+  "label": {
+   "en": "Screw terminal block 6 poles (3.5 mm)",
+   "tr": "Vidalı klemens 6 kutuplu (3,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "right": [],
+   "title": "TERM 6"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "TB350_6"
+ },
+ {
+  "id": "hdr-m-2",
+  "label": {
+   "en": "Pin header 2 pins, male (2.54 mm, takes a female socket)",
+   "tr": "Pin header 2 pin, erkek (2,54 mm, dişi soket takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+",
+    "-"
+   ],
+   "right": [],
+   "title": "HDR 2"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_2"
+ },
+ {
+  "id": "hdr-m-3",
+  "label": {
+   "en": "Pin header 3 pins, male (2.54 mm, takes a female socket)",
+   "tr": "Pin header 3 pin, erkek (2,54 mm, dişi soket takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3"
+   ],
+   "right": [],
+   "title": "HDR 3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_3"
+ },
+ {
+  "id": "hdr-m-4",
+  "label": {
+   "en": "Pin header 4 pins, male (2.54 mm, takes a female socket)",
+   "tr": "Pin header 4 pin, erkek (2,54 mm, dişi soket takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "right": [],
+   "title": "HDR 4"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_4"
+ },
+ {
+  "id": "hdr-m-5",
+  "label": {
+   "en": "Pin header 5 pins, male (2.54 mm, takes a female socket)",
+   "tr": "Pin header 5 pin, erkek (2,54 mm, dişi soket takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "right": [],
+   "title": "HDR 5"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_5"
+ },
+ {
+  "id": "hdr-m-6",
+  "label": {
+   "en": "Pin header 6 pins, male (2.54 mm, takes a female socket)",
+   "tr": "Pin header 6 pin, erkek (2,54 mm, dişi soket takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "right": [],
+   "title": "HDR 6"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_6"
+ },
+ {
+  "id": "hdr-m-7",
+  "label": {
+   "en": "Pin header 7 pins, male (2.54 mm, takes a female socket)",
+   "tr": "Pin header 7 pin, erkek (2,54 mm, dişi soket takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "right": [],
+   "title": "HDR 7"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_7"
+ },
+ {
+  "id": "hdr-m-8",
+  "label": {
+   "en": "Pin header 8 pins, male (2.54 mm, takes a female socket)",
+   "tr": "Pin header 8 pin, erkek (2,54 mm, dişi soket takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "right": [],
+   "title": "HDR 8"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_8"
+ },
+ {
+  "id": "hdr-m-9",
+  "label": {
+   "en": "Pin header 9 pins, male (2.54 mm, takes a female socket)",
+   "tr": "Pin header 9 pin, erkek (2,54 mm, dişi soket takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "right": [],
+   "title": "HDR 9"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_9"
+ },
+ {
+  "id": "hdr-m-10",
+  "label": {
+   "en": "Pin header 10 pins, male (2.54 mm, takes a female socket)",
+   "tr": "Pin header 10 pin, erkek (2,54 mm, dişi soket takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+   ],
+   "right": [],
+   "title": "HDR 10"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "SIP_10"
+ },
+ {
+  "id": "hdr-f-2",
+  "label": {
+   "en": "Female header 2 pins (socket, 2.54 mm)",
+   "tr": "Dişi header 2 pin (soket, 2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+",
+    "-"
+   ],
+   "right": [],
+   "title": "SOCKET 2"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "FHDR_2"
+ },
+ {
+  "id": "hdr-f-3",
+  "label": {
+   "en": "Female header 3 pins (socket, 2.54 mm)",
+   "tr": "Dişi header 3 pin (soket, 2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3"
+   ],
+   "right": [],
+   "title": "SOCKET 3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "FHDR_3"
+ },
+ {
+  "id": "hdr-f-4",
+  "label": {
+   "en": "Female header 4 pins (socket, 2.54 mm)",
+   "tr": "Dişi header 4 pin (soket, 2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "right": [],
+   "title": "SOCKET 4"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "FHDR_4"
+ },
+ {
+  "id": "hdr-f-5",
+  "label": {
+   "en": "Female header 5 pins (socket, 2.54 mm)",
+   "tr": "Dişi header 5 pin (soket, 2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "right": [],
+   "title": "SOCKET 5"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "FHDR_5"
+ },
+ {
+  "id": "hdr-f-6",
+  "label": {
+   "en": "Female header 6 pins (socket, 2.54 mm)",
+   "tr": "Dişi header 6 pin (soket, 2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "right": [],
+   "title": "SOCKET 6"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "FHDR_6"
+ },
+ {
+  "id": "hdr-f-7",
+  "label": {
+   "en": "Female header 7 pins (socket, 2.54 mm)",
+   "tr": "Dişi header 7 pin (soket, 2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "right": [],
+   "title": "SOCKET 7"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "FHDR_7"
+ },
+ {
+  "id": "hdr-f-8",
+  "label": {
+   "en": "Female header 8 pins (socket, 2.54 mm)",
+   "tr": "Dişi header 8 pin (soket, 2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "right": [],
+   "title": "SOCKET 8"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "FHDR_8"
+ },
+ {
+  "id": "hdr-f-9",
+  "label": {
+   "en": "Female header 9 pins (socket, 2.54 mm)",
+   "tr": "Dişi header 9 pin (soket, 2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "right": [],
+   "title": "SOCKET 9"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "FHDR_9"
+ },
+ {
+  "id": "hdr-f-10",
+  "label": {
+   "en": "Female header 10 pins (socket, 2.54 mm)",
+   "tr": "Dişi header 10 pin (soket, 2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+   ],
+   "right": [],
+   "title": "SOCKET 10"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "FHDR_10"
+ },
+ {
+  "id": "plug-508-2",
+  "label": {
+   "en": "Pluggable terminal block 2 poles, male header (5.08 mm, takes the screw plug)",
+   "tr": "Geçmeli klemens 2 kutuplu, erkek (5,08 mm, vidalı fiş takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+",
+    "-"
+   ],
+   "right": [],
+   "title": "PLUG 2"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "PLUG508_2"
+ },
+ {
+  "id": "plug-508-3",
+  "label": {
+   "en": "Pluggable terminal block 3 poles, male header (5.08 mm, takes the screw plug)",
+   "tr": "Geçmeli klemens 3 kutuplu, erkek (5,08 mm, vidalı fiş takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3"
+   ],
+   "right": [],
+   "title": "PLUG 3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "PLUG508_3"
+ },
+ {
+  "id": "plug-508-4",
+  "label": {
+   "en": "Pluggable terminal block 4 poles, male header (5.08 mm, takes the screw plug)",
+   "tr": "Geçmeli klemens 4 kutuplu, erkek (5,08 mm, vidalı fiş takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "right": [],
+   "title": "PLUG 4"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "PLUG508_4"
+ },
+ {
+  "id": "plug-508-5",
+  "label": {
+   "en": "Pluggable terminal block 5 poles, male header (5.08 mm, takes the screw plug)",
+   "tr": "Geçmeli klemens 5 kutuplu, erkek (5,08 mm, vidalı fiş takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "right": [],
+   "title": "PLUG 5"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "PLUG508_5"
+ },
+ {
+  "id": "plug-508-6",
+  "label": {
+   "en": "Pluggable terminal block 6 poles, male header (5.08 mm, takes the screw plug)",
+   "tr": "Geçmeli klemens 6 kutuplu, erkek (5,08 mm, vidalı fiş takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "right": [],
+   "title": "PLUG 6"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "PLUG508_6"
+ },
+ {
+  "id": "plug-508-7",
+  "label": {
+   "en": "Pluggable terminal block 7 poles, male header (5.08 mm, takes the screw plug)",
+   "tr": "Geçmeli klemens 7 kutuplu, erkek (5,08 mm, vidalı fiş takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "right": [],
+   "title": "PLUG 7"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "PLUG508_7"
+ },
+ {
+  "id": "plug-508-8",
+  "label": {
+   "en": "Pluggable terminal block 8 poles, male header (5.08 mm, takes the screw plug)",
+   "tr": "Geçmeli klemens 8 kutuplu, erkek (5,08 mm, vidalı fiş takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "right": [],
+   "title": "PLUG 8"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "PLUG508_8"
+ },
+ {
+  "id": "plug-508-9",
+  "label": {
+   "en": "Pluggable terminal block 9 poles, male header (5.08 mm, takes the screw plug)",
+   "tr": "Geçmeli klemens 9 kutuplu, erkek (5,08 mm, vidalı fiş takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "right": [],
+   "title": "PLUG 9"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "PLUG508_9"
+ },
+ {
+  "id": "plug-508-10",
+  "label": {
+   "en": "Pluggable terminal block 10 poles, male header (5.08 mm, takes the screw plug)",
+   "tr": "Geçmeli klemens 10 kutuplu, erkek (5,08 mm, vidalı fiş takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+   ],
+   "right": [],
+   "title": "PLUG 10"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "PLUG508_10"
+ },
+ {
+  "id": "plug-508-11",
+  "label": {
+   "en": "Pluggable terminal block 11 poles, male header (5.08 mm, takes the screw plug)",
+   "tr": "Geçmeli klemens 11 kutuplu, erkek (5,08 mm, vidalı fiş takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   "right": [],
+   "title": "PLUG 11"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "PLUG508_11"
+ },
+ {
+  "id": "plug-508-12",
+  "label": {
+   "en": "Pluggable terminal block 12 poles, male header (5.08 mm, takes the screw plug)",
+   "tr": "Geçmeli klemens 12 kutuplu, erkek (5,08 mm, vidalı fiş takılır)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "right": [],
+   "title": "PLUG 12"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "PLUG508_12"
+ },
+ {
+  "id": "jst-xh-2",
+  "label": {
+   "en": "JST XH connector 2 pins (2.5 mm)",
+   "tr": "JST XH konnektör 2 pin (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "+",
+    "-"
+   ],
+   "right": [],
+   "title": "JST XH 2"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_2"
+ },
+ {
+  "id": "jst-xh-3",
+  "label": {
+   "en": "JST XH connector 3 pins (2.5 mm)",
+   "tr": "JST XH konnektör 3 pin (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3"
+   ],
+   "right": [],
+   "title": "JST XH 3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_3"
+ },
+ {
+  "id": "jst-xh-4",
+  "label": {
+   "en": "JST XH connector 4 pins (2.5 mm)",
+   "tr": "JST XH konnektör 4 pin (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "right": [],
+   "title": "JST XH 4"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_4"
+ },
+ {
+  "id": "jst-xh-5",
+  "label": {
+   "en": "JST XH connector 5 pins (2.5 mm)",
+   "tr": "JST XH konnektör 5 pin (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "right": [],
+   "title": "JST XH 5"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_5"
+ },
+ {
+  "id": "jst-xh-6",
+  "label": {
+   "en": "JST XH connector 6 pins (2.5 mm)",
+   "tr": "JST XH konnektör 6 pin (2,5 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "right": [],
+   "title": "JST XH 6"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "JSTXH_6"
+ },
+ {
+  "id": "hdr2-m-6",
+  "label": {
+   "en": "Pin header 2x3, male (6 pins, 2.54 mm)",
+   "tr": "Pin header 2x3, erkek (6 pin, 2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "3",
+    "5"
+   ],
+   "right": [
+    "2",
+    "4",
+    "6"
+   ],
+   "title": "HDR 2x3"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "HDR2X3",
+  "padMap": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6"
+  ]
+ },
+ {
+  "id": "hdr2-m-8",
+  "label": {
+   "en": "Pin header 2x4, male (8 pins, 2.54 mm)",
+   "tr": "Pin header 2x4, erkek (8 pin, 2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "3",
+    "5",
+    "7"
+   ],
+   "right": [
+    "2",
+    "4",
+    "6",
+    "8"
+   ],
+   "title": "HDR 2x4"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "HDR2X4",
+  "padMap": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8"
+  ]
+ },
+ {
+  "id": "hdr2-m-10",
+  "label": {
+   "en": "Pin header 2x5, male (10 pins, 2.54 mm)",
+   "tr": "Pin header 2x5, erkek (10 pin, 2,54 mm)"
+  },
+  "category": "connector",
+  "prefix": "J",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1",
+    "3",
+    "5",
+    "7",
+    "9"
+   ],
+   "right": [
+    "2",
+    "4",
+    "6",
+    "8",
+    "10"
+   ],
+   "title": "HDR 2x5"
+  },
+  "builtin": true,
+  "model": {
+   "elements": []
+  },
+  "footprint": "HDR2X5",
+  "padMap": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10"
+  ]
+ }
+]

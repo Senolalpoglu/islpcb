@@ -1,0 +1,3897 @@
+[
+ {
+  "id": "gate-nand",
+  "label": {
+   "en": "NAND gate (5 V)",
+   "tr": "NAND kapısı (5 V)"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "B"
+   ],
+   "right": [
+    "Y"
+   ],
+   "title": "NAND"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "vdd",
+      "0"
+     ],
+     "value": 5
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "vdd",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "vdd",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "g_n",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_n",
+      "0",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "virtual": true
+ },
+ {
+  "id": "gate-nor",
+  "label": {
+   "en": "NOR gate (5 V)",
+   "tr": "NOR kapısı (5 V)"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "B"
+   ],
+   "right": [
+    "Y"
+   ],
+   "title": "NOR"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "vdd",
+      "0"
+     ],
+     "value": 5
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_p",
+      "vdd",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "g_p",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "0",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "0",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "virtual": true
+ },
+ {
+  "id": "gate-and",
+  "label": {
+   "en": "AND gate (5 V)",
+   "tr": "AND kapısı (5 V)"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "B"
+   ],
+   "right": [
+    "Y"
+   ],
+   "title": "AND"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "vdd",
+      "0"
+     ],
+     "value": 5
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_m",
+      "vdd",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_m",
+      "vdd",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_m",
+      "ga_n",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "ga_n",
+      "0",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "0",
+      "g_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "vdd",
+      "g_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "virtual": true
+ },
+ {
+  "id": "gate-or",
+  "label": {
+   "en": "OR gate (5 V)",
+   "tr": "OR kapısı (5 V)"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "B"
+   ],
+   "right": [
+    "Y"
+   ],
+   "title": "OR"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "vdd",
+      "0"
+     ],
+     "value": 5
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "ga_p",
+      "vdd",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_m",
+      "ga_p",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_m",
+      "0",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_m",
+      "0",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "0",
+      "g_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "vdd",
+      "g_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "virtual": true
+ },
+ {
+  "id": "gate-xor",
+  "label": {
+   "en": "XOR gate (5 V)",
+   "tr": "XOR kapısı (5 V)"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "B"
+   ],
+   "right": [
+    "Y"
+   ],
+   "title": "XOR"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "vdd",
+      "0"
+     ],
+     "value": 5
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_m",
+      "vdd",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_m",
+      "vdd",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_m",
+      "g1_n",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_n",
+      "0",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_p",
+      "vdd",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_p",
+      "vdd",
+      "g_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_p",
+      "g2_n",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_n",
+      "0",
+      "g_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_q",
+      "vdd",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_q",
+      "vdd",
+      "g_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_q",
+      "g3_n",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_n",
+      "0",
+      "g_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "vdd",
+      "g_p"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "vdd",
+      "g_q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "g4_n",
+      "g_p"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g4_n",
+      "0",
+      "g_q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "virtual": true
+ },
+ {
+  "id": "gate-xnor",
+  "label": {
+   "en": "XNOR gate (5 V)",
+   "tr": "XNOR kapısı (5 V)"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A",
+    "B"
+   ],
+   "right": [
+    "Y"
+   ],
+   "title": "XNOR"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "vdd",
+      "0"
+     ],
+     "value": 5
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx_m",
+      "vdd",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx_m",
+      "vdd",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx_m",
+      "gx1_n",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx1_n",
+      "0",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx_p",
+      "vdd",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx_p",
+      "vdd",
+      "gx_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx_p",
+      "gx2_n",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx2_n",
+      "0",
+      "gx_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx_q",
+      "vdd",
+      "B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx_q",
+      "vdd",
+      "gx_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx_q",
+      "gx3_n",
+      "B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx3_n",
+      "0",
+      "gx_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_x",
+      "vdd",
+      "gx_p"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_x",
+      "vdd",
+      "gx_q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_x",
+      "gx4_n",
+      "gx_p"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "gx4_n",
+      "0",
+      "gx_q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "0",
+      "g_x"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "vdd",
+      "g_x"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "virtual": true
+ },
+ {
+  "id": "gate-inv",
+  "label": {
+   "en": "Inverter (5 V)",
+   "tr": "Evirici (5 V)"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A"
+   ],
+   "right": [
+    "Y"
+   ],
+   "title": "NOT"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "vdd",
+      "0"
+     ],
+     "value": 5
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "0",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "vdd",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "virtual": true
+ },
+ {
+  "id": "gate-buf",
+  "label": {
+   "en": "Buffer (5 V)",
+   "tr": "Tampon (5 V)"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "A"
+   ],
+   "right": [
+    "Y"
+   ],
+   "title": "BUF"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "vdd",
+      "0"
+     ],
+     "value": 5
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_m",
+      "0",
+      "A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g_m",
+      "vdd",
+      "A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "0",
+      "g_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Y",
+      "vdd",
+      "g_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "virtual": true
+ },
+ {
+  "id": "dff",
+  "label": {
+   "en": "D flip-flop (5 V)",
+   "tr": "D flip-flop (5 V)"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "D",
+    "CLK"
+   ],
+   "right": [
+    "Q",
+    "QN"
+   ],
+   "title": "D-FF"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "V",
+     "nodes": [
+      "vdd",
+      "0"
+     ],
+     "value": 5
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "nclk",
+      "0",
+      "CLK"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "nclk",
+      "vdd",
+      "CLK"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_nd",
+      "0",
+      "D"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_nd",
+      "vdd",
+      "D"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_s",
+      "vdd",
+      "D"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_s",
+      "vdd",
+      "nclk"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_s",
+      "m1_n",
+      "D"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m1_n",
+      "0",
+      "nclk"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_r",
+      "vdd",
+      "m_nd"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_r",
+      "vdd",
+      "nclk"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m_r",
+      "m2_n",
+      "m_nd"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m2_n",
+      "0",
+      "nclk"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "mq",
+      "vdd",
+      "m_s"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "mq",
+      "vdd",
+      "mqn"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "mq",
+      "m3_n",
+      "m_s"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m3_n",
+      "0",
+      "mqn"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "mqn",
+      "vdd",
+      "m_r"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "mqn",
+      "vdd",
+      "mq"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "mqn",
+      "m4_n",
+      "m_r"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "m4_n",
+      "0",
+      "mq"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_nd",
+      "0",
+      "mq"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_nd",
+      "vdd",
+      "mq"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_s",
+      "vdd",
+      "mq"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_s",
+      "vdd",
+      "CLK"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_s",
+      "s1_n",
+      "mq"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s1_n",
+      "0",
+      "CLK"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_r",
+      "vdd",
+      "s_nd"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_r",
+      "vdd",
+      "CLK"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s_r",
+      "s2_n",
+      "s_nd"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s2_n",
+      "0",
+      "CLK"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "vdd",
+      "s_s"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "vdd",
+      "QN"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "Q",
+      "s3_n",
+      "s_s"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s3_n",
+      "0",
+      "QN"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "QN",
+      "vdd",
+      "s_r"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "QN",
+      "vdd",
+      "Q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "QN",
+      "s4_n",
+      "s_r"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "s4_n",
+      "0",
+      "Q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "virtual": true
+ },
+ {
+  "id": "74hc00",
+  "label": {
+   "en": "74HC00 quad NAND",
+   "tr": "74HC00 dörtlü NAND"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1A",
+    "1B",
+    "1Y",
+    "2A",
+    "2B",
+    "2Y",
+    "GND"
+   ],
+   "right": [
+    "VCC",
+    "4B",
+    "4A",
+    "4Y",
+    "3B",
+    "3A",
+    "3Y"
+   ],
+   "title": "74HC00"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "VCC",
+      "1A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "VCC",
+      "1B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "g0_n",
+      "1A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_n",
+      "GND",
+      "1B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "VCC",
+      "2A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "VCC",
+      "2B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "g1_n",
+      "2A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_n",
+      "GND",
+      "2B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "VCC",
+      "3A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "VCC",
+      "3B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "g2_n",
+      "3A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_n",
+      "GND",
+      "3B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "VCC",
+      "4A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "VCC",
+      "4B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "g3_n",
+      "4A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_n",
+      "GND",
+      "4B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 7,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "74hc08",
+  "label": {
+   "en": "74HC08 quad AND",
+   "tr": "74HC08 dörtlü AND"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1A",
+    "1B",
+    "1Y",
+    "2A",
+    "2B",
+    "2Y",
+    "GND"
+   ],
+   "right": [
+    "VCC",
+    "4B",
+    "4A",
+    "4Y",
+    "3B",
+    "3A",
+    "3Y"
+   ],
+   "title": "74HC08"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "VCC",
+      "1A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "VCC",
+      "1B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "g0a_n",
+      "1A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0a_n",
+      "GND",
+      "1B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "GND",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "VCC",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "VCC",
+      "2A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "VCC",
+      "2B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "g1a_n",
+      "2A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1a_n",
+      "GND",
+      "2B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "GND",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "VCC",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "VCC",
+      "3A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "VCC",
+      "3B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "g2a_n",
+      "3A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2a_n",
+      "GND",
+      "3B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "GND",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "VCC",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "VCC",
+      "4A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "VCC",
+      "4B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "g3a_n",
+      "4A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3a_n",
+      "GND",
+      "4B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "GND",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "VCC",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 7,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "74hc32",
+  "label": {
+   "en": "74HC32 quad OR",
+   "tr": "74HC32 dörtlü OR"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1A",
+    "1B",
+    "1Y",
+    "2A",
+    "2B",
+    "2Y",
+    "GND"
+   ],
+   "right": [
+    "VCC",
+    "4B",
+    "4A",
+    "4Y",
+    "3B",
+    "3A",
+    "3Y"
+   ],
+   "title": "74HC32"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "g0a_p",
+      "VCC",
+      "1A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "g0a_p",
+      "1B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "GND",
+      "1A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "GND",
+      "1B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "GND",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "VCC",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1a_p",
+      "VCC",
+      "2A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "g1a_p",
+      "2B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "GND",
+      "2A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "GND",
+      "2B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "GND",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "VCC",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2a_p",
+      "VCC",
+      "3A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "g2a_p",
+      "3B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "GND",
+      "3A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "GND",
+      "3B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "GND",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "VCC",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3a_p",
+      "VCC",
+      "4A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "g3a_p",
+      "4B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "GND",
+      "4A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "GND",
+      "4B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "GND",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "VCC",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 7,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "74hc86",
+  "label": {
+   "en": "74HC86 quad XOR",
+   "tr": "74HC86 dörtlü XOR"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1A",
+    "1B",
+    "1Y",
+    "2A",
+    "2B",
+    "2Y",
+    "GND"
+   ],
+   "right": [
+    "VCC",
+    "4B",
+    "4A",
+    "4Y",
+    "3B",
+    "3A",
+    "3Y"
+   ],
+   "title": "74HC86"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "VCC",
+      "1A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "VCC",
+      "1B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_m",
+      "g01_n",
+      "1A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g01_n",
+      "GND",
+      "1B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_p",
+      "VCC",
+      "1A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_p",
+      "VCC",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_p",
+      "g02_n",
+      "1A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g02_n",
+      "GND",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_q",
+      "VCC",
+      "1B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_q",
+      "VCC",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g0_q",
+      "g03_n",
+      "1B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g03_n",
+      "GND",
+      "g0_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "VCC",
+      "g0_p"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "VCC",
+      "g0_q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "g04_n",
+      "g0_p"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g04_n",
+      "GND",
+      "g0_q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "VCC",
+      "2A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "VCC",
+      "2B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_m",
+      "g11_n",
+      "2A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g11_n",
+      "GND",
+      "2B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_p",
+      "VCC",
+      "2A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_p",
+      "VCC",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_p",
+      "g12_n",
+      "2A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g12_n",
+      "GND",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_q",
+      "VCC",
+      "2B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_q",
+      "VCC",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_q",
+      "g13_n",
+      "2B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g13_n",
+      "GND",
+      "g1_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "VCC",
+      "g1_p"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "VCC",
+      "g1_q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "g14_n",
+      "g1_p"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g14_n",
+      "GND",
+      "g1_q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "VCC",
+      "3A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "VCC",
+      "3B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_m",
+      "g21_n",
+      "3A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g21_n",
+      "GND",
+      "3B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_p",
+      "VCC",
+      "3A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_p",
+      "VCC",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_p",
+      "g22_n",
+      "3A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g22_n",
+      "GND",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_q",
+      "VCC",
+      "3B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_q",
+      "VCC",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_q",
+      "g23_n",
+      "3B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g23_n",
+      "GND",
+      "g2_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "VCC",
+      "g2_p"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "VCC",
+      "g2_q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "g24_n",
+      "g2_p"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g24_n",
+      "GND",
+      "g2_q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "VCC",
+      "4A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "VCC",
+      "4B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_m",
+      "g31_n",
+      "4A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g31_n",
+      "GND",
+      "4B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_p",
+      "VCC",
+      "4A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_p",
+      "VCC",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_p",
+      "g32_n",
+      "4A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g32_n",
+      "GND",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_q",
+      "VCC",
+      "4B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_q",
+      "VCC",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_q",
+      "g33_n",
+      "4B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g33_n",
+      "GND",
+      "g3_m"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "VCC",
+      "g3_p"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "VCC",
+      "g3_q"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "g34_n",
+      "g3_p"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g34_n",
+      "GND",
+      "g3_q"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 7,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "74hc02",
+  "label": {
+   "en": "74HC02 quad NOR",
+   "tr": "74HC02 dörtlü NOR"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1Y",
+    "1A",
+    "1B",
+    "2Y",
+    "2A",
+    "2B",
+    "GND"
+   ],
+   "right": [
+    "VCC",
+    "4Y",
+    "4B",
+    "4A",
+    "3Y",
+    "3B",
+    "3A"
+   ],
+   "title": "74HC02"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "g0_p",
+      "VCC",
+      "1A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "g0_p",
+      "1B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "GND",
+      "1A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "GND",
+      "1B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g1_p",
+      "VCC",
+      "2A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "g1_p",
+      "2B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "GND",
+      "2A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "GND",
+      "2B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g2_p",
+      "VCC",
+      "3A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "g2_p",
+      "3B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "GND",
+      "3A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "GND",
+      "3B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "g3_p",
+      "VCC",
+      "4A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "g3_p",
+      "4B"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "GND",
+      "4A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "GND",
+      "4B"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 7,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ },
+ {
+  "id": "74hc04",
+  "label": {
+   "en": "74HC04 hex inverter",
+   "tr": "74HC04 altılı evirici"
+  },
+  "category": "logic",
+  "prefix": "U",
+  "symbol": {
+   "kind": "box",
+   "left": [
+    "1A",
+    "1Y",
+    "2A",
+    "2Y",
+    "3A",
+    "3Y",
+    "GND"
+   ],
+   "right": [
+    "VCC",
+    "6A",
+    "6Y",
+    "5A",
+    "5Y",
+    "4A",
+    "4Y"
+   ],
+   "title": "74HC04"
+  },
+  "builtin": true,
+  "model": {
+   "elements": [
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "GND",
+      "1A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "1Y",
+      "VCC",
+      "1A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "GND",
+      "2A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "2Y",
+      "VCC",
+      "2A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "GND",
+      "3A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "3Y",
+      "VCC",
+      "3A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "GND",
+      "4A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "4Y",
+      "VCC",
+      "4A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "5Y",
+      "GND",
+      "5A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "5Y",
+      "VCC",
+      "5A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "6Y",
+      "GND",
+      "6A"
+     ],
+     "props": {
+      "nmos": true,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    },
+    {
+     "type": "M",
+     "nodes": [
+      "6Y",
+      "VCC",
+      "6A"
+     ],
+     "props": {
+      "nmos": false,
+      "beta": 0.02,
+      "vth": 1.0
+     }
+    }
+   ]
+  },
+  "footprint": "DIP14",
+  "ratings": {
+   "v": [
+    {
+     "a": "VCC",
+     "b": "GND",
+     "max": 7,
+     "min": -0.5,
+     "polar": "min"
+    }
+   ]
+  }
+ }
+]
